@@ -195,6 +195,7 @@ def etapa_conciliacion(llm, para_llm: list[dict], modelo: str, sistema: str, usu
 
 # ---------------------------------------------------------------- armado final
 PERIODO = re.compile(r"^(Retiro - |Personal - Haberes)")
+SOSPECHA = re.compile(r"instruc|sospech|manipul", re.IGNORECASE)   # el lector avisa si un documento intenta dar ordenes
 
 
 def armar(movs: list[dict], reglas: dict, decisiones: dict, lecturas: dict, para_llm: list[dict]) -> list[dict]:
@@ -216,6 +217,11 @@ def armar(movs: list[dict], reglas: dict, decisiones: dict, lecturas: dict, para
                 avisos.append("guarda: se descartaron ids de documento inexistentes")
                 d["docs"] = validos
             sug = sugerencia.get(m["n"])
+            # Guarda 0: un documento que trae "instrucciones" para el sistema es sospechoso: nunca da confianza alta.
+            sospechosos = [x for x in d["docs"] if x in lecturas and SOSPECHA.search(lecturas[x]["extraccion"]["nota"])]
+            if sospechosos:
+                d["confianza"] = "baja"
+                avisos.append("ALERTA: el lector marco instrucciones sospechosas en " + ", ".join(sospechosos))
             # Guarda 1: la tabla manda. El modelo no puede reescribirla ni dejarla vacia.
             if sug and (d["detalle_origen"] == "tabla" or not d["detalle"]) and d["detalle"] != sug:
                 avisos.append("guarda: se restituyo el Detalle de la tabla")

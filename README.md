@@ -3,7 +3,16 @@
 ## Qué construí
 Un agente que concilia el extracto bancario mensual de una empresa agropecuaria con la carpeta de comprobantes del mes (PDF y fotos): vincula cada movimiento con su comprobante, completa el N° de comprobante y una categoría (`Categoría - Subcategoría - Identificador`), marca el estado de cada fila con colores (gris, blanco, amarillo, naranja, celeste), copia los comprobantes con un nombre ordenado y genera un reporte de importe por categoría. Es para quien administra empresas de terceros y hoy lo hace a mano cada mes (~140 movimientos). El código resuelve lo determinístico (cargos automáticos del banco, tabla de Detalles ya validados, importes exactos) y el modelo (Haiku 4.5) lee los documentos y decide los casos ambiguos; una persona revisa lo marcado y firma.
 
-Documentos del repositorio: [DECISIONES.md](DECISIONES.md) (historia y errores) · [ANALISIS_ECONOMICO.md](ANALISIS_ECONOMICO.md) · [GOBIERNO_Y_RIESGO.md](GOBIERNO_Y_RIESGO.md) · [prompts/](prompts/) (contrato vigente y versiones anteriores) · [corridas/](corridas/) (9 corridas; resumen en [corridas/RESUMEN.md](corridas/RESUMEN.md)).
+**Dónde está la evidencia de cada requisito de la consigna:**
+
+| Requisito | Dónde |
+|---|---|
+| 1 · Sistema completo (objetivo, contrato, herramienta real, salida estructurada, supervisión L0–L4) | Contrato: [prompts/](prompts/) · código: [src/](src/) · supervisión L0–L4: [GOBIERNO_Y_RIESGO.md](GOBIERNO_Y_RIESGO.md), punto 2 |
+| 2 · Corre de verdad (tres corridas reales, reconstruibles) | [corridas/](corridas/): 9 corridas, cada una con su `LEEME.md` (fecha, entrada, salida); resumen en [corridas/RESUMEN.md](corridas/RESUMEN.md) |
+| 3 · Formato estricto | Este README, `prompts/`, `corridas/` y `DECISIONES.md`, más dos documentos de apoyo (`ANALISIS_ECONOMICO.md` y `GOBIERNO_Y_RIESGO.md`) |
+| 4 · Historia del proceso | [DECISIONES.md](DECISIONES.md) (D0 a D16: quién hizo qué, iteraciones, errores, cambios de alcance) y [prompts/historial/](prompts/historial/) |
+| 5 · Análisis económico | [ANALISIS_ECONOMICO.md](ANALISIS_ECONOMICO.md) |
+| 6 · Gobierno y riesgo | [GOBIERNO_Y_RIESGO.md](GOBIERNO_Y_RIESGO.md) |
 
 ## Cómo se lo pedí
 Las instrucciones textuales que le di al agente que construyó el sistema (Claude Code), en orden. Los datos personales están reemplazados por `<...>`.
@@ -57,7 +66,7 @@ Necesita una clave de la API de Anthropic en `datos_privados/.env` (`ANTHROPIC_A
 - **Los 13 documentos que son imágenes** dependen de la lectura por visión de Haiku, que es débil (extrajo solo el total de un resumen de expensas, no el importe por unidad). No se probó un modelo más grande solo para esas.
 - **Lo que quedó fuera de alcance a propósito:** el cruce de echeqs con comprobantes sueltos, el circuito de facturas con una empresa vinculada y la ejecución programada semanal (D1).
 - **Las corridas publicadas están anonimizadas**, no son literalmente "tal como salieron" (D14). Los PDF no se publican.
-- **No probado:** documentos adversariales (un PDF con instrucciones escondidas), la API de lotes y el caché de prompts para bajar el costo, y un segundo cliente.
+- **Poco probado:** documentos adversariales (un solo caso ficticio y directo, `corridas/adversarial/`, D17; no se probaron ataques sutiles). **No probado:** la API de lotes y el caché de prompts para bajar el costo, y un segundo cliente.
 - El agente **no** actualiza la Tabla de Referencias: agregar filas es decisión de la persona.
 
 ## Qué aprendí

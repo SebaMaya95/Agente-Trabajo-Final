@@ -1,12 +1,18 @@
 # DECISIONES — la historia de cómo se construyó
 
-> Registro cronológico, escrito a medida que pasaban las cosas. Las cifras son las medidas reales de cada corrida.
+> Registro cronológico. D1 a D9 se escribieron antes de correr la versión siguiente; D10 a D14 se escribieron juntas después de correr v4 y las comparaciones de modelo; D15 y D16 después de sus hallazgos. Las cifras son las medidas de cada corrida y están en [corridas/RESUMEN.md](corridas/RESUMEN.md).
 > Fechas: el armado del repo empezó el 25/09/2026, después de la fecha original de entrega (13/09); se consulta prórroga con el profesor.
+
+## D0 · Quién hizo qué, y cómo leer la historia de commits
+- **La persona (dueña del caso):** eligió el problema; aportó los datos de agosto (extracto, cierre hecho a mano, Tabla de Referencias, comprobantes) y la instrucción original de Cowork; aclaró la semántica de los colores y las convenciones del cliente; aprobó el recorte de alcance y la evaluación contra un mes cerrado; creó la cuenta y la clave de la API (sin pasarla por el chat); autorizó publicar las corridas anonimizadas; fijó el criterio de uso eficiente de tokens y modelo óptimo.
+- **Claude Code (asistente de IA):** escribió el código, los contratos (prompts), la evaluación y el anonimizador; corrió los experimentos; diagnosticó los errores; redactó estos documentos. Los commits llevan la línea `Co-Authored-By`. Siguiendo la regla de la materia, la persona no escribió código: describió, decidió y revisó.
+- **Historia de commits:** los 6 commits son del 25/09 (todo el desarrollo ocurrió en una sesión de trabajo). Las iteraciones **no** están una por commit: están en `prompts/historial/` (v0 a v4), en `corridas/` (00 a 08, con fecha y hora en `salida.json` y en cada `LEEME.md`) y en este archivo. No se armaron commits retroactivos para no inventar una historia que no ocurrió así.
+- **Lo que no está documentado:** el trabajo previo en Cowork, más allá de su instrucción final.
 
 ## D1 · Elección del caso y alcance (25/09)
 **Caso:** conciliar cada mes el extracto bancario de una empresa agropecuaria con los comprobantes de la carpeta del mes: completar `N° Comprobante` y `DETALLE` (Categoría - Subcategoría - Identificador), marcar el estado de cada fila con colores, renombrar los comprobantes y generar un reporte de importe por categoría.
 
-**De dónde viene:** ya existía una versión hecha en Cowork como una única instrucción larga (~5.000 palabras) que hacía el cierre mensual, la corrida semanal, el cruce de echeqs contra comprobantes sueltos y un circuito de tres facturas con una empresa vinculada. Cada regla del texto nació de una falla real: documentos que cubren dos movimientos, expensas sin número de comprobante, fechas guardadas como serial de Excel, recibos de pago confundidos con la factura, etc.
+**De dónde viene:** ya existía una versión hecha en Cowork como una única instrucción larga (~5.000 palabras) que hacía el cierre mensual, la corrida semanal, el cruce de echeqs contra comprobantes sueltos y un circuito de tres facturas con una empresa vinculada. Las reglas del texto son casos muy particulares (documentos que cubren dos movimientos, expensas sin número de comprobante, fechas guardadas como serial de Excel, recibos de pago confundidos con la factura), lo que sugiere que surgieron de fallas reales, pero **no se conserva el historial de cambios de esa versión**: solo su texto final ([prompts/historial/v0_cowork_original_anonimizado.md](prompts/historial/v0_cowork_original_anonimizado.md)).
 
 **Qué se achicó y por qué** (para dos semanas y media de atención parcial):
 - Se quitó el cruce de echeqs y el circuito de facturas con la empresa vinculada: son casos particulares de un solo cliente, difíciles de evaluar y no cambian la arquitectura.
@@ -35,7 +41,7 @@ Solución (`evaluacion/preparar_datos.py`): se juntan todos los PDF e imágenes 
 - Problema de fondo de la tabla: el mismo concepto del banco puede tener distinto Detalle según el documento (pagos a AFIP: Ganancias vs IVA vs cargas sociales). En agosto, 3 de los 44 movimientos resueltos por tabla difieren del cierre manual. Queda como riesgo: la tabla es una sugerencia, no una verdad.
 
 ## D6 · Arquitectura: qué hace el código y qué hace el modelo (25/09)
-Se evaluó una llamada única con todo el mes (128 documentos, del orden de 250 mil tokens más el extracto). Se descartó: cara por corrida, difícil de auditar y con riesgo de errores al buscar importes exactos en un contexto enorme.
+Se consideró una llamada única con todo el mes (128 documentos, del orden de 250 mil tokens más el extracto, según el conteo de caracteres). **No se probó**: se descartó por diseño, por estas razones que son estimaciones y no mediciones: costo alto por corrida, difícil de auditar y riesgo de errores al buscar importes exactos en un contexto enorme.
 
 Diseño elegido, dos etapas:
 1. **Lector** (modelo chico, una llamada por documento): saca tipo, rol (origen / pago / otro), emisor, CUIT, número de comprobante y **todos los importes impresos**. Si el PDF tiene texto va solo texto (172 de 178 tienen); solo los escaneados y las fotos van como imagen, y las fotos se achican a 1568 px.
@@ -142,3 +148,9 @@ Antes de cerrar se repitió v4 con el código final (US$ 0,07, con la lectura en
 - Por qué pasa: no se fijó la temperatura (Sonnet 5 no admite el parámetro) y el modelo decide con criterio los casos ambiguos. Para una corrida en producción esto es una razón más para que las filas ambiguas las revise una persona.
 - No se probó `temperature=0` en Haiku para reducir la variación. Queda como paso siguiente, junto con repetir cada configuración 3 veces para tener un intervalo en vez de un punto.
 
+## D17 · Una prueba de inyección de instrucciones, y un hueco que mostró (25/09)
+Idea tomada de la consigna del parcial de la materia (un caso "tramposo" que intenta engañar al corrector): ¿qué pasa si un comprobante trae órdenes para el sistema? Se armó una prueba con datos **ficticios** (`corridas/adversarial/`, script `evaluacion/prueba_adversarial.py`): un documento que pide vincularse a todos los movimientos, poner confianza alta y no avisar, una factura normal y un extracto de 4 movimientos.
+- **Primera pasada (US$ 0,01):** el sistema **no obedeció**: el documento manipulador no se vinculó a los movimientos de otro importe ni recibió confianza alta, y la factura normal se vinculó bien. El lector incluso anotó "instrucción sospechosa". **Pero** esa nota no llegaba al revisor: el documento sí se vinculó, con confianza *media*, al movimiento cuyo importe coincidía por casualidad. (Los datos de esta primera pasada no se conservaron; se resumen acá.)
+- **Corrección:** guarda en código: si el lector anota instrucciones sospechosas en un documento vinculado, la confianza pasa a *baja* y el motivo lleva una `ALERTA`. En agosto ninguna nota de las 128 lecturas dispara la guarda, así que las corridas 00 a 08 no cambian.
+- **Segunda pasada (US$ 0,004):** 7 de 7 verificaciones aprobadas (`corridas/adversarial/resultado.json`): el documento manipulador se vincula al movimiento 4 (importe idéntico) pero con confianza baja y alerta.
+- **Límite dicho con claridad:** es un solo ataque directo. No se probaron ataques sutiles (texto invisible, otros idiomas, documentos que imitan comprobantes reales). Un documento *falso* con el importe exacto de un movimiento real seguirá vinculándose: la defensa ahí es la revisión humana de los vínculos con confianza media o baja.

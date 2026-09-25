@@ -17,7 +17,7 @@ Configuración final: Haiku 4.5 en las dos etapas, contrato v5 (corrida `08_v5-e
 - La lectura se guarda en un cache por contenido del documento y versión del prompt: releer el mes con otro conciliador (o con otro contrato del conciliador) cuesta solo la etapa 2 (US$ 0,07). Así se hicieron las corridas v3 y v4.
 - Lo que el código resuelve sin modelo (filas grises: 46 de 143; y la regla "importe único + emisor + tabla": 15) no cuesta tokens.
 
-**Costo total de construir y probar el agente (solo API):** US$ 3,86 = prueba de humo 0,049 + v1 0,534 + v2 0,635 + v3 0,069 + v4 0,070 + Sonnet conciliador 0,190 + Sonnet completo 1,616 + repetición de v4 0,069 + v5 0,630. (No incluye el uso de Claude Code para escribir el código, que corre con la suscripción y no se mide por token.)
+**Costo total de construir y probar el agente (solo API):** US$ 3,88 = prueba de humo 0,049 + v1 0,534 + v2 0,635 + v3 0,069 + v4 0,070 + Sonnet conciliador 0,190 + Sonnet completo 1,616 + repetición de v4 0,069 + v5 0,630 + prueba adversarial 0,015. (No incluye el uso de Claude Code para escribir el código, que corre con la suscripción y no se mide por token.)
 
 ## 2. Qué costaría corriendo en serio
 
