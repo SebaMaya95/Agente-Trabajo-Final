@@ -1,0 +1,117 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 85,
+    "n": 90
+  },
+  "detalle_exacto_validado": {
+    "ok": 35,
+    "n": 38
+  },
+  "categoria_validada": {
+    "ok": 35,
+    "n": 38
+  },
+  "deducido_exacto": {
+    "ok": 4,
+    "n": 6
+  },
+  "deducido_categoria": {
+    "ok": 4,
+    "n": 6
+  },
+  "tabla_exacto": {
+    "ok": 31,
+    "n": 32
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 86,
+    "n": 90
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60,
+    80,
+    81
+  ],
+  "errores": [
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "importe exacto coincide; pertenencia dudosa pero es gasto empresa"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A 0001-33529820",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 30,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - El Nombre116",
+      "esperado": "Impuesto - ARCA - Ganancias",
+      "origen": "tabla",
+      "motivo": "VEP ARCA ganancias importe exacto coincide"
+    },
+    {
+      "n": 55,
+      "campo": "comprobante",
+      "agente": "032361051-7",
+      "esperado": "",
+      "motivo": "Nombre201 SENASA coincide en importe exacto; tabla respalda"
+    },
+    {
+      "n": 65,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro de efectivo sin documento respaldatorio"
+    },
+    {
+      "n": 84,
+      "campo": "comprobante",
+      "agente": "1-15943",
+      "esperado": "",
+      "motivo": "importe no coincide con ningún monto del documento; CUIT sí"
+    },
+    {
+      "n": 87,
+      "campo": "comprobante",
+      "agente": "1670810156 ; 0000-2026-000018",
+      "esperado": "VEP 1670810156",
+      "motivo": "VEP ARCA Ganancias; importe exacto; documento origen especifica | guarda: comprobante tomado de los documentos de origen"
+    },
+    {
+      "n": 87,
+      "campo": "detalle",
+      "agente": "Impuesto - ARCA - Ganancias",
+      "esperado": "Personal - Leyes - El Nombre116",
+      "origen": "deducido",
+      "motivo": "VEP ARCA Ganancias; importe exacto; documento origen especifica | guarda: comprobante tomado de los documentos de origen"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 68,
+    "vinculados_correctamente": 57,
+    "vinculados_parcial": 2,
+    "no_vinculados": 9,
+    "sin_movimiento_esperado": 60,
+    "sin_movimiento_bien_dejados": 54,
+    "sin_movimiento_vinculados_de_mas": [
+      "doc_023.pdf",
+      "doc_049.pdf",
+      "doc_051.pdf",
+      "doc_068.pdf",
+      "doc_081.pdf",
+      "doc_085.pdf"
+    ]
+  }
+}

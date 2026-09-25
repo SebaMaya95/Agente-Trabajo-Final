@@ -1,0 +1,47 @@
+[
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-haiku-4-5",
+  "input_tokens": 9918,
+  "output_tokens": 1612,
+  "usd": 0.017978,
+  "stop_reason": "end_turn",
+  "segundos": 17.03
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-haiku-4-5",
+  "input_tokens": 7726,
+  "output_tokens": 1329,
+  "usd": 0.014371,
+  "stop_reason": "end_turn",
+  "segundos": 12.8
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-haiku-4-5",
+  "input_tokens": 10435,
+  "output_tokens": 1679,
+  "usd": 0.01883,
+  "stop_reason": "end_turn",
+  "segundos": 16.77
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-haiku-4-5",
+  "input_tokens": 7658,
+  "output_tokens": 1210,
+  "usd": 0.013708,
+  "stop_reason": "end_turn",
+  "segundos": 8.8
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-haiku-4-5",
+  "input_tokens": 3630,
+  "output_tokens": 149,
+  "usd": 0.004375,
+  "stop_reason": "end_turn",
+  "segundos": 1.93
+ }
+]

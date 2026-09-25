@@ -1,0 +1,108 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 85,
+    "n": 90
+  },
+  "detalle_exacto_validado": {
+    "ok": 36,
+    "n": 38
+  },
+  "categoria_validada": {
+    "ok": 37,
+    "n": 38
+  },
+  "deducido_exacto": {
+    "ok": 7,
+    "n": 9
+  },
+  "deducido_categoria": {
+    "ok": 8,
+    "n": 9
+  },
+  "tabla_exacto": {
+    "ok": 29,
+    "n": 29
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 87,
+    "n": 90
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60,
+    80,
+    81
+  ],
+  "errores": [
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "pertenece=dudoso pero importe exacto y concepto razonable; expensas de inmueble empresa"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A 0001-33529820",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 27,
+      "campo": "detalle",
+      "agente": "Impuesto - ARCA - Ganancias",
+      "esperado": "Personal - Leyes - El Nombre116",
+      "origen": "deducido",
+      "motivo": "importe exacto en VEP ARCA; reemplaza sugerencia genérica"
+    },
+    {
+      "n": 55,
+      "campo": "comprobante",
+      "agente": "032361051-7",
+      "esperado": "",
+      "motivo": "importe exacto; sugerencia tabla coincide"
+    },
+    {
+      "n": 85,
+      "campo": "comprobante",
+      "agente": "84354 ; 00084354",
+      "esperado": "0002-00000043",
+      "motivo": "Importe exacto coincide ambos comprobantes pago; sugerencia tabla."
+    },
+    {
+      "n": 87,
+      "campo": "comprobante",
+      "agente": "0000-2026-000018 ; 1670810156",
+      "esperado": "VEP 1670810156",
+      "motivo": "Importe exacto coincide retención y VEP ARCA; pago retención. | guarda: comprobante tomado de los documentos de origen"
+    },
+    {
+      "n": 87,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - Retención ARCA",
+      "esperado": "Personal - Leyes - El Nombre116",
+      "origen": "deducido",
+      "motivo": "Importe exacto coincide retención y VEP ARCA; pago retención. | guarda: comprobante tomado de los documentos de origen"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 68,
+    "vinculados_correctamente": 58,
+    "vinculados_parcial": 4,
+    "no_vinculados": 6,
+    "sin_movimiento_esperado": 60,
+    "sin_movimiento_bien_dejados": 55,
+    "sin_movimiento_vinculados_de_mas": [
+      "doc_023.pdf",
+      "doc_049.pdf",
+      "doc_051.pdf",
+      "doc_081.pdf",
+      "doc_085.pdf"
+    ]
+  }
+}

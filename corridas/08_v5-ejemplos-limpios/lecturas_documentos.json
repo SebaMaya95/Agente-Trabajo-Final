@@ -1,0 +1,3998 @@
+{
+ "doc_001.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre133 Nombre134 Nombre135",
+  "emisor_cuit": "20258662710",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00001127",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 10100692.8
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "original, duplicado, triplicado con mismo Nombre280",
+  "uso": {
+   "input_tokens": 4239,
+   "output_tokens": 131,
+   "usd": 0.004894
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_002.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "BANCO Nombre064 Nombre136 S.A.",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre137 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "11181814",
+  "fecha": "2026-07-31",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 3000000
+   }
+  ],
+  "identificador": "Retiro Julio 26",
+  "pertenece": "dudoso",
+  "nota": "Transferencia a persona física, verificar autorización",
+  "uso": {
+   "input_tokens": 2659,
+   "output_tokens": 144,
+   "usd": 0.003379
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_003.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre020 Nombre021 Nombre022",
+  "emisor_cuit": "20672945922",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000439",
+  "fecha": "2026-08-01",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 716320
+   }
+  ],
+  "identificador": "72 2845 Nombre335:0 - Nombre004, Nombre129 Nombre130",
+  "pertenece": "si",
+  "nota": "Factura triplicada (original, duplicado, triplicado)",
+  "uso": {
+   "input_tokens": 4101,
+   "output_tokens": 153,
+   "usd": 0.004866
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_004.jpg": {
+  "tipo": "expensas",
+  "rol": "origen",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "",
+  "fecha": "",
+  "importes": [
+   {
+    "etiqueta": "Nombre336 Be S.A",
+    "monto": 118489
+   },
+   {
+    "etiqueta": "Nombre337 Nombre338",
+    "monto": 148010
+   },
+   {
+    "etiqueta": "Nombre339 Nombre340",
+    "monto": 148010
+   },
+   {
+    "etiqueta": "Nombre341 Nombre342",
+    "monto": 254368
+   },
+   {
+    "etiqueta": "Nombre343 Nombre344",
+    "monto": 110806
+   },
+   {
+    "etiqueta": "Nombre345 Nombre011",
+    "monto": 128195
+   },
+   {
+    "etiqueta": "Nombre346 Nombre262",
+    "monto": 275801
+   },
+   {
+    "etiqueta": "Nombre347 Nombre109",
+    "monto": 129408
+   },
+   {
+    "etiqueta": "Nombre348 Nombre338 / Nombre349 Nombre350",
+    "monto": 130621
+   },
+   {
+    "etiqueta": "Nombre351 Nombre352",
+    "monto": 300874
+   },
+   {
+    "etiqueta": "Nombre334 Nombre106",
+    "monto": 257198
+   },
+   {
+    "etiqueta": "Nombre336 Be S.A / Nombre353",
+    "monto": 257603
+   },
+   {
+    "etiqueta": "Nombre236",
+    "monto": 273779
+   },
+   {
+    "etiqueta": "Nombre354 Nombre342",
+    "monto": 143562
+   },
+   {
+    "etiqueta": "Nombre355 Nombre262",
+    "monto": 127790
+   },
+   {
+    "etiqueta": "Nombre160 Nombre262 Nombre356",
+    "monto": 264478
+   },
+   {
+    "etiqueta": "Nombre336 Be S.A.",
+    "monto": 254368
+   },
+   {
+    "etiqueta": "Nombre357 Nombre356 Nombre358",
+    "monto": 274992
+   },
+   {
+    "etiqueta": "Nombre336 Be S.A.",
+    "monto": 222824
+   },
+   {
+    "etiqueta": "Nombre336 Be S.A.",
+    "monto": 222824
+   },
+   {
+    "etiqueta": "total",
+    "monto": 4044000
+   }
+  ],
+  "identificador": "",
+  "pertenece": "dudoso",
+  "nota": "resumen expensas sin período ni comprobante Nombre280",
+  "uso": {
+   "input_tokens": 3748,
+   "output_tokens": 476,
+   "usd": 0.006128
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_005.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre138 Nombre139 Nombre140",
+  "emisor_cuit": "20291788964",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00003 00000310",
+  "fecha": "2026-08-12",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 1164299.82
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado impreso",
+  "uso": {
+   "input_tokens": 4020,
+   "output_tokens": 128,
+   "usd": 0.00466
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_006.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "00002 00000139",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 2766422.23
+   }
+  ],
+  "identificador": "",
+  "pertenece": "no",
+  "nota": "Nombre141 Nombre045 Nombre142 SA empresa vinculada",
+  "uso": {
+   "input_tokens": 4170,
+   "output_tokens": 140,
+   "usd": 0.00487
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_007.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33537902382",
+  "receptor": "Nombre112, Nombre044 Nombre143",
+  "numero_comprobante": "00000003",
+  "fecha": "2026-08-11",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1669294.74
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1437974
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2299899.25
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "no",
+  "nota": "Nombre141 Nombre045 Nombre142 SA es empresa vinculada, no de El Nombre116",
+  "uso": {
+   "input_tokens": 3299,
+   "output_tokens": 185,
+   "usd": 0.004224
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_008.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre112 Nombre006 Nombre007",
+  "emisor_cuit": "20247068571",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00001 00000004",
+  "fecha": "2026-07-31",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 2500000
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado impreso, monotributista",
+  "uso": {
+   "input_tokens": 3765,
+   "output_tokens": 128,
+   "usd": 0.004405
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_009.pdf": {
+  "tipo": "echeq",
+  "rol": "pago",
+  "emisor": "BANCO Nombre148 S.A.",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "64193010",
+  "fecha": "2026-01-15",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 3100000
+   }
+  ],
+  "identificador": "Nombre1499Nombre150",
+  "pertenece": "si",
+  "nota": "Endosado a Nombre141 Nombre045 Nombre142 SA",
+  "uso": {
+   "input_tokens": 7057,
+   "output_tokens": 144,
+   "usd": 0.007777
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_010.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "9224",
+  "fecha": "2026-06-23",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 99926.53
+   }
+  ],
+  "identificador": "Nombre416 Nombre417 3860463269736230159",
+  "pertenece": "dudoso",
+  "nota": "Nombre359 Nombre360 Nombre016 Nombre004, posible servicio de la empresa",
+  "uso": {
+   "input_tokens": 2492,
+   "output_tokens": 129,
+   "usd": 0.003137
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_011.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre151 Nombre152 Nombre153",
+  "emisor_cuit": "20850146105",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00003 00013637",
+  "fecha": "2026-08-27",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 94138
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado, mismo Nombre280 factura",
+  "uso": {
+   "input_tokens": 4482,
+   "output_tokens": 128,
+   "usd": 0.005122
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_012.jpg": {
+  "tipo": "resumen_cuenta",
+  "rol": "otro",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "",
+  "fecha": "",
+  "importes": [
+   {
+    "etiqueta": "Saldo primer semestre 2026",
+    "monto": 1602030
+   },
+   {
+    "etiqueta": "JG Nombre154",
+    "monto": 1570637
+   },
+   {
+    "etiqueta": "Nombre155 Nombre156",
+    "monto": 244830
+   },
+   {
+    "etiqueta": "Nombre017",
+    "monto": 345970
+   },
+   {
+    "etiqueta": "Nombre157",
+    "monto": 18000
+   },
+   {
+    "etiqueta": "Nombre158 Nombre159",
+    "monto": 644000
+   },
+   {
+    "etiqueta": "Estudio Nombre160",
+    "monto": 290000
+   },
+   {
+    "etiqueta": "Nombre161",
+    "monto": 134656
+   },
+   {
+    "etiqueta": "Mantenimiento cta banco",
+    "monto": 120357
+   },
+   {
+    "etiqueta": "Nombre163",
+    "monto": 25000
+   },
+   {
+    "etiqueta": "Nombre164 Nombre165",
+    "monto": 129000
+   },
+   {
+    "etiqueta": "Nombre166",
+    "monto": 110000
+   },
+   {
+    "etiqueta": "Nombre167 Nombre168",
+    "monto": 30000
+   },
+   {
+    "etiqueta": "Total gastos",
+    "monto": 5264480
+   },
+   {
+    "etiqueta": "Nombre169 Julio 2026",
+    "monto": 4044000
+   },
+   {
+    "etiqueta": "Saldo Nombre170 Nombre171",
+    "monto": 1220480
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "Resumen de movimientos de cuenta bancaria, período no especificado",
+  "uso": {
+   "input_tokens": 3714,
+   "output_tokens": 382,
+   "usd": 0.005624
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_013.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "BANCO Nombre064 Nombre136 S.A.",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre137 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "12158529",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "importe transferido",
+    "monto": 4000000
+   }
+  ],
+  "identificador": "Nombre111 Nombre109 Nombre110 - CBU 3357944544524870952290",
+  "pertenece": "dudoso",
+  "nota": "transferencia a cuenta personal, motivo retiro agosto",
+  "uso": {
+   "input_tokens": 2659,
+   "output_tokens": 160,
+   "usd": 0.003459
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_014.pdf": {
+  "tipo": "retencion",
+  "rol": "pago",
+  "emisor": "Nombre172, Nombre021 Nombre173",
+  "emisor_cuit": "20791832273",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0000-2026-000019",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "monto retenido",
+    "monto": 292110.6
+   },
+   {
+    "etiqueta": "monto comprobante origen",
+    "monto": 14672700.0
+   }
+  ],
+  "identificador": "Factura 00002-00000644",
+  "pertenece": "si",
+  "nota": "retención impuesto ganancias sobre honorarios",
+  "uso": {
+   "input_tokens": 2816,
+   "output_tokens": 170,
+   "usd": 0.003666
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_015.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre117 Nombre118 S.A",
+  "emisor_cuit": "30970486850",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0002-00082836",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 535279.8
+   },
+   {
+    "etiqueta": "IVA",
+    "monto": 92899.8
+   },
+   {
+    "etiqueta": "total",
+    "monto": 442380.0
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "servicios SaaS software agrícola agosto 2026",
+  "uso": {
+   "input_tokens": 2968,
+   "output_tokens": 166,
+   "usd": 0.003798
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_016.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARCA",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "1662279801",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "Nombre174 Nombre175. Nombre176 (351)",
+    "monto": 777602.94
+   },
+   {
+    "etiqueta": "empleador-Nombre177 Nombre175. Nombre176 (301)",
+    "monto": 541556.94
+   },
+   {
+    "etiqueta": "Nombre174 Nombre178 Nombre176 (352)",
+    "monto": 191137.73
+   },
+   {
+    "etiqueta": "Nombre177 Nombre179 sociales (302)",
+    "monto": 95568.87
+   },
+   {
+    "etiqueta": "Nombre329. Nombre180 de Nombre181 (312)",
+    "monto": 951869.54
+   },
+   {
+    "etiqueta": "Nombre161 de Nombre182 Nombre183 (28)",
+    "monto": 1273.86
+   },
+   {
+    "etiqueta": "total",
+    "monto": 2559009.88
+   }
+  ],
+  "identificador": "2026-07",
+  "pertenece": "no",
+  "nota": "VEP de Nombre141 Nombre045 Nombre142 SA, empresa vinculada",
+  "uso": {
+   "input_tokens": 2739,
+   "output_tokens": 267,
+   "usd": 0.004074
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_017.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre023",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "00011-00157351",
+  "fecha": "2026-08-28",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 332754
+   }
+  ],
+  "identificador": "609504",
+  "pertenece": "si",
+  "nota": "débito automático, factura electrónica",
+  "uso": {
+   "input_tokens": 2600,
+   "output_tokens": 121,
+   "usd": 0.003205
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_018.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "FC INSUMOS SA",
+  "emisor_cuit": "30393702993",
+  "receptor": "Nombre131 Nombre132 EL Nombre116",
+  "numero_comprobante": "A 0010-00014631",
+  "fecha": "2026-07-03",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 468720
+   }
+  ],
+  "identificador": "Nombre004 - Nombre129 Nombre130",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2814,
+   "output_tokens": 124,
+   "usd": 0.003434
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_019.pdf": {
+  "tipo": "otro",
+  "rol": "otro",
+  "emisor": "Nombre185 Nombre186 del Nombre187 Nombre186 de Nombre188",
+  "emisor_cuit": "",
+  "receptor": "Nombre045 Nombre105, Nombre044",
+  "numero_comprobante": "P33612196",
+  "fecha": "2026-08-18",
+  "importes": [],
+  "identificador": "Nombre189 26254531",
+  "pertenece": "no",
+  "nota": "Certificado de antecedentes penales, no es comprobante administrativo.",
+  "uso": {
+   "input_tokens": 2670,
+   "output_tokens": 118,
+   "usd": 0.00326
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_020.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Sindicato de Nombre190 de Nombre191",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre141 Nombre045 Nombre142 SA",
+  "numero_comprobante": "5165087",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "total a Nombre184",
+    "monto": 232251.57
+   }
+  ],
+  "identificador": "07-2026",
+  "pertenece": "no",
+  "nota": "Documento de empresa vinculada, no es de El Nombre116",
+  "uso": {
+   "input_tokens": 3242,
+   "output_tokens": 144,
+   "usd": 0.003962
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_021.pdf": {
+  "tipo": "remito",
+  "rol": "otro",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0001-00146121",
+  "fecha": "2026-08-18",
+  "importes": [],
+  "identificador": "72 Nº 2845 Nombre287 Av 59 y 57",
+  "pertenece": "si",
+  "nota": "remito de entrega, sin importe",
+  "uso": {
+   "input_tokens": 2605,
+   "output_tokens": 134,
+   "usd": 0.003275
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_022.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre120 Nombre048",
+  "emisor_cuit": "23637811100",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A 0003-00019213",
+  "fecha": "2026-08-11",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 76774.23
+   },
+   {
+    "etiqueta": "descuento 10%",
+    "monto": 7677.42
+   },
+   {
+    "etiqueta": "IVA",
+    "monto": 14510.33
+   },
+   {
+    "etiqueta": "total",
+    "monto": 83607.14
+   }
+  ],
+  "identificador": "Calle 72 Nº 2845, Nombre004",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3911,
+   "output_tokens": 190,
+   "usd": 0.004861
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_023.pdf": {
+  "tipo": "remito",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre199 y Nombre200 SA",
+  "numero_comprobante": "032361051-7",
+  "fecha": "2026-08-11",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 5762.33
+   }
+  ],
+  "identificador": "Nombre201 9425958",
+  "pertenece": "si",
+  "nota": "DT-e SENASA, traslado de 8 vacas a remate feria",
+  "uso": {
+   "input_tokens": 4882,
+   "output_tokens": 146,
+   "usd": 0.005612
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_024.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "otro",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre202 Julio Nombre203",
+  "numero_comprobante": "00000001",
+  "fecha": "2026-07-15",
+  "importes": [
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 2488339
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 4327186.87
+   }
+  ],
+  "identificador": "Nombre418 23088768706",
+  "pertenece": "no",
+  "nota": "empleado de Nombre141 Nombre045, empresa vinculada",
+  "uso": {
+   "input_tokens": 3359,
+   "output_tokens": 164,
+   "usd": 0.004179
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_025.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre052 Nombre053 Nombre156",
+  "emisor_cuit": "33751612109",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A 0004-00005776",
+  "fecha": "2026-08-10",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 471200
+   },
+   {
+    "etiqueta": "IVA 21%",
+    "monto": 98952
+   },
+   {
+    "etiqueta": "total",
+    "monto": 570152
+   }
+  ],
+  "identificador": "008140",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2906,
+   "output_tokens": 152,
+   "usd": 0.003666
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_026.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre138 Nombre139 Nombre140",
+  "emisor_cuit": "20291788964",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00003 00000317",
+  "fecha": "2026-08-28",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 814999.38
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "triplicado impreso, mismo comprobante tres veces",
+  "uso": {
+   "input_tokens": 4005,
+   "output_tokens": 134,
+   "usd": 0.004675
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_027.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre204 Nombre136 S.A.",
+  "emisor_cuit": "30999845803",
+  "receptor": "Nombre131 Nombre132 E",
+  "numero_comprobante": "03950-07678443",
+  "fecha": "2026-07-14",
+  "importes": [
+   {
+    "etiqueta": "total Nombre241 del mes",
+    "monto": 27900.64
+   }
+  ],
+  "identificador": "002-25 DE MAYO AV. 3816 - 5 - A - Nombre004",
+  "pertenece": "si",
+  "nota": "débito automático, período 14/06 al 13/07",
+  "uso": {
+   "input_tokens": 5734,
+   "output_tokens": 165,
+   "usd": 0.006559
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_028.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre108 Nombre106 Nombre107",
+  "numero_comprobante": "00000036",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1823304.29
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1462298
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2571001.93
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3215,
+   "output_tokens": 166,
+   "usd": 0.004045
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_029.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "BANCO Nombre205",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "TSOP9-03-519",
+  "fecha": "2026-08-24",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 48249866.67
+   }
+  ],
+  "identificador": "CTA CTE Nombre419 84354",
+  "pertenece": "si",
+  "nota": "Nombre305 de pago a Nombre081 Nombre082 SA",
+  "uso": {
+   "input_tokens": 2647,
+   "output_tokens": 144,
+   "usd": 0.003367
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_030.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre207 Nombre186 de Nombre208 Nombre209 y Nombre210 del Nombre211 Nombre212 de Nombre213, Nombre214 y Servicios",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre141 Nombre045 Nombre142 SA",
+  "numero_comprobante": "5165090",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "total a Nombre184",
+    "monto": 63600.61
+   }
+  ],
+  "identificador": "07/2026",
+  "pertenece": "no",
+  "nota": "Documento de empresa vinculada Nombre141 Nombre045",
+  "uso": {
+   "input_tokens": 3199,
+   "output_tokens": 167,
+   "usd": 0.004034
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_031.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre215. Nombre216. El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre116 Nombre217 Nombre218",
+  "numero_comprobante": "00000035",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1626655.04
+   },
+   {
+    "etiqueta": "Nombre248",
+    "monto": 172955.97
+   },
+   {
+    "etiqueta": "ley 19032",
+    "monto": 47169.81
+   },
+   {
+    "etiqueta": "Nombre178 Nombre176",
+    "monto": 47169.81
+   },
+   {
+    "etiqueta": "Nombre196 Nombre198",
+    "monto": 31446.54
+   },
+   {
+    "etiqueta": "Nombre175 Nombre197",
+    "monto": 23584.91
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1304328
+   },
+   {
+    "etiqueta": "Nombre252",
+    "monto": 251042.43
+   },
+   {
+    "etiqueta": "Nombre328 Nombre248",
+    "monto": 322075.62
+   },
+   {
+    "etiqueta": "Nombre328 oo ss",
+    "monto": 94339.62
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2294112.71
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3214,
+   "output_tokens": 304,
+   "usd": 0.004734
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_032.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre219 Nombre220 SA",
+  "emisor_cuit": "30646339160",
+  "receptor": "",
+  "numero_comprobante": "3458",
+  "fecha": "2026-07-03",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 200716.03
+   }
+  ],
+  "identificador": "120-014140/0",
+  "pertenece": "si",
+  "nota": "pago manual de servicio",
+  "uso": {
+   "input_tokens": 2471,
+   "output_tokens": 115,
+   "usd": 0.003046
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_033.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Los Nombre221 S.A.",
+  "emisor_cuit": "30308017728",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 S.A",
+  "numero_comprobante": "A 0004-00002343",
+  "fecha": "2026-08-28",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 13252215.28
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado, mismo comprobante",
+  "uso": {
+   "input_tokens": 4185,
+   "output_tokens": 136,
+   "usd": 0.004865
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_034.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre199 y Nombre200 SA",
+  "emisor_cuit": "30770914115",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0011-00027229",
+  "fecha": "2026-08-18",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 6211920
+   },
+   {
+    "etiqueta": "comisión",
+    "monto": 186357.6
+   },
+   {
+    "etiqueta": "movimiento de feria",
+    "monto": 62119.2
+   },
+   {
+    "etiqueta": "gastos Nombre421",
+    "monto": 31059.6
+   },
+   {
+    "etiqueta": "gastos Nombre224",
+    "monto": 9317.88
+   },
+   {
+    "etiqueta": "Nombre225 Nombre226",
+    "monto": 39756.29
+   },
+   {
+    "etiqueta": "retención IIBB Nombre129 Nombre130",
+    "monto": 116970.46
+   },
+   {
+    "etiqueta": "impuesto a las ganancias",
+    "monto": 46589.4
+   },
+   {
+    "etiqueta": "IVA",
+    "monto": 614094.87
+   },
+   {
+    "etiqueta": "total Nombre228",
+    "monto": 6259301.4
+   }
+  ],
+  "identificador": "Nombre004",
+  "pertenece": "si",
+  "nota": "liquidación de venta de ganado, plazos múltiples",
+  "uso": {
+   "input_tokens": 3260,
+   "output_tokens": 309,
+   "usd": 0.004805
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_035.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "BANCO Nombre064 Nombre136 S.A.",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre137 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "12156494",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "importe transferido",
+    "monto": 4000000
+   }
+  ],
+  "identificador": "4789377075140230767511",
+  "pertenece": "dudoso",
+  "nota": "Transferencia a Nombre045 Nombre105, posible vinculada",
+  "uso": {
+   "input_tokens": 2659,
+   "output_tokens": 151,
+   "usd": 0.003414
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_036.pdf": {
+  "tipo": "otro",
+  "rol": "otro",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "",
+  "fecha": "",
+  "importes": [],
+  "identificador": "",
+  "pertenece": "no",
+  "nota": "Manual de piezas de repuesto Nombre324 Nombre325, no comprobante administrativo",
+  "uso": {
+   "input_tokens": 21214,
+   "output_tokens": 80,
+   "usd": 0.021614
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_037.jpeg": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre064",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "11435075",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 325612.46
+   }
+  ],
+  "identificador": "Nro. VEP 352870067951",
+  "pertenece": "dudoso",
+  "nota": "VEP ARCA, receptor no identificado en documento",
+  "uso": {
+   "input_tokens": 3240,
+   "output_tokens": 121,
+   "usd": 0.003845
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_038.pdf": {
+  "tipo": "retencion",
+  "rol": "pago",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre081 Nombre230 S.R.L.",
+  "numero_comprobante": "2026/00001/00000007",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "importe retenido",
+    "monto": 229160.4
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2574,
+   "output_tokens": 132,
+   "usd": 0.003234
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_039.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre219 Nombre136 S.R.L.",
+  "emisor_cuit": "30646339160",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 S.A",
+  "numero_comprobante": "0081-01186450",
+  "fecha": "2026-06-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 174962.97
+   }
+  ],
+  "identificador": "7561849186",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 6969,
+   "output_tokens": 129,
+   "usd": 0.007614
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_040.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARCA",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "1669866364",
+  "fecha": "2026-08-20",
+  "importes": [
+   {
+    "etiqueta": "IVA",
+    "monto": 15260197.01
+   },
+   {
+    "etiqueta": "total",
+    "monto": 15260197.01
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "VEP consolidado, expira 2026-08-21",
+  "uso": {
+   "input_tokens": 2576,
+   "output_tokens": 146,
+   "usd": 0.003306
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_041.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre236 Nombre218",
+  "emisor_cuit": "20186946627",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000217",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 489808
+   }
+  ],
+  "identificador": "Nombre239264",
+  "pertenece": "si",
+  "nota": "triplicado impreso, original y duplicado también presentes",
+  "uso": {
+   "input_tokens": 4296,
+   "output_tokens": 131,
+   "usd": 0.004951
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_042.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "",
+  "emisor_cuit": "9931994500378",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0006-00041443",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total USD",
+    "monto": 35302.72
+   },
+   {
+    "etiqueta": "gravado pesos",
+    "monto": 43515705.7
+   },
+   {
+    "etiqueta": "IVA pesos",
+    "monto": 9138298.2
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento duplicado en imagen, transacción en USD",
+  "uso": {
+   "input_tokens": 3860,
+   "output_tokens": 163,
+   "usd": 0.004675
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_043.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre015, Nombre014",
+  "emisor_cuit": "27106849154",
+  "receptor": "Nombre131 Nombre132 el Nombre116 SA",
+  "numero_comprobante": "C-00002-00000043",
+  "fecha": "2026-08-01",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 697197.38
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "Honorarios por asesoramiento, vencimiento 16/08/2026",
+  "uso": {
+   "input_tokens": 2782,
+   "output_tokens": 139,
+   "usd": 0.003477
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_044.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre113 Nombre011 Nombre012",
+  "emisor_cuit": "20642353564",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00001222",
+  "fecha": "2026-08-01",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 1887000
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado, honorarios mensuales julio 2026",
+  "uso": {
+   "input_tokens": 3831,
+   "output_tokens": 135,
+   "usd": 0.004506
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_045.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre019 S.A.",
+  "emisor_cuit": "30735649422",
+  "receptor": "Nombre137. Nombre132 EL Nombre116 S.A.",
+  "numero_comprobante": "A 0001-00005206",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "neto gravado",
+    "monto": 996000
+   },
+   {
+    "etiqueta": "IVA 21%",
+    "monto": 209160
+   },
+   {
+    "etiqueta": "total",
+    "monto": 1205160
+   }
+  ],
+  "identificador": "Nombre004",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2757,
+   "output_tokens": 163,
+   "usd": 0.003572
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_046.jpeg": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre064",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "12560623",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 325612.46
+   }
+  ],
+  "identificador": "Nro. VEP 12225100326897",
+  "pertenece": "dudoso",
+  "nota": "VEP de ARCA, empresa externa, verificar si pertenece.",
+  "uso": {
+   "input_tokens": 2768,
+   "output_tokens": 129,
+   "usd": 0.003413
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_047.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre219 Nombre220 SA",
+  "emisor_cuit": "30646339160",
+  "receptor": "",
+  "numero_comprobante": "4920",
+  "fecha": "2026-07-03",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 174962.97
+   }
+  ],
+  "identificador": "120-014140/0",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2471,
+   "output_tokens": 109,
+   "usd": 0.003016
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_048.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre240 Nombre136 SA",
+  "emisor_cuit": "30939925480",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "A 1340-00553437",
+  "fecha": "2026-09-01",
+  "importes": [
+   {
+    "etiqueta": "total a Nombre184",
+    "monto": 791525.38
+   }
+  ],
+  "identificador": "2/6476800307",
+  "pertenece": "si",
+  "nota": "factura de servicios móviles con múltiples líneas",
+  "uso": {
+   "input_tokens": 5001,
+   "output_tokens": 142,
+   "usd": 0.005711
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_049.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "C.E.S.P.",
+  "emisor_cuit": "55869832325198",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "70015-51615416/8",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total vinculado al servicio",
+    "monto": 180569.55
+   },
+   {
+    "etiqueta": "total no vinculado al servicio",
+    "monto": 5641.05
+   },
+   {
+    "etiqueta": "total factura",
+    "monto": 186210.6
+   }
+  ],
+  "identificador": "Nombre004 7630 Nombre129 Nombre130",
+  "pertenece": "si",
+  "nota": "factura de gas, ciclo 1 de 2, descuento 30% aplicado",
+  "uso": {
+   "input_tokens": 3219,
+   "output_tokens": 198,
+   "usd": 0.004209
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_050.jpeg": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre064",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "13427280",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 62440.71
+   }
+  ],
+  "identificador": "651285449251",
+  "pertenece": "dudoso",
+  "nota": "VEP ARCA, CUIT 23-05013125-4, no es empresa",
+  "uso": {
+   "input_tokens": 3216,
+   "output_tokens": 124,
+   "usd": 0.003836
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_051.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "C.E.S.P.",
+  "emisor_cuit": "55869832325198",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "70015-51619368/9",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total vinculado al servicio",
+    "monto": 180569.55
+   },
+   {
+    "etiqueta": "total no vinculado al servicio",
+    "monto": 5641.05
+   },
+   {
+    "etiqueta": "total",
+    "monto": 186210.6
+   }
+  ],
+  "identificador": "Nombre004 7630 Nombre129 Nombre130",
+  "pertenece": "si",
+  "nota": "liquidación 2 de 2, suministro con descuento zona fría",
+  "uso": {
+   "input_tokens": 3219,
+   "output_tokens": 197,
+   "usd": 0.004204
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_052.pdf": {
+  "tipo": "resumen_cuenta",
+  "rol": "otro",
+  "emisor": "Banco Nombre064 Nombre136 S.A.",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre109 Nombre110 Nombre111",
+  "numero_comprobante": "",
+  "fecha": "2026-07-30",
+  "importes": [
+   {
+    "etiqueta": "saldo total pesos",
+    "monto": 1575554.44
+   },
+   {
+    "etiqueta": "saldo total Nombre093",
+    "monto": 4000.55
+   }
+  ],
+  "identificador": "120-363628/4",
+  "pertenece": "no",
+  "nota": "Resumen de cuenta personal, no pertenece a la empresa.",
+  "uso": {
+   "input_tokens": 4987,
+   "output_tokens": 158,
+   "usd": 0.005777
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_053.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre023",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "00011-00153429",
+  "fecha": "2026-08-09",
+  "importes": [
+   {
+    "etiqueta": "cuota region",
+    "monto": 246367.97
+   },
+   {
+    "etiqueta": "cuota Nombre023",
+    "monto": 769487.95
+   },
+   {
+    "etiqueta": "Nombre242 Nombre243",
+    "monto": 3000.01
+   },
+   {
+    "etiqueta": "total",
+    "monto": 1018855.9
+   }
+  ],
+  "identificador": "Nombre004, Calle 72 2845",
+  "pertenece": "si",
+  "nota": "débito automático factura electrónica",
+  "uso": {
+   "input_tokens": 2684,
+   "output_tokens": 191,
+   "usd": 0.003639
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_054.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre002 Nombre003 Nombre004 S.A.",
+  "emisor_cuit": "30497172214",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0003-00001728",
+  "fecha": "2026-07-31",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 872744.13
+   }
+  ],
+  "identificador": "10-7292/10-7162/10-7189/10-7202/10-7247",
+  "pertenece": "si",
+  "nota": "factura de combustible Nombre003",
+  "uso": {
+   "input_tokens": 2984,
+   "output_tokens": 156,
+   "usd": 0.003764
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_055.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARBA",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "192427094",
+  "fecha": "2026-08-20",
+  "importes": [
+   {
+    "etiqueta": "monto a Nombre184",
+    "monto": 666563.8
+   }
+  ],
+  "identificador": "2026-07",
+  "pertenece": "si",
+  "nota": "VEP ingresos brutos período julio 2026",
+  "uso": {
+   "input_tokens": 2664,
+   "output_tokens": 133,
+   "usd": 0.003329
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_056.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "BANCO Nombre064 Nombre136 S.A.",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre137 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "10233657",
+  "fecha": "2026-08-10",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 2000000
+   }
+  ],
+  "identificador": "Adelanto Retiro Nombre244",
+  "pertenece": "dudoso",
+  "nota": "transferencia a accionista Nombre045 Nombre105 Nombre044",
+  "uso": {
+   "input_tokens": 2661,
+   "output_tokens": 147,
+   "usd": 0.003396
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_057.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre245 Nombre059 Nombre246 Nombre220 Nombre247 RURAL",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "173439841804",
+  "fecha": "2026-08-12",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 246165.99
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "pago de Nombre044 Nombre045 a Nombre059 por empresa",
+  "uso": {
+   "input_tokens": 2684,
+   "output_tokens": 129,
+   "usd": 0.003329
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_058.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre124 Nombre103 Nombre104",
+  "numero_comprobante": "00000027",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1554860
+   },
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1941652.45
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2740889.83
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3219,
+   "output_tokens": 169,
+   "usd": 0.004064
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_059.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre250 Eléctrica Nombre422 Nombre423",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A-0014-00128667",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 95528.61
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 108359.02
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 12770.41
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60.0
+   }
+  ],
+  "identificador": "Ruta 86 Nº0 KM.32,5 Nombre004",
+  "pertenece": "si",
+  "nota": "liquidación 2/2, Nombre309 estimado 404 kWh",
+  "uso": {
+   "input_tokens": 3312,
+   "output_tokens": 223,
+   "usd": 0.004427
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_060.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "Nombre255. Nombre216. EL Nombre116 SA",
+  "numero_comprobante": "0025-00008787",
+  "fecha": "2026-07-30",
+  "importes": [
+   {
+    "etiqueta": "Nombre253 Nombre254",
+    "monto": 40546.89
+   },
+   {
+    "etiqueta": "Nombre254 500",
+    "monto": 598154.94
+   },
+   {
+    "etiqueta": "IVA 21%",
+    "monto": 134127.37
+   },
+   {
+    "etiqueta": "total",
+    "monto": 868141.39
+   }
+  ],
+  "identificador": "Cuenta Nombre316 07630",
+  "pertenece": "si",
+  "nota": "combustibles múltiples productos",
+  "uso": {
+   "input_tokens": 2724,
+   "output_tokens": 178,
+   "usd": 0.003614
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_061.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre172 Nombre021 Nombre173",
+  "emisor_cuit": "20791832273",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000644",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 16213333.5
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "triplicado de factura, original y duplicado iguales",
+  "uso": {
+   "input_tokens": 4149,
+   "output_tokens": 134,
+   "usd": 0.004819
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_062.jpeg": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Nombre064",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "13346505",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 62941.69
+   }
+  ],
+  "identificador": "00989504399891649547",
+  "pertenece": "dudoso",
+  "nota": "VEP de ARCA, posible gasto de empresa pero sin confirmación de receptor",
+  "uso": {
+   "input_tokens": 3216,
+   "output_tokens": 125,
+   "usd": 0.003841
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_063.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre081 Nombre230 S.R.L.",
+  "emisor_cuit": "30126414930",
+  "receptor": "Nombre131 Nombre132 El Nombre116",
+  "numero_comprobante": "3045-00000059",
+  "fecha": "2026-08-27",
+  "importes": [
+   {
+    "etiqueta": "total USD",
+    "monto": 36629.34
+   },
+   {
+    "etiqueta": "total ARS",
+    "monto": 55456098.36
+   }
+  ],
+  "identificador": "Nombre256 3599106",
+  "pertenece": "si",
+  "nota": "Factura en Nombre093, tipo cambio 1.514",
+  "uso": {
+   "input_tokens": 5052,
+   "output_tokens": 161,
+   "usd": 0.005857
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_064.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre249 Nombre250 Nombre423",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A-0014-00128661",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 28067.96
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 32067.29
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 3939.33
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60.0
+   }
+  ],
+  "identificador": "Ruta 86 Nº0 KM.32, Suministro 80439",
+  "pertenece": "si",
+  "nota": "liquidación 2/2, Nombre309 estimado 0 kWh",
+  "uso": {
+   "input_tokens": 3279,
+   "output_tokens": 219,
+   "usd": 0.004374
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_065.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre204 Nombre136 S.A.",
+  "emisor_cuit": "30999845803",
+  "receptor": "Nombre131 Nombre132 E",
+  "numero_comprobante": "03950-07882992",
+  "fecha": "2026-07-28",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 164889.25
+   }
+  ],
+  "identificador": "Nombre334 Nombre008 Nombre367 Nombre331 AV. 1530, 7630 Nombre004",
+  "pertenece": "si",
+  "nota": "débito automático, período 28/06-27/07",
+  "uso": {
+   "input_tokens": 5599,
+   "output_tokens": 158,
+   "usd": 0.006389
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_066.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre262 Nombre263 Y Nombre264. S.A.I.C.F.I.",
+  "emisor_cuit": "30858327994",
+  "receptor": "Nombre131 Nombre216.EL Nombre116 S.A.",
+  "numero_comprobante": "0019 00028462",
+  "fecha": "2026-08-28",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 4581660.12
+   }
+  ],
+  "identificador": "72 2845, 7630-Nombre004, BS. AS.",
+  "pertenece": "si",
+  "nota": "adaptador girasoleio Nombre263 para Nombre324 Nombre325 X9",
+  "uso": {
+   "input_tokens": 3911,
+   "output_tokens": 168,
+   "usd": 0.004751
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_067.pdf": {
+  "tipo": "resumen_sueldos",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "",
+  "fecha": "2026-08-01",
+  "importes": [
+   {
+    "etiqueta": "Nombre045 Nombre105 Nombre044",
+    "monto": 1800000
+   },
+   {
+    "etiqueta": "Nombre045 Nombre105 Nombre008",
+    "monto": 1800000
+   },
+   {
+    "etiqueta": "Nombre267 DA Nombre268 Nombre269 Nombre270",
+    "monto": 1818366.29
+   },
+   {
+    "etiqueta": "Nombre124 Nombre103 Nombre104",
+    "monto": 1941652.45
+   },
+   {
+    "etiqueta": "Nombre115 Nombre049 Nombre007",
+    "monto": 1333898.88
+   },
+   {
+    "etiqueta": "Nombre271 Nombre272 Nombre273",
+    "monto": 863172.31
+   },
+   {
+    "etiqueta": "Nombre274 Nombre044 Nombre022",
+    "monto": 1685140.12
+   },
+   {
+    "etiqueta": "Nombre275 Nombre276 Nombre012",
+    "monto": 1621767.04
+   },
+   {
+    "etiqueta": "Nombre116 Nombre217 Nombre218",
+    "monto": 1626655.04
+   },
+   {
+    "etiqueta": "Nombre108 Nombre106 Nombre107",
+    "monto": 1823304.29
+   },
+   {
+    "etiqueta": "total neto",
+    "monto": 13023502.01
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3242,
+   "output_tokens": 361,
+   "usd": 0.005047
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_068.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre080 S.A",
+  "emisor_cuit": "30726480462",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "1-15943",
+  "fecha": "2026-07-08",
+  "importes": [
+   {
+    "etiqueta": "total operación",
+    "monto": 1586046.7
+   },
+   {
+    "etiqueta": "total Nombre368",
+    "monto": 66811.32
+   },
+   {
+    "etiqueta": "total retenciones",
+    "monto": 101564.4
+   },
+   {
+    "etiqueta": "importe neto a Nombre184",
+    "monto": 1417670.98
+   }
+  ],
+  "identificador": "Nombre004",
+  "pertenece": "si",
+  "nota": "Liquidación primaria de granos, Nombre295 G2.",
+  "uso": {
+   "input_tokens": 3619,
+   "output_tokens": 201,
+   "usd": 0.004624
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_069.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre278 Nombre142 S.C.",
+  "emisor_cuit": "30586672456",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 S.A.",
+  "numero_comprobante": "A 0011-00001957",
+  "fecha": "2026-08-03",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 1763876.28
+   },
+   {
+    "etiqueta": "IVA 10.5%",
+    "monto": 370414.02
+   },
+   {
+    "etiqueta": "total",
+    "monto": 2134290.3
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "presupuesto N° 10899",
+  "uso": {
+   "input_tokens": 2842,
+   "output_tokens": 177,
+   "usd": 0.003727
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_070.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre023",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "00011-00155355",
+  "fecha": "2026-08-09",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 4680.99
+   }
+  ],
+  "identificador": "609504",
+  "pertenece": "si",
+  "nota": "cuota región, débito automático 30/07/2026",
+  "uso": {
+   "input_tokens": 2603,
+   "output_tokens": 128,
+   "usd": 0.003243
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_071.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "9535379",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "importe transferido",
+    "monto": 742155
+   }
+  ],
+  "identificador": "976826147",
+  "pertenece": "no",
+  "nota": "transferencia judicial a Nombre407, no es gasto de empresa",
+  "uso": {
+   "input_tokens": 2562,
+   "output_tokens": 110,
+   "usd": 0.003112
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_072.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre112 Nombre006 Nombre007",
+  "numero_comprobante": "00000002",
+  "fecha": "2026-08-11",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1669294.74
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1437974
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2299899.25
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "no",
+  "nota": "Documento de empresa vinculada no dirigido a Nombre131",
+  "uso": {
+   "input_tokens": 3308,
+   "output_tokens": 175,
+   "usd": 0.004183
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_073.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre081 Nombre082 S.A.",
+  "emisor_cuit": "30956357683",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000043",
+  "fecha": "2025-11-26",
+  "importes": [
+   {
+    "etiqueta": "total USD",
+    "monto": 235960
+   },
+   {
+    "etiqueta": "total ARS",
+    "monto": 342142000
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "Nombre323 usado. Original, duplicado, triplicado.",
+  "uso": {
+   "input_tokens": 4611,
+   "output_tokens": 152,
+   "usd": 0.005371
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_074.pdf": {
+  "tipo": "retencion",
+  "rol": "pago",
+  "emisor": "Nombre178 Nombre176 de Nombre190 de Nombre191",
+  "emisor_cuit": "30607691709",
+  "receptor": "Nombre141 Nombre045 Nombre142 SA",
+  "numero_comprobante": "5165093",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "Nombre194 Nombre195 Nombre424",
+    "monto": 75000
+   }
+  ],
+  "identificador": "09-40171-01",
+  "pertenece": "no",
+  "nota": "empresa vinculada Nombre141 Nombre045 Nombre142 SA",
+  "uso": {
+   "input_tokens": 2677,
+   "output_tokens": 145,
+   "usd": 0.003402
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_075.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "EL Nombre116",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0001-00146121",
+  "fecha": "2026-08-28",
+  "importes": [],
+  "identificador": "72 Nº 2845 Nombre287 AV 59 Y 57",
+  "pertenece": "si",
+  "nota": "documento incompleto, sin importes finales",
+  "uso": {
+   "input_tokens": 2491,
+   "output_tokens": 129,
+   "usd": 0.003136
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_076.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0002-00031535",
+  "fecha": "2026-07-27",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 480000
+   },
+   {
+    "etiqueta": "tasa general",
+    "monto": 100800
+   },
+   {
+    "etiqueta": "total",
+    "monto": 580800
+   }
+  ],
+  "identificador": "Calle 722, Nombre004",
+  "pertenece": "si",
+  "nota": "Factura de fertilizantes y preparación de muestra",
+  "uso": {
+   "input_tokens": 3224,
+   "output_tokens": 158,
+   "usd": 0.004014
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_077.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre249 Nombre250 Eléctrica",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "B-0014-02367928",
+  "fecha": "2026-07-23",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 30335.87
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 32491.11
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 2095.24
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Calle 59 Nº3200, Suministro 6",
+  "pertenece": "si",
+  "nota": "Liquidación 2/2, vencimiento 04/09/2026",
+  "uso": {
+   "input_tokens": 3362,
+   "output_tokens": 214,
+   "usd": 0.004432
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_078.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre019 S.A.",
+  "emisor_cuit": "30735649422",
+  "receptor": "Nombre137. Nombre132 EL Nombre116 S.A.",
+  "numero_comprobante": "0001-00005207",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "neto gravado",
+    "monto": 20000
+   },
+   {
+    "etiqueta": "IVA 21%",
+    "monto": 4200
+   },
+   {
+    "etiqueta": "total",
+    "monto": 24200
+   }
+  ],
+  "identificador": "Nombre004",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2728,
+   "output_tokens": 160,
+   "usd": 0.003528
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_079.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre275 Nombre276 Nombre012",
+  "numero_comprobante": "",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1621767.04
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1299440
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2288475.99
+   }
+  ],
+  "identificador": "00000034",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3209,
+   "output_tokens": 164,
+   "usd": 0.004029
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_080.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "O.A.C.I. S.A.",
+  "emisor_cuit": "30944632768",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0028-00068988",
+  "fecha": "2026-08-14",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 797940.7
+   },
+   {
+    "etiqueta": "IVA",
+    "monto": 167567.55
+   },
+   {
+    "etiqueta": "total",
+    "monto": 965508.25
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3056,
+   "output_tokens": 156,
+   "usd": 0.003836
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_081.pdf": {
+  "tipo": "retencion",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre133 Nombre134 Nombre135",
+  "numero_comprobante": "0000-2026-000018",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "monto comprobante",
+    "monto": 8347680
+   },
+   {
+    "etiqueta": "monto retencion",
+    "monto": 165610.2
+   }
+  ],
+  "identificador": "Factura 00002-00001127",
+  "pertenece": "si",
+  "nota": "certificado de retención por ganancias",
+  "uso": {
+   "input_tokens": 2833,
+   "output_tokens": 163,
+   "usd": 0.003648
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_082.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre290 Nombre291 S.A.",
+  "emisor_cuit": "30192752696",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A 0019-00018849",
+  "fecha": "2026-07-21",
+  "importes": [
+   {
+    "etiqueta": "subtotal USD",
+    "monto": 4900
+   },
+   {
+    "etiqueta": "total USD",
+    "monto": 5414.5
+   }
+  ],
+  "identificador": "Calle 72 Nro 2845, Nombre004",
+  "pertenece": "si",
+  "nota": "Balanza electrónica, pago en USD o pesos según cotización Banco Nombre205",
+  "uso": {
+   "input_tokens": 3030,
+   "output_tokens": 177,
+   "usd": 0.003915
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_083.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre249 Nombre250",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A-0014-00128665",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 28007.62
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 31998.49
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 3930.87
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60.0
+   }
+  ],
+  "identificador": "Ruta 86 Nº0 KM.28, Suministro 3",
+  "pertenece": "si",
+  "nota": "Liquidación 2/2, Nombre309 estimado cero",
+  "uso": {
+   "input_tokens": 3274,
+   "output_tokens": 211,
+   "usd": 0.004329
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_084.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre085 Nombre083 Nombre084",
+  "emisor_cuit": "20154722375",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000279",
+  "fecha": "2026-08-03",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 552027.92
+   }
+  ],
+  "identificador": "cp.2908",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 4209,
+   "output_tokens": 123,
+   "usd": 0.004824
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_085.pdf": {
+  "tipo": "echeq",
+  "rol": "pago",
+  "emisor": "BANCO DE Nombre296 Y Nombre129 Nombre130 S.A.U.",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "00007683",
+  "fecha": "2026-06-26",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 2000000
+   }
+  ],
+  "identificador": "G7V955Nombre29749EMP",
+  "pertenece": "si",
+  "nota": "endosado a Nombre141 Nombre045 Nombre142 SA",
+  "uso": {
+   "input_tokens": 7057,
+   "output_tokens": 150,
+   "usd": 0.007807
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_086.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre052 Nombre053 Nombre156",
+  "emisor_cuit": "33751612109",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A 0004-00005765",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 305575.26
+   },
+   {
+    "etiqueta": "IVA 21%",
+    "monto": 64170.8
+   },
+   {
+    "etiqueta": "total",
+    "monto": 369746.06
+   }
+  ],
+  "identificador": "008140",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2991,
+   "output_tokens": 158,
+   "usd": 0.003781
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_087.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "5542",
+  "fecha": "2026-07-13",
+  "importes": [
+   {
+    "etiqueta": "importe pagado",
+    "monto": 169746.06
+   }
+  ],
+  "identificador": "33751612109",
+  "pertenece": "dudoso",
+  "nota": "CUIT 33751612109 no pertenece a la empresa",
+  "uso": {
+   "input_tokens": 2476,
+   "output_tokens": 114,
+   "usd": 0.003046
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_088.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "EL Nombre086 DE Nombre087 SA",
+  "emisor_cuit": "30143959176",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00001 00005363",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 590673.6
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado: original, duplicado y triplicado",
+  "uso": {
+   "input_tokens": 4332,
+   "output_tokens": 136,
+   "usd": 0.005012
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_089.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre115 Nombre049 Nombre007",
+  "numero_comprobante": "00000028",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1333898.88
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 328725
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 1879666.17
+   }
+  ],
+  "identificador": "Nombre115 Nombre049 Nombre007 - 08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3230,
+   "output_tokens": 178,
+   "usd": 0.00412
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_090.pdf": {
+  "tipo": "resumen_sueldos",
+  "rol": "origen",
+  "emisor": "Nombre063 - Nombre298 Nombre299 DEL Nombre300",
+  "emisor_cuit": "30642543624",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "",
+  "fecha": "2026-07-25",
+  "importes": [
+   {
+    "etiqueta": "Nombre045 Nombre105 Nombre301",
+    "monto": 686000.9
+   },
+   {
+    "etiqueta": "Nombre045 Nombre105 Nombre302",
+    "monto": 1357057.01
+   },
+   {
+    "etiqueta": "total general",
+    "monto": 2043057.91
+   }
+  ],
+  "identificador": "01/07/2026 al 31/07/2026",
+  "pertenece": "dudoso",
+  "nota": "Afiliados a nombre de personas, no de la empresa.",
+  "uso": {
+   "input_tokens": 3000,
+   "output_tokens": 202,
+   "usd": 0.00401
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_091.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARCA",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "1670810156",
+  "fecha": "2026-08-24",
+  "importes": [
+   {
+    "etiqueta": "Ganancias",
+    "monto": 165610.2
+   }
+  ],
+  "identificador": "2026-08",
+  "pertenece": "si",
+  "nota": "VEP pendiente de pago, expira 2026-09-23",
+  "uso": {
+   "input_tokens": 2611,
+   "output_tokens": 137,
+   "usd": 0.003296
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_092.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARCA",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "1670805904",
+  "fecha": "2026-08-24",
+  "importes": [
+   {
+    "etiqueta": "IVA",
+    "monto": 1221783.91
+   },
+   {
+    "etiqueta": "total",
+    "monto": 1221783.91
+   }
+  ],
+  "identificador": "",
+  "pertenece": "no",
+  "nota": "VEP a nombre de Nombre141 Nombre045 Nombre142 SA",
+  "uso": {
+   "input_tokens": 2580,
+   "output_tokens": 135,
+   "usd": 0.003255
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_093.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARCA",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "1663742379",
+  "fecha": "2026-08-07",
+  "importes": [
+   {
+    "etiqueta": "ganancias sociedades",
+    "monto": 5917909.11
+   }
+  ],
+  "identificador": "2026",
+  "pertenece": "si",
+  "nota": "anticipo cuota 7 impuesto ganancias",
+  "uso": {
+   "input_tokens": 2602,
+   "output_tokens": 132,
+   "usd": 0.003262
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_094.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre250 Eléctrica Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A-0014-00128663",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 566108.58
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 806710.39
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 106944.77
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Ruta 86 Nº0 KM.32, Suministro 2",
+  "pertenece": "si",
+  "nota": "Liquidación 2/2, Nombre309 estimado",
+  "uso": {
+   "input_tokens": 3329,
+   "output_tokens": 212,
+   "usd": 0.004389
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_095.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre199 y Nombre200 SA",
+  "emisor_cuit": "30770914115",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0011-00027228",
+  "fecha": "2026-08-18",
+  "importes": [
+   {
+    "etiqueta": "subtotal",
+    "monto": 6614400
+   },
+   {
+    "etiqueta": "total Nombre228",
+    "monto": 6668887.34
+   }
+  ],
+  "identificador": "Nombre004",
+  "pertenece": "si",
+  "nota": "venta de hacienda (4 vacas conserva)",
+  "uso": {
+   "input_tokens": 3287,
+   "output_tokens": 156,
+   "usd": 0.004067
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_096.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre063",
+  "emisor_cuit": "30642543624",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "0080-00365134",
+  "fecha": "2026-07-24",
+  "importes": [
+   {
+    "etiqueta": "total Nombre425 plan de servicio",
+    "monto": 2043057.91
+   },
+   {
+    "etiqueta": "neto gravado",
+    "monto": 2043057.91
+   },
+   {
+    "etiqueta": "IVA Nombre426 10,50%",
+    "monto": 214521.08
+   },
+   {
+    "etiqueta": "total",
+    "monto": 2257578.99
+   }
+  ],
+  "identificador": "07/2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2693,
+   "output_tokens": 184,
+   "usd": 0.003613
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_097.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre017 Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "B-0014-02381660",
+  "fecha": "2026-07-29",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 57546.39
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 61588.92
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 3982.53
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Calle 40 Nº5242, Nombre004, Suministro 9",
+  "pertenece": "si",
+  "nota": "liquidación 1/2, vencimiento 10/08/2026",
+  "uso": {
+   "input_tokens": 3352,
+   "output_tokens": 212,
+   "usd": 0.004412
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_098.pdf": {
+  "tipo": "echeq",
+  "rol": "pago",
+  "emisor": "BANCO DE Nombre296 Y Nombre129 Nombre130 S.A.U.",
+  "emisor_cuit": "30726480462",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 S.A.",
+  "numero_comprobante": "00007727",
+  "fecha": "2026-07-03",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 4516775.66
+   }
+  ],
+  "identificador": "G0Nombre3133G187V9Nombre314",
+  "pertenece": "si",
+  "nota": "endosado a Nombre310 GAS Nombre311 Nombre312",
+  "uso": {
+   "input_tokens": 3911,
+   "output_tokens": 161,
+   "usd": 0.004716
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_099.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre315 Nombre262 Nombre008",
+  "emisor_cuit": "20199420650",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000913",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 2752750
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "original, duplicado y triplicado del mismo comprobante",
+  "uso": {
+   "input_tokens": 4140,
+   "output_tokens": 131,
+   "usd": 0.004795
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_100.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33042402323",
+  "receptor": "",
+  "numero_comprobante": "0025-00008701",
+  "fecha": "2026-07-30",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 2766422.22
+   }
+  ],
+  "identificador": "",
+  "pertenece": "no",
+  "nota": "Nombre141 Nombre045 Nombre142 SA, empresa vinculada",
+  "uso": {
+   "input_tokens": 2851,
+   "output_tokens": 123,
+   "usd": 0.003466
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_101.pdf": {
+  "tipo": "retencion",
+  "rol": "origen",
+  "emisor": "Nombre246 Nombre136 DE Nombre208 Nombre317 Y Nombre318 (Nombre059) Nombre198",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0031880663",
+  "fecha": "2026-07-16",
+  "importes": [
+   {
+    "etiqueta": "total pagado",
+    "monto": 246165.99
+   }
+  ],
+  "identificador": "07-2026 / 0",
+  "pertenece": "si",
+  "nota": "nota de crédito Nombre059, vencimiento 16/08/2026",
+  "uso": {
+   "input_tokens": 3410,
+   "output_tokens": 162,
+   "usd": 0.00422
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_102.pdf": {
+  "tipo": "retencion",
+  "rol": "pago",
+  "emisor": "LOS Nombre221 S.A.",
+  "emisor_cuit": "30308017728",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0000-2026-000020",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "monto retenido",
+    "monto": 238515.7
+   },
+   {
+    "etiqueta": "monto comprobante origen",
+    "monto": 11992955.0
+   }
+  ],
+  "identificador": "Factura 00004-00002343",
+  "pertenece": "si",
+  "nota": "Retención Ganancias sobre servicios no ejecutados dependencia",
+  "uso": {
+   "input_tokens": 2819,
+   "output_tokens": 177,
+   "usd": 0.003704
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_103.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre267 Da Nombre268 Nombre269 Nombre270",
+  "numero_comprobante": "00000023",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1818366.29
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1457360
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2565307.45
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3209,
+   "output_tokens": 166,
+   "usd": 0.004039
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_104.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre250 Eléctrica Nombre377 Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre111 Nombre109 Nombre110",
+  "numero_comprobante": "B-0014-02392599",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 424366.1
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 453839.54
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 29413.44
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Suministro 3, Nombre127 64553",
+  "pertenece": "no",
+  "nota": "Documento a nombre de persona física, no de la empresa",
+  "uso": {
+   "input_tokens": 3340,
+   "output_tokens": 201,
+   "usd": 0.004345
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_105.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre204 Nombre136 S.A.",
+  "emisor_cuit": "30999845803",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "A03950-07857017",
+  "fecha": "2026-07-28",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 74739.06
+   }
+  ],
+  "identificador": "Av. 2870 Nombre106, Av. De la Nombre374 y Nombre375, 7630 Nombre004",
+  "pertenece": "si",
+  "nota": "Factura de servicios de telecomunicaciones con débito automático",
+  "uso": {
+   "input_tokens": 5570,
+   "output_tokens": 169,
+   "usd": 0.006415
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_106.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33042402323",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000137",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "neto gravado",
+    "monto": 25000006.73
+   },
+   {
+    "etiqueta": "IVA 21%",
+    "monto": 5250001.41
+   },
+   {
+    "etiqueta": "total",
+    "monto": 30250008.14
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "Original. Documento triplicado impreso.",
+  "uso": {
+   "input_tokens": 4173,
+   "output_tokens": 175,
+   "usd": 0.005048
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_107.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "",
+  "numero_comprobante": "00084354",
+  "fecha": "2026-08-24",
+  "importes": [
+   {
+    "etiqueta": "monto transferido",
+    "monto": 48249866.67
+   }
+  ],
+  "identificador": "Nombre323 Nombre324 Nombre325",
+  "pertenece": "si",
+  "nota": "transferencia a cuenta de terceros, concepto cuota",
+  "uso": {
+   "input_tokens": 2622,
+   "output_tokens": 114,
+   "usd": 0.003192
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_108.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre017 Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "B-0014-02381661",
+  "fecha": "2026-07-29",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 58953.68
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 63077.03
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 4063.35
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Calle 40 Nº5242, Nombre004",
+  "pertenece": "si",
+  "nota": "liquidación 2/2, suministro 80439009",
+  "uso": {
+   "input_tokens": 3352,
+   "output_tokens": 202,
+   "usd": 0.004362
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_109.jpg": {
+  "tipo": "resumen_cuenta",
+  "rol": "otro",
+  "emisor": "",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "",
+  "fecha": "",
+  "importes": [
+   {
+    "etiqueta": "Enero Nombre326",
+    "monto": 3456000
+   },
+   {
+    "etiqueta": "Enero Nombre327",
+    "monto": 3836390
+   },
+   {
+    "etiqueta": "Febrero Nombre326",
+    "monto": 3456000
+   },
+   {
+    "etiqueta": "Febrero Nombre327",
+    "monto": 4445437
+   },
+   {
+    "etiqueta": "Marzo Nombre326",
+    "monto": 3456000
+   },
+   {
+    "etiqueta": "Marzo Nombre327",
+    "monto": 3327618
+   },
+   {
+    "etiqueta": "Abril Nombre326",
+    "monto": 3456000
+   },
+   {
+    "etiqueta": "Abril Nombre327",
+    "monto": 3641005
+   },
+   {
+    "etiqueta": "Mayo Nombre326",
+    "monto": 3456000
+   },
+   {
+    "etiqueta": "Mayo Nombre327",
+    "monto": 3513863
+   },
+   {
+    "etiqueta": "Junio Nombre326",
+    "monto": 3456000
+   },
+   {
+    "etiqueta": "Junio Nombre327",
+    "monto": 3573717
+   },
+   {
+    "etiqueta": "Total Nombre326",
+    "monto": 20736000
+   },
+   {
+    "etiqueta": "Total Nombre327",
+    "monto": 22338030
+   },
+   {
+    "etiqueta": "Saldo",
+    "monto": 1602030
+   }
+  ],
+  "identificador": "01-2026 a 06-2026",
+  "pertenece": "si",
+  "nota": "Resumen de saldos semestrales, no comprobante de gasto.",
+  "uso": {
+   "input_tokens": 3070,
+   "output_tokens": 372,
+   "usd": 0.00493
+  },
+  "vision": true,
+  "truncado": false
+ },
+ "doc_110.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre047 Nombre004 S.A.",
+  "emisor_cuit": "30230035963",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00002 00000427",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 99825
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado, original y duplicado incluidos",
+  "uso": {
+   "input_tokens": 4287,
+   "output_tokens": 132,
+   "usd": 0.004947
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_111.pdf": {
+  "tipo": "retencion",
+  "rol": "pago",
+  "emisor": "Nombre133 Nombre134 Nombre135",
+  "emisor_cuit": "20258662710",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0000-2026-000018",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "monto comprobante origen",
+    "monto": 8347680
+   },
+   {
+    "etiqueta": "monto retencion",
+    "monto": 165610.2
+   }
+  ],
+  "identificador": "00002-00001127",
+  "pertenece": "si",
+  "nota": "retención impuesto ganancias por servicios",
+  "uso": {
+   "input_tokens": 2815,
+   "output_tokens": 163,
+   "usd": 0.00363
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_112.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre219 Nombre136 S.R.L.",
+  "emisor_cuit": "30646339160",
+  "receptor": "Nombre131 EL Nombre116 S.A",
+  "numero_comprobante": "0081-01187551",
+  "fecha": "2026-06-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 200716.03
+   }
+  ],
+  "identificador": "RUTA 86 KM 32, Nombre004, CP 7630",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 6773,
+   "output_tokens": 139,
+   "usd": 0.007468
+  },
+  "vision": false,
+  "truncado": true
+ },
+ "doc_113.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre116 Nombre217 Nombre218",
+  "emisor_cuit": "20128719797",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00001 00000003",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 3500000
+   }
+  ],
+  "identificador": "Nombre427 Nombre428 52 - Nombre334 Nombre429, Nombre129 Nombre130",
+  "pertenece": "si",
+  "nota": "documento triplicado, original duplicado triplicado",
+  "uso": {
+   "input_tokens": 3774,
+   "output_tokens": 145,
+   "usd": 0.004499
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_114.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre141 Nombre045 Nombre142 SA",
+  "emisor_cuit": "33537902382",
+  "receptor": "Nombre112, Nombre044 Nombre143",
+  "numero_comprobante": "00000003",
+  "fecha": "2026-07-15",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1060010.29
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1416723.0
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2266230.01
+   }
+  ],
+  "identificador": "07-2026",
+  "pertenece": "no",
+  "nota": "Empleado de empresa vinculada, no de El Nombre116 SA",
+  "uso": {
+   "input_tokens": 3211,
+   "output_tokens": 179,
+   "usd": 0.004106
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_115.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Banco Nombre064 Nombre136 SA",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "04054323",
+  "fecha": "2026-07-31",
+  "importes": [
+   {
+    "etiqueta": "importe transferido",
+    "monto": 1000000
+   }
+  ],
+  "identificador": "Retiro Julio 26",
+  "pertenece": "dudoso",
+  "nota": "transferencia a persona física, relación con empresa unclear",
+  "uso": {
+   "input_tokens": 2658,
+   "output_tokens": 141,
+   "usd": 0.003363
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_116.pdf": {
+  "tipo": "comprobante_pago",
+  "rol": "pago",
+  "emisor": "Banco Nombre064 Nombre136 S.A.",
+  "emisor_cuit": "30836827261",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "12162955",
+  "fecha": "2026-08-31",
+  "importes": [
+   {
+    "etiqueta": "importe",
+    "monto": 4000000
+   }
+  ],
+  "identificador": "Retiro Agosto 26",
+  "pertenece": "dudoso",
+  "nota": "Pago a Nombre045 Nombre105 Nombre008, vinculado a Nombre141 Nombre045.",
+  "uso": {
+   "input_tokens": 2658,
+   "output_tokens": 154,
+   "usd": 0.003428
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_117.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre028 ELECTRICIDAD S.A.",
+  "emisor_cuit": "30004356126",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "0005-00014682",
+  "fecha": "2026-06-01",
+  "importes": [
+   {
+    "etiqueta": "gravado",
+    "monto": 12745.12
+   },
+   {
+    "etiqueta": "IVA 10.5%",
+    "monto": 1338.24
+   },
+   {
+    "etiqueta": "total",
+    "monto": 14083.36
+   }
+  ],
+  "identificador": "72-2845",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2791,
+   "output_tokens": 164,
+   "usd": 0.003611
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_118.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre045 Nombre105 Nombre008",
+  "numero_comprobante": "00000013",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1800000
+   },
+   {
+    "etiqueta": "Nombre328 Nombre248",
+    "monto": 277599
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2077599
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1800000
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2908,
+   "output_tokens": 177,
+   "usd": 0.003793
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_119.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre058 Nombre056 Nombre057",
+  "emisor_cuit": "20123986774",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00003 00001684",
+  "fecha": "2026-08-12",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 58080
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "documento triplicado, mismo comprobante",
+  "uso": {
+   "input_tokens": 4023,
+   "output_tokens": 129,
+   "usd": 0.004668
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_120.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre274 Nombre044 Nombre022",
+  "numero_comprobante": "00000032",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 1685140.12
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1349920.01
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2378262.22
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3209,
+   "output_tokens": 168,
+   "usd": 0.004049
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_121.pdf": {
+  "tipo": "vep_impuesto",
+  "rol": "origen",
+  "emisor": "ARCA",
+  "emisor_cuit": "",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "1662208122",
+  "fecha": "2026-08-05",
+  "importes": [
+   {
+    "etiqueta": "Nombre174 Nombre175. Nombre176",
+    "monto": 2453504.74
+   },
+   {
+    "etiqueta": "EMPLEADOR-Nombre177 Nombre175. Nombre176",
+    "monto": 1782313.95
+   },
+   {
+    "etiqueta": "Nombre174 Nombre178 Nombre176",
+    "monto": 670389.94
+   },
+   {
+    "etiqueta": "Nombre177 Nombre179 SOCIALES",
+    "monto": 335194.97
+   },
+   {
+    "etiqueta": "Nombre329.Nombre180 DE Nombre181 L 24557",
+    "monto": 2455541.46
+   },
+   {
+    "etiqueta": "Nombre194 Nombre330",
+    "monto": 184624.48
+   },
+   {
+    "etiqueta": "Nombre330",
+    "monto": 184624.48
+   },
+   {
+    "etiqueta": "total",
+    "monto": 8066194.02
+   }
+  ],
+  "identificador": "2026-07",
+  "pertenece": "si",
+  "nota": "VEP pendiente, Empleadores SICOSS Saldo DJ",
+  "uso": {
+   "input_tokens": 2737,
+   "output_tokens": 297,
+   "usd": 0.004222
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_122.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre250 Eléctrica Nombre017 Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre111 Nombre109 Nombre110",
+  "numero_comprobante": "B-0014-02392598",
+  "fecha": "2026-08-04",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 415134.84
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 444024.46
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 28829.62
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "64553-3",
+  "pertenece": "dudoso",
+  "nota": "Suministro a persona fisica, verificar si es gasto empresa",
+  "uso": {
+   "input_tokens": 3339,
+   "output_tokens": 195,
+   "usd": 0.004314
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_123.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre045 Nombre105 Nombre044",
+  "numero_comprobante": "00000003",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 1800000
+   },
+   {
+    "etiqueta": "Nombre174 empleador",
+    "monto": 277599
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 2077599
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 2908,
+   "output_tokens": 160,
+   "usd": 0.003708
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_124.pdf": {
+  "tipo": "recibo_sueldo",
+  "rol": "origen",
+  "emisor": "Nombre131 Nombre132 El Nombre116 SA",
+  "emisor_cuit": "30719795892",
+  "receptor": "Nombre271 Nombre272 Nombre273",
+  "numero_comprobante": "00000031",
+  "fecha": "2026-08-06",
+  "importes": [
+   {
+    "etiqueta": "sueldo Nombre144",
+    "monto": 863172.31
+   },
+   {
+    "etiqueta": "sueldo neto",
+    "monto": 666571
+   },
+   {
+    "etiqueta": "Nombre145 total empleador",
+    "monto": 1269049.25
+   }
+  ],
+  "identificador": "08-2026",
+  "pertenece": "si",
+  "nota": "",
+  "uso": {
+   "input_tokens": 3213,
+   "output_tokens": 166,
+   "usd": 0.004043
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_125.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre249 Nombre250 General Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "A-0014-00128669",
+  "fecha": "2026-08-13",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 28048
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 32044.53
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 3936.53
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Ruta 86 Nº0 KM.32, Nombre004",
+  "pertenece": "si",
+  "nota": "liquidación 2/2, suministro rural residencial",
+  "uso": {
+   "input_tokens": 3288,
+   "output_tokens": 209,
+   "usd": 0.004333
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_126.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre333 Insumos Nombre156",
+  "emisor_cuit": "30845505064",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 S.A",
+  "numero_comprobante": "0010-00071348",
+  "fecha": "2026-04-28",
+  "importes": [
+   {
+    "etiqueta": "total USD",
+    "monto": 92867.5
+   }
+  ],
+  "identificador": "72 2845 0",
+  "pertenece": "si",
+  "nota": "factura en Nombre093, semillas Nombre295",
+  "uso": {
+   "input_tokens": 3521,
+   "output_tokens": 143,
+   "usd": 0.004236
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_127.pdf": {
+  "tipo": "liquidacion_servicio",
+  "rol": "origen",
+  "emisor": "Nombre017 Nombre004",
+  "emisor_cuit": "30686897576",
+  "receptor": "Nombre131 Nombre132 El Nombre116 SA",
+  "numero_comprobante": "B-0014-02367927",
+  "fecha": "2026-07-23",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 29845.13
+   },
+   {
+    "etiqueta": "total unificado",
+    "monto": 31974.16
+   },
+   {
+    "etiqueta": "cuota capital",
+    "monto": 2069.03
+   },
+   {
+    "etiqueta": "fundación educacional",
+    "monto": 60
+   }
+  ],
+  "identificador": "Calle 59 Nº3200, suministro 6",
+  "pertenece": "si",
+  "nota": "liquidación 1/2, dos códigos Link/Banelco",
+  "uso": {
+   "input_tokens": 3362,
+   "output_tokens": 205,
+   "usd": 0.004387
+  },
+  "vision": false,
+  "truncado": false
+ },
+ "doc_128.pdf": {
+  "tipo": "factura",
+  "rol": "origen",
+  "emisor": "Nombre099 Nombre123 Nombre097 Nombre098",
+  "emisor_cuit": "27078868930",
+  "receptor": "Nombre131 Nombre132 EL Nombre116 SA",
+  "numero_comprobante": "00001 00000975",
+  "fecha": "2026-08-27",
+  "importes": [
+   {
+    "etiqueta": "total",
+    "monto": 60000
+   }
+  ],
+  "identificador": "",
+  "pertenece": "si",
+  "nota": "Documento triplicado, honorarios DNRPA",
+  "uso": {
+   "input_tokens": 3804,
+   "output_tokens": 134,
+   "usd": 0.004474
+  },
+  "vision": false,
+  "truncado": false
+ }
+}

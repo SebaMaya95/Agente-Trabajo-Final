@@ -1,0 +1,1199 @@
+[
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5087,
+  "output_tokens": 173,
+  "usd": 0.011904,
+  "stop_reason": "end_turn",
+  "segundos": 5.03
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3382,
+  "output_tokens": 204,
+  "usd": 0.008804,
+  "stop_reason": "end_turn",
+  "segundos": 5.32
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5294,
+  "output_tokens": 179,
+  "usd": 0.012378,
+  "stop_reason": "end_turn",
+  "segundos": 5.56
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5015,
+  "output_tokens": 176,
+  "usd": 0.01179,
+  "stop_reason": "end_turn",
+  "segundos": 3.12
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5204,
+  "output_tokens": 202,
+  "usd": 0.012428,
+  "stop_reason": "end_turn",
+  "segundos": 3.16
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4375,
+  "output_tokens": 698,
+  "usd": 0.01573,
+  "stop_reason": "end_turn",
+  "segundos": 9.41
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4208,
+  "output_tokens": 260,
+  "usd": 0.011016,
+  "stop_reason": "end_turn",
+  "segundos": 5.27
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4775,
+  "output_tokens": 199,
+  "usd": 0.01154,
+  "stop_reason": "end_turn",
+  "segundos": 3.0
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3177,
+  "output_tokens": 198,
+  "usd": 0.008334,
+  "stop_reason": "end_turn",
+  "segundos": 4.71
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 7692,
+  "output_tokens": 201,
+  "usd": 0.017394,
+  "stop_reason": "end_turn",
+  "segundos": 6.12
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5588,
+  "output_tokens": 179,
+  "usd": 0.012966,
+  "stop_reason": "end_turn",
+  "segundos": 4.69
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3383,
+  "output_tokens": 209,
+  "usd": 0.008856,
+  "stop_reason": "end_turn",
+  "segundos": 3.14
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3559,
+  "output_tokens": 240,
+  "usd": 0.009518,
+  "stop_reason": "end_turn",
+  "segundos": 3.26
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4341,
+  "output_tokens": 592,
+  "usd": 0.014602,
+  "stop_reason": "end_turn",
+  "segundos": 6.94
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3760,
+  "output_tokens": 212,
+  "usd": 0.00964,
+  "stop_reason": "end_turn",
+  "segundos": 2.96
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3287,
+  "output_tokens": 164,
+  "usd": 0.008214,
+  "stop_reason": "end_turn",
+  "segundos": 2.68
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3588,
+  "output_tokens": 166,
+  "usd": 0.008836,
+  "stop_reason": "end_turn",
+  "segundos": 2.69
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3487,
+  "output_tokens": 358,
+  "usd": 0.010554,
+  "stop_reason": "end_turn",
+  "segundos": 3.8
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3393,
+  "output_tokens": 159,
+  "usd": 0.008376,
+  "stop_reason": "end_turn",
+  "segundos": 2.77
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3294,
+  "output_tokens": 159,
+  "usd": 0.008178,
+  "stop_reason": "end_turn",
+  "segundos": 2.88
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4228,
+  "output_tokens": 191,
+  "usd": 0.010366,
+  "stop_reason": "end_turn",
+  "segundos": 3.59
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4544,
+  "output_tokens": 166,
+  "usd": 0.010748,
+  "stop_reason": "end_turn",
+  "segundos": 4.65
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6403,
+  "output_tokens": 238,
+  "usd": 0.015186,
+  "stop_reason": "end_turn",
+  "segundos": 4.22
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3647,
+  "output_tokens": 162,
+  "usd": 0.008914,
+  "stop_reason": "end_turn",
+  "segundos": 2.71
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4307,
+  "output_tokens": 230,
+  "usd": 0.010914,
+  "stop_reason": "end_turn",
+  "segundos": 4.17
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6984,
+  "output_tokens": 223,
+  "usd": 0.016198,
+  "stop_reason": "end_turn",
+  "segundos": 4.09
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3375,
+  "output_tokens": 206,
+  "usd": 0.00881,
+  "stop_reason": "end_turn",
+  "segundos": 2.45
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4144,
+  "output_tokens": 189,
+  "usd": 0.010178,
+  "stop_reason": "end_turn",
+  "segundos": 4.07
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5000,
+  "output_tokens": 175,
+  "usd": 0.01175,
+  "stop_reason": "end_turn",
+  "segundos": 6.35
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3145,
+  "output_tokens": 145,
+  "usd": 0.00774,
+  "stop_reason": "end_turn",
+  "segundos": 2.27
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4242,
+  "output_tokens": 288,
+  "usd": 0.011364,
+  "stop_reason": "end_turn",
+  "segundos": 3.96
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4144,
+  "output_tokens": 230,
+  "usd": 0.010588,
+  "stop_reason": "end_turn",
+  "segundos": 3.85
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5225,
+  "output_tokens": 192,
+  "usd": 0.01237,
+  "stop_reason": "end_turn",
+  "segundos": 3.28
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3385,
+  "output_tokens": 208,
+  "usd": 0.00885,
+  "stop_reason": "end_turn",
+  "segundos": 3.11
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4078,
+  "output_tokens": 278,
+  "usd": 0.010936,
+  "stop_reason": "end_turn",
+  "segundos": 4.65
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3867,
+  "output_tokens": 161,
+  "usd": 0.009344,
+  "stop_reason": "end_turn",
+  "segundos": 3.86
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3323,
+  "output_tokens": 169,
+  "usd": 0.008336,
+  "stop_reason": "end_turn",
+  "segundos": 2.6
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3251,
+  "output_tokens": 183,
+  "usd": 0.008332,
+  "stop_reason": "end_turn",
+  "segundos": 2.83
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5321,
+  "output_tokens": 169,
+  "usd": 0.012332,
+  "stop_reason": "end_turn",
+  "segundos": 3.12
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 8480,
+  "output_tokens": 210,
+  "usd": 0.01906,
+  "stop_reason": "end_turn",
+  "segundos": 4.67
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 21858,
+  "output_tokens": 126,
+  "usd": 0.044976,
+  "stop_reason": "end_turn",
+  "segundos": 9.42
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3514,
+  "output_tokens": 158,
+  "usd": 0.008608,
+  "stop_reason": "end_turn",
+  "segundos": 2.33
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3463,
+  "output_tokens": 165,
+  "usd": 0.008576,
+  "stop_reason": "end_turn",
+  "segundos": 2.13
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4702,
+  "output_tokens": 218,
+  "usd": 0.011584,
+  "stop_reason": "end_turn",
+  "segundos": 3.76
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4841,
+  "output_tokens": 183,
+  "usd": 0.011512,
+  "stop_reason": "end_turn",
+  "segundos": 3.13
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3395,
+  "output_tokens": 173,
+  "usd": 0.00852,
+  "stop_reason": "end_turn",
+  "segundos": 3.11
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3145,
+  "output_tokens": 166,
+  "usd": 0.00795,
+  "stop_reason": "end_turn",
+  "segundos": 2.67
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6368,
+  "output_tokens": 174,
+  "usd": 0.014476,
+  "stop_reason": "end_turn",
+  "segundos": 3.79
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4010,
+  "output_tokens": 336,
+  "usd": 0.01138,
+  "stop_reason": "end_turn",
+  "segundos": 5.3
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3843,
+  "output_tokens": 176,
+  "usd": 0.009446,
+  "stop_reason": "end_turn",
+  "segundos": 3.95
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4010,
+  "output_tokens": 327,
+  "usd": 0.01129,
+  "stop_reason": "end_turn",
+  "segundos": 4.65
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3395,
+  "output_tokens": 237,
+  "usd": 0.00916,
+  "stop_reason": "end_turn",
+  "segundos": 2.75
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6160,
+  "output_tokens": 281,
+  "usd": 0.01513,
+  "stop_reason": "end_turn",
+  "segundos": 4.33
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3752,
+  "output_tokens": 178,
+  "usd": 0.009284,
+  "stop_reason": "end_turn",
+  "segundos": 2.93
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3415,
+  "output_tokens": 169,
+  "usd": 0.00852,
+  "stop_reason": "end_turn",
+  "segundos": 3.44
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3414,
+  "output_tokens": 192,
+  "usd": 0.008748,
+  "stop_reason": "end_turn",
+  "segundos": 2.57
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3387,
+  "output_tokens": 208,
+  "usd": 0.008854,
+  "stop_reason": "end_turn",
+  "segundos": 4.12
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4154,
+  "output_tokens": 235,
+  "usd": 0.010658,
+  "stop_reason": "end_turn",
+  "segundos": 4.11
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3454,
+  "output_tokens": 160,
+  "usd": 0.008508,
+  "stop_reason": "end_turn",
+  "segundos": 3.51
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4198,
+  "output_tokens": 278,
+  "usd": 0.011176,
+  "stop_reason": "end_turn",
+  "segundos": 4.02
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5150,
+  "output_tokens": 173,
+  "usd": 0.01203,
+  "stop_reason": "end_turn",
+  "segundos": 3.15
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3843,
+  "output_tokens": 169,
+  "usd": 0.009376,
+  "stop_reason": "end_turn",
+  "segundos": 4.08
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6298,
+  "output_tokens": 164,
+  "usd": 0.014236,
+  "stop_reason": "end_turn",
+  "segundos": 3.41
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4160,
+  "output_tokens": 296,
+  "usd": 0.01128,
+  "stop_reason": "end_turn",
+  "segundos": 4.31
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6875,
+  "output_tokens": 178,
+  "usd": 0.01553,
+  "stop_reason": "end_turn",
+  "segundos": 3.59
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4544,
+  "output_tokens": 187,
+  "usd": 0.010958,
+  "stop_reason": "end_turn",
+  "segundos": 3.84
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3592,
+  "output_tokens": 178,
+  "usd": 0.008964,
+  "stop_reason": "end_turn",
+  "segundos": 2.67
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3996,
+  "output_tokens": 504,
+  "usd": 0.013032,
+  "stop_reason": "end_turn",
+  "segundos": 4.93
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3294,
+  "output_tokens": 166,
+  "usd": 0.008248,
+  "stop_reason": "end_turn",
+  "segundos": 3.01
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4602,
+  "output_tokens": 384,
+  "usd": 0.013044,
+  "stop_reason": "end_turn",
+  "segundos": 5.78
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3283,
+  "output_tokens": 234,
+  "usd": 0.008906,
+  "stop_reason": "end_turn",
+  "segundos": 3.16
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4231,
+  "output_tokens": 267,
+  "usd": 0.011132,
+  "stop_reason": "end_turn",
+  "segundos": 4.4
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3163,
+  "output_tokens": 144,
+  "usd": 0.007766,
+  "stop_reason": "end_turn",
+  "segundos": 2.47
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3460,
+  "output_tokens": 194,
+  "usd": 0.00886,
+  "stop_reason": "end_turn",
+  "segundos": 3.05
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5723,
+  "output_tokens": 271,
+  "usd": 0.014156,
+  "stop_reason": "end_turn",
+  "segundos": 4.05
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3429,
+  "output_tokens": 162,
+  "usd": 0.008478,
+  "stop_reason": "end_turn",
+  "segundos": 2.64
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4247,
+  "output_tokens": 297,
+  "usd": 0.011464,
+  "stop_reason": "end_turn",
+  "segundos": 3.78
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4136,
+  "output_tokens": 228,
+  "usd": 0.010552,
+  "stop_reason": "end_turn",
+  "segundos": 3.95
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3855,
+  "output_tokens": 269,
+  "usd": 0.0104,
+  "stop_reason": "end_turn",
+  "segundos": 4.87
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3842,
+  "output_tokens": 202,
+  "usd": 0.009704,
+  "stop_reason": "end_turn",
+  "segundos": 3.42
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3582,
+  "output_tokens": 222,
+  "usd": 0.009384,
+  "stop_reason": "end_turn",
+  "segundos": 2.99
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3847,
+  "output_tokens": 245,
+  "usd": 0.010144,
+  "stop_reason": "end_turn",
+  "segundos": 3.69
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5237,
+  "output_tokens": 173,
+  "usd": 0.012204,
+  "stop_reason": "end_turn",
+  "segundos": 2.66
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4149,
+  "output_tokens": 285,
+  "usd": 0.011148,
+  "stop_reason": "end_turn",
+  "segundos": 4.79
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3736,
+  "output_tokens": 207,
+  "usd": 0.009542,
+  "stop_reason": "end_turn",
+  "segundos": 2.96
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5387,
+  "output_tokens": 178,
+  "usd": 0.012554,
+  "stop_reason": "end_turn",
+  "segundos": 2.71
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3152,
+  "output_tokens": 166,
+  "usd": 0.007964,
+  "stop_reason": "end_turn",
+  "segundos": 3.77
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 7692,
+  "output_tokens": 193,
+  "usd": 0.017314,
+  "stop_reason": "end_turn",
+  "segundos": 7.73
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3293,
+  "output_tokens": 179,
+  "usd": 0.008376,
+  "stop_reason": "end_turn",
+  "segundos": 2.71
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3815,
+  "output_tokens": 280,
+  "usd": 0.01043,
+  "stop_reason": "end_turn",
+  "segundos": 3.64
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4162,
+  "output_tokens": 232,
+  "usd": 0.010644,
+  "stop_reason": "end_turn",
+  "segundos": 4.32
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3255,
+  "output_tokens": 186,
+  "usd": 0.00837,
+  "stop_reason": "end_turn",
+  "segundos": 2.92
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3292,
+  "output_tokens": 187,
+  "usd": 0.008454,
+  "stop_reason": "end_turn",
+  "segundos": 2.74
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4217,
+  "output_tokens": 286,
+  "usd": 0.011294,
+  "stop_reason": "end_turn",
+  "segundos": 3.72
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4109,
+  "output_tokens": 271,
+  "usd": 0.010928,
+  "stop_reason": "end_turn",
+  "segundos": 4.24
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3413,
+  "output_tokens": 211,
+  "usd": 0.008936,
+  "stop_reason": "end_turn",
+  "segundos": 2.87
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4239,
+  "output_tokens": 277,
+  "usd": 0.011248,
+  "stop_reason": "end_turn",
+  "segundos": 4.03
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3604,
+  "output_tokens": 171,
+  "usd": 0.008918,
+  "stop_reason": "end_turn",
+  "segundos": 2.67
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5174,
+  "output_tokens": 175,
+  "usd": 0.012098,
+  "stop_reason": "end_turn",
+  "segundos": 2.88
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4544,
+  "output_tokens": 200,
+  "usd": 0.011088,
+  "stop_reason": "end_turn",
+  "segundos": 5.75
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3562,
+  "output_tokens": 245,
+  "usd": 0.009574,
+  "stop_reason": "end_turn",
+  "segundos": 3.14
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4339,
+  "output_tokens": 260,
+  "usd": 0.011278,
+  "stop_reason": "end_turn",
+  "segundos": 4.02
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4134,
+  "output_tokens": 234,
+  "usd": 0.010608,
+  "stop_reason": "end_turn",
+  "segundos": 5.42
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4224,
+  "output_tokens": 300,
+  "usd": 0.011448,
+  "stop_reason": "end_turn",
+  "segundos": 4.14
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5207,
+  "output_tokens": 208,
+  "usd": 0.012494,
+  "stop_reason": "end_turn",
+  "segundos": 3.29
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 6823,
+  "output_tokens": 204,
+  "usd": 0.015686,
+  "stop_reason": "end_turn",
+  "segundos": 4.18
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3324,
+  "output_tokens": 173,
+  "usd": 0.008378,
+  "stop_reason": "end_turn",
+  "segundos": 2.52
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5363,
+  "output_tokens": 194,
+  "usd": 0.012666,
+  "stop_reason": "end_turn",
+  "segundos": 3.24
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3564,
+  "output_tokens": 224,
+  "usd": 0.009368,
+  "stop_reason": "end_turn",
+  "segundos": 3.03
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4239,
+  "output_tokens": 275,
+  "usd": 0.011228,
+  "stop_reason": "end_turn",
+  "segundos": 4.56
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3697,
+  "output_tokens": 464,
+  "usd": 0.012034,
+  "stop_reason": "end_turn",
+  "segundos": 4.73
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3381,
+  "output_tokens": 206,
+  "usd": 0.008822,
+  "stop_reason": "end_turn",
+  "segundos": 2.86
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4781,
+  "output_tokens": 219,
+  "usd": 0.011752,
+  "stop_reason": "end_turn",
+  "segundos": 3.38
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4109,
+  "output_tokens": 259,
+  "usd": 0.010808,
+  "stop_reason": "end_turn",
+  "segundos": 3.69
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 8294,
+  "output_tokens": 178,
+  "usd": 0.018368,
+  "stop_reason": "end_turn",
+  "segundos": 4.25
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3522,
+  "output_tokens": 180,
+  "usd": 0.008844,
+  "stop_reason": "end_turn",
+  "segundos": 2.76
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3383,
+  "output_tokens": 207,
+  "usd": 0.008836,
+  "stop_reason": "end_turn",
+  "segundos": 2.97
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3742,
+  "output_tokens": 221,
+  "usd": 0.009694,
+  "stop_reason": "end_turn",
+  "segundos": 2.94
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 5042,
+  "output_tokens": 175,
+  "usd": 0.011834,
+  "stop_reason": "end_turn",
+  "segundos": 3.31
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3484,
+  "output_tokens": 354,
+  "usd": 0.010508,
+  "stop_reason": "end_turn",
+  "segundos": 3.74
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4130,
+  "output_tokens": 230,
+  "usd": 0.01056,
+  "stop_reason": "end_turn",
+  "segundos": 3.99
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 3743,
+  "output_tokens": 254,
+  "usd": 0.010026,
+  "stop_reason": "end_turn",
+  "segundos": 3.65
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4223,
+  "output_tokens": 297,
+  "usd": 0.011416,
+  "stop_reason": "end_turn",
+  "segundos": 4.95
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4135,
+  "output_tokens": 226,
+  "usd": 0.01053,
+  "stop_reason": "end_turn",
+  "segundos": 4.04
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4166,
+  "output_tokens": 291,
+  "usd": 0.011242,
+  "stop_reason": "end_turn",
+  "segundos": 4.03
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4515,
+  "output_tokens": 196,
+  "usd": 0.01099,
+  "stop_reason": "end_turn",
+  "segundos": 4.77
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4247,
+  "output_tokens": 288,
+  "usd": 0.011374,
+  "stop_reason": "end_turn",
+  "segundos": 4.27
+ },
+ {
+  "etapa": "lectura",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4805,
+  "output_tokens": 216,
+  "usd": 0.01177,
+  "stop_reason": "end_turn",
+  "segundos": 3.37
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 13087,
+  "output_tokens": 2324,
+  "usd": 0.049414,
+  "stop_reason": "end_turn",
+  "segundos": 18.19
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 10953,
+  "output_tokens": 1960,
+  "usd": 0.041506,
+  "stop_reason": "end_turn",
+  "segundos": 16.44
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 13412,
+  "output_tokens": 2178,
+  "usd": 0.048604,
+  "stop_reason": "end_turn",
+  "segundos": 16.91
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 11021,
+  "output_tokens": 1926,
+  "usd": 0.041302,
+  "stop_reason": "end_turn",
+  "segundos": 16.99
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4827,
+  "output_tokens": 246,
+  "usd": 0.012114,
+  "stop_reason": "end_turn",
+  "segundos": 4.29
+ }
+]

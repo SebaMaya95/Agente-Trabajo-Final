@@ -1,0 +1,2201 @@
+{
+ "meta": {
+  "mes": "202608",
+  "etiqueta": "v4-conc-sonnet",
+  "fecha": "2026-09-25T13:46:00",
+  "modelo_lector": "claude-haiku-4-5",
+  "modelo_conciliador": "claude-sonnet-5",
+  "movimientos": 143,
+  "documentos": 128,
+  "resueltos_por_regla": 15,
+  "enviados_al_modelo": 82,
+  "lecturas_reutilizadas_del_cache": 128,
+  "gastado_en_esta_corrida": {
+   "conciliacion": {
+    "llamadas": 5,
+    "input_tokens": 52370,
+    "output_tokens": 8559,
+    "usd": 0.19033
+   }
+  },
+  "costo_referencia_lectura_completa": {
+   "input_tokens": 457790,
+   "output_tokens": 21793,
+   "usd": 0.5668
+  },
+  "usd_esta_corrida": 0.1903,
+  "docs_truncados": [
+   "doc_023.pdf",
+   "doc_027.pdf",
+   "doc_039.pdf",
+   "doc_048.pdf",
+   "doc_052.pdf",
+   "doc_063.pdf",
+   "doc_065.pdf",
+   "doc_105.pdf",
+   "doc_112.pdf"
+  ],
+  "docs_con_vision": [
+   "doc_004.jpg",
+   "doc_009.pdf",
+   "doc_012.jpg",
+   "doc_022.pdf",
+   "doc_036.pdf",
+   "doc_037.jpeg",
+   "doc_046.jpeg",
+   "doc_050.jpeg",
+   "doc_062.jpeg",
+   "doc_066.pdf",
+   "doc_085.pdf",
+   "doc_098.pdf",
+   "doc_109.jpg"
+  ]
+ },
+ "filas": [
+  {
+   "n": 1,
+   "fecha": "2026-08-03",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -51.76,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 2,
+   "fecha": "2026-08-04",
+   "concepto": "Debito automatico - Personal flow da-7643081437971453",
+   "importe": -27900.64,
+   "estado": "BLANCO",
+   "detalle": "Servicioss - Personal Flow - 002 3816 5A",
+   "detalle_origen": "tabla",
+   "comprobante": "03950-07678443",
+   "docs": [
+    "doc_027.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con liquidación Nombre204 para ese domicilio"
+  },
+  {
+   "n": 3,
+   "fecha": "2026-08-04",
+   "concepto": "Compra con tarjeta de debito - Nombre001 - tarj nro. 9486",
+   "importe": -16882.38,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento de respaldo ni sugerencia exacta"
+  },
+  {
+   "n": 4,
+   "fecha": "2026-08-04",
+   "concepto": "Transferencia realizada - A Nombre002 Nombre003 Nombre004 / - fac / 30497172214",
+   "importe": -872744.13,
+   "estado": "BLANCO",
+   "detalle": "Insumo - Combustible - Nombre002 Nombre003 Nombre004",
+   "detalle_origen": "tabla",
+   "comprobante": "0003-00001728",
+   "docs": [
+    "doc_054.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 5,
+   "fecha": "2026-08-04",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre006 Nombre007 Nombre008 / - fac / 20247068571",
+   "importe": -2500000.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Agricultura - Nombre112 Nombre006 Nombre007",
+   "detalle_origen": "tabla",
+   "comprobante": "00001 00000004",
+   "docs": [
+    "doc_008.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe redondo pero CUIT y nombre coinciden exactamente"
+  },
+  {
+   "n": 6,
+   "fecha": "2026-08-04",
+   "concepto": "Transferencia realizada - A Nombre009 Nombre010 ii / - exp / 30852371911",
+   "importe": -129408.0,
+   "estado": "BLANCO",
+   "detalle": "Expensas - Nombre010 - 5A",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [
+    "doc_004.jpg"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "documento dudoso pero importe exacto y concepto de expensas coincide"
+  },
+  {
+   "n": 7,
+   "fecha": "2026-08-04",
+   "concepto": "Transferencia realizada - A Nombre011 Nombre012 Nombre013 / - fac / 20642353564",
+   "importe": -1887000.0,
+   "estado": "BLANCO",
+   "detalle": "Estudio Contable - Estudio Contable - Nombre113",
+   "detalle_origen": "tabla",
+   "comprobante": "00002 00001222",
+   "docs": [
+    "doc_044.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 8,
+   "fecha": "2026-08-04",
+   "concepto": "Transferencia realizada - A Nombre014 Nombre015 / - fac / 27106849154",
+   "importe": -697197.38,
+   "estado": "BLANCO",
+   "detalle": "Asesoramiento - AB - Nombre015 Nombre014",
+   "detalle_origen": "tabla",
+   "comprobante": "C-00002-00000043",
+   "docs": [
+    "doc_043.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 9,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 5088363703323581336 - tarj nro. 2889",
+   "importe": -4123.35,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 40 Nº5242",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02381661",
+   "docs": [
+    "doc_108.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con cuota plan de pagos de este suministro"
+  },
+  {
+   "n": 10,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 7402927012482700075 - tarj nro. 2889",
+   "importe": -2155.24,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 59 Nº3200",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02367928",
+   "docs": [
+    "doc_077.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con cuota plan de pagos de este suministro"
+  },
+  {
+   "n": 11,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 7402927012482700075 - tarj nro. 2889",
+   "importe": -30335.87,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 59 Nº3200",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02367928",
+   "docs": [
+    "doc_077.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con total de la liquidación"
+  },
+  {
+   "n": 12,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 5088363703323581336 - tarj nro. 2889",
+   "importe": -4042.53,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 40 Nº5242",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02381660",
+   "docs": [
+    "doc_097.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con cuota plan de pagos de este suministro"
+  },
+  {
+   "n": 13,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 7402927012482700075 - tarj nro. 2889",
+   "importe": -29845.13,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 2 Nº3816",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02367927",
+   "docs": [
+    "doc_127.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con total de la liquidación"
+  },
+  {
+   "n": 14,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 5088363703323581336 - tarj nro. 2889",
+   "importe": -58953.68,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 40 Nº5242",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02381661",
+   "docs": [
+    "doc_108.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con total de la liquidación"
+  },
+  {
+   "n": 15,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 5088363703323581336 - tarj nro. 2889",
+   "importe": -57546.39,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 40 Nº5242",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02381660",
+   "docs": [
+    "doc_097.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con total de la liquidación"
+  },
+  {
+   "n": 16,
+   "fecha": "2026-08-04",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 7402927012482700075 - tarj nro. 2889",
+   "importe": -2129.03,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Calle 2 Nº3816",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02367927",
+   "docs": [
+    "doc_127.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con cuota plan de pagos de este suministro"
+  },
+  {
+   "n": 17,
+   "fecha": "2026-08-04",
+   "concepto": "Transferencia realizada - A Nombre019 sa / - fac / 30735649422",
+   "importe": -1229360.0,
+   "estado": "BLANCO",
+   "detalle": "Maquinaria - Repuestos - Nombre019",
+   "detalle_origen": "tabla",
+   "comprobante": "0001-00005206 ; 0001-00005207",
+   "docs": [
+    "doc_045.pdf",
+    "doc_078.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "dos facturas del mismo emisor suman exactamente el importe transferido | guarda: comprobante tomado de los documentos de origen"
+  },
+  {
+   "n": 18,
+   "fecha": "2026-08-04",
+   "concepto": "Transferencia inmediata - A Nombre020 Nombre021 Nombre022 / - fac / 20672945922",
+   "importe": -716320.0,
+   "estado": "BLANCO",
+   "detalle": "Maquinaria - Repuestos - Nombre020 Nombre021 Nombre022",
+   "detalle_origen": "tabla",
+   "comprobante": "00002 00000439",
+   "docs": [
+    "doc_003.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe, CUIT y nombre coinciden exactamente"
+  },
+  {
+   "n": 19,
+   "fecha": "2026-08-04",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -49595.65,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 20,
+   "fecha": "2026-08-05",
+   "concepto": "Debito automatico - Nombre023 -909449900",
+   "importe": -1023536.89,
+   "estado": "BLANCO",
+   "detalle": "Asesoramiento - Asociación - Nombre023",
+   "detalle_origen": "tabla",
+   "comprobante": "00011-00153429 ; 00011-00155355",
+   "docs": [
+    "doc_053.pdf",
+    "doc_070.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "dos documentos del mismo emisor suman exactamente el débito | guarda: comprobante tomado de los documentos de origen"
+  },
+  {
+   "n": 21,
+   "fecha": "2026-08-05",
+   "concepto": "Compra con tarjeta de debito - Nombre024 Nombre025 del Nombre026 - tarj nro. 6685",
+   "importe": -80210.02,
+   "estado": "NARANJA",
+   "detalle": "Maquinaria - Ferreteria - Nombre114 Nombre025",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "regla",
+   "motivo": "regla: tabla exacta, sin documento candidato"
+  },
+  {
+   "n": 22,
+   "fecha": "2026-08-05",
+   "concepto": "Transferencia por sistema Nombre027 - Cuit:30318985229 - cbu:2984769633927535115696",
+   "importe": -742155.0,
+   "estado": "NARANJA",
+   "detalle": "Personal - Embargo - Nombre115",
+   "detalle_origen": "tabla",
+   "comprobante": "9535379",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "documento no pertenece formalmente pero importe exacto y concepto de embargo coincide"
+  },
+  {
+   "n": 23,
+   "fecha": "2026-08-05",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -11075.41,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 24,
+   "fecha": "2026-08-06",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre028 electricidad sa / - fac / 30004356126",
+   "importe": -14083.36,
+   "estado": "BLANCO",
+   "detalle": "Mantenimiento - Materiales Electricos - Nombre028 Electricidad",
+   "detalle_origen": "tabla",
+   "comprobante": "0005 00014682",
+   "docs": [
+    "doc_117.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 25,
+   "fecha": "2026-08-06",
+   "concepto": "Pago de servicios - Nombre029: 20660736274 - tarj nro. 2889",
+   "importe": -806120.21,
+   "estado": "NARANJA",
+   "detalle": "Servicios - Telefonía - Nombre029",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "regla",
+   "motivo": "regla: tabla exacta, sin documento candidato"
+  },
+  {
+   "n": 26,
+   "fecha": "2026-08-06",
+   "concepto": "Pago de servicios - Nombre030: 1665017166896451239 - tarj nro. 2889",
+   "importe": -369746.06,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Internet - Nombre052",
+   "detalle_origen": "tabla",
+   "comprobante": "A 0004-00005765",
+   "docs": [
+    "doc_086.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con factura de Nombre052 Nombre053"
+  },
+  {
+   "n": 27,
+   "fecha": "2026-08-06",
+   "concepto": "Pago de servicios - Nombre031.Nombre032: 7316975267718804405 - tarj nro. 2889",
+   "importe": -8066194.02,
+   "estado": "BLANCO",
+   "detalle": "Impuesto - ARCA - Ganancias",
+   "detalle_origen": "deducido",
+   "comprobante": "1662208122",
+   "docs": [
+    "doc_121.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "VEP de ARCA coincide en importe; corresponde a impuesto Nombre186 no cargas sociales"
+  },
+  {
+   "n": 28,
+   "fecha": "2026-08-06",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -55536.86,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 29,
+   "fecha": "2026-08-07",
+   "concepto": "Snp debito directo - Nombre033 y con-30719795892",
+   "importe": -535279.8,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Software - Nombre117 Nombre118",
+   "detalle_origen": "tabla",
+   "comprobante": "0002 - 00082836",
+   "docs": [
+    "doc_015.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con factura de Nombre117 Nombre118"
+  },
+  {
+   "n": 30,
+   "fecha": "2026-08-07",
+   "concepto": "Pago de servicios - Nombre031.Nombre032: 7316975267718804405 - tarj nro. 2889",
+   "importe": -5917909.11,
+   "estado": "BLANCO",
+   "detalle": "Impuesto - ARCA - Ganancias",
+   "detalle_origen": "deducido",
+   "comprobante": "1663742379",
+   "docs": [
+    "doc_093.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "VEP de ARCA por ganancias sociedades coincide en importe exacto"
+  },
+  {
+   "n": 31,
+   "fecha": "2026-08-07",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -38719.13,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 32,
+   "fecha": "2026-08-10",
+   "concepto": "Deposito e-Nombre034 48hs Nombre035 Nombre036",
+   "importe": 3100000.0,
+   "estado": "NARANJA",
+   "detalle": "Maquinaria - Venta - Nombre119",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "e-Nombre034 candidato no pertenece a la empresa; se mantiene sugerencia de tabla por antecedente"
+  },
+  {
+   "n": 33,
+   "fecha": "2026-08-10",
+   "concepto": "Comision Nombre037 Nombre038 Nombre039",
+   "importe": -21700.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 34,
+   "fecha": "2026-08-10",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -4557.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 35,
+   "fecha": "2026-08-10",
+   "concepto": "Iva percepcion rg 2408",
+   "importe": -651.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 36,
+   "fecha": "2026-08-10",
+   "concepto": "Compra con tarjeta de debito - Nombre042*Nombre043 - tarj nro. 6685",
+   "importe": -165019.0,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento ni sugerencia clara para estación de servicio"
+  },
+  {
+   "n": 37,
+   "fecha": "2026-08-10",
+   "concepto": "Debito automatico - Personal flow da-2836253793388025",
+   "importe": -164889.25,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Telefonía - Personal Flow",
+   "detalle_origen": "tabla",
+   "comprobante": "03950-07882992",
+   "docs": [
+    "doc_065.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto y emisor coincide con liquidación de servicio"
+  },
+  {
+   "n": 38,
+   "fecha": "2026-08-10",
+   "concepto": "Debito automatico - Personal flow da-0728408245106320",
+   "importe": -74739.06,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Telefonía - Personal Flow",
+   "detalle_origen": "tabla",
+   "comprobante": "A03950-07857017",
+   "docs": [
+    "doc_105.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto y emisor coincide con liquidación de servicio"
+  },
+  {
+   "n": 39,
+   "fecha": "2026-08-10",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre044 Nombre045 Nombre046 / - var / 20041007133",
+   "importe": -2000000.0,
+   "estado": "AMARILLO",
+   "detalle": "Retiro - Accionista - Nombre044 Nombre045",
+   "detalle_origen": "tabla",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_085.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "echeq con importe exacto respalda pago; factura no coincide en importe | convencion: comprobante = periodo"
+  },
+  {
+   "n": 40,
+   "fecha": "2026-08-10",
+   "concepto": "Transferencia realizada - A Nombre047 Nombre004 s a / - fac / 30230035963",
+   "importe": -99825.0,
+   "estado": "BLANCO",
+   "detalle": "Maquinaria - Repuestos - Nombre047 Nombre004",
+   "detalle_origen": "tabla",
+   "comprobante": "00002 00000427",
+   "docs": [
+    "doc_110.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 41,
+   "fecha": "2026-08-10",
+   "concepto": "Impuesto ley 25.413 credito 0,6%",
+   "importe": -18600.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 42,
+   "fecha": "2026-08-10",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -15188.28,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 43,
+   "fecha": "2026-08-11",
+   "concepto": "Transferencia realizada - A Nombre048 Nombre049 Nombre050 / - fac / 23637811100",
+   "importe": -83607.14,
+   "estado": "BLANCO",
+   "detalle": "Mantenimiento - Plomeria - Nombre120 Nombre048",
+   "detalle_origen": "tabla",
+   "comprobante": "A 0003-00019213",
+   "docs": [
+    "doc_022.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 44,
+   "fecha": "2026-08-11",
+   "concepto": "Compra con tarjeta de debito - Nombre051 energia sa - tarj nro. 9486",
+   "importe": -240008.0,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento ni antecedente Nombre029 para Nombre051 Energía"
+  },
+  {
+   "n": 45,
+   "fecha": "2026-08-11",
+   "concepto": "Transferencia realizada - A Nombre052 Nombre053 sr / - fac / 33751612109",
+   "importe": -570152.0,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Internet - Nombre052",
+   "detalle_origen": "tabla",
+   "comprobante": "A 0004-00005776",
+   "docs": [
+    "doc_025.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe, CUIT y nombre coinciden con factura de Nombre052"
+  },
+  {
+   "n": 46,
+   "fecha": "2026-08-11",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -5362.6,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 47,
+   "fecha": "2026-08-12",
+   "concepto": "Compra con tarjeta de debito - Nombre054 Nombre055 - tarj nro. 6685",
+   "importe": -209772.88,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento ni antecedente Nombre029 para Nombre054 Nombre055"
+  },
+  {
+   "n": 48,
+   "fecha": "2026-08-12",
+   "concepto": "Transferencia inmediata - A Nombre056 Nombre057 Nombre058 / - fac / 20123986774",
+   "importe": -58080.0,
+   "estado": "BLANCO",
+   "detalle": "Ganaderia - Insumo - Nombre121 Nombre122",
+   "detalle_origen": "tabla",
+   "comprobante": "00003 00001684",
+   "docs": [
+    "doc_119.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 49,
+   "fecha": "2026-08-12",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -1607.12,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 50,
+   "fecha": "2026-08-13",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4224108234408205485 - tarj nro. 2889",
+   "importe": -29473.44,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Diag. Nombre334 Nombre008 1530, Nombre004",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02392599",
+   "docs": [
+    "doc_104.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe exacto con cuota derivada; documento dudoso pero coincide en monto"
+  },
+  {
+   "n": 51,
+   "fecha": "2026-08-13",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4224108234408205485 - tarj nro. 2889",
+   "importe": -424366.1,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Diag. Nombre334 Nombre008 1530, Nombre004",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02392599",
+   "docs": [
+    "doc_104.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe exacto con total de liquidación dudosa"
+  },
+  {
+   "n": 52,
+   "fecha": "2026-08-13",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4224108234408205485 - tarj nro. 2889",
+   "importe": -28889.62,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Av. 59 Nº1798, Nombre004",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02392598",
+   "docs": [
+    "doc_122.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe exacto con cuota derivada; documento dudoso pero coincide en monto"
+  },
+  {
+   "n": 53,
+   "fecha": "2026-08-13",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4224108234408205485 - tarj nro. 2889",
+   "importe": -415134.84,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Av. 59 Nº1798, Nombre004",
+   "detalle_origen": "deducido",
+   "comprobante": "B-0014-02392598",
+   "docs": [
+    "doc_122.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe exacto con total de liquidación dudosa"
+  },
+  {
+   "n": 54,
+   "fecha": "2026-08-13",
+   "concepto": "Compra con tarjeta de debito - Nombre042*Nombre059 - tarj nro. 9486",
+   "importe": -246165.99,
+   "estado": "BLANCO",
+   "detalle": "Personal - Sindicato - Nombre059",
+   "detalle_origen": "tabla",
+   "comprobante": "0031880663",
+   "docs": [
+    "doc_101.pdf",
+    "doc_057.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "retención origen y comprobante de pago coinciden en importe y nombre"
+  },
+  {
+   "n": 55,
+   "fecha": "2026-08-13",
+   "concepto": "Debito automatico - Senasa -30719795892",
+   "importe": -5762.33,
+   "estado": "BLANCO",
+   "detalle": "Impuesto - SENASA - El Nombre116",
+   "detalle_origen": "tabla",
+   "comprobante": "032361051-7",
+   "docs": [
+    "doc_023.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto y emisor propio coincide con remito SENASA"
+  },
+  {
+   "n": 56,
+   "fecha": "2026-08-13",
+   "concepto": "Compra con tarjeta de debito - Nombre042*Nombre060 - tarj nro. 9486",
+   "importe": -584777.26,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento ni antecedente Nombre029 para Nombre409 Autos"
+  },
+  {
+   "n": 57,
+   "fecha": "2026-08-13",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -10407.42,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 58,
+   "fecha": "2026-08-14",
+   "concepto": "Transferencia realizada - A Nombre061 sa / - fac / 30944632768",
+   "importe": -965508.25,
+   "estado": "BLANCO",
+   "detalle": "Mantenimiento - Materiales Electricos - Nombre061 SA",
+   "detalle_origen": "tabla",
+   "comprobante": "0028-00068988",
+   "docs": [
+    "doc_080.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 59,
+   "fecha": "2026-08-14",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -5793.05,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 60,
+   "fecha": "2026-08-18",
+   "concepto": "Compra con tarjeta de debito - Nombre062 s a - tarj nro. 6685",
+   "importe": -175004.97,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento ni antecedente Nombre029 para Nombre062"
+  },
+  {
+   "n": 61,
+   "fecha": "2026-08-18",
+   "concepto": "Debito automatico - Nombre063 -5373606737494",
+   "importe": -2257578.99,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Salud - Nombre063",
+   "detalle_origen": "tabla",
+   "comprobante": "0080-00365134",
+   "docs": [
+    "doc_096.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 62,
+   "fecha": "2026-08-18",
+   "concepto": "Compra con tarjeta de debito - Nombre001 - tarj nro. 9486",
+   "importe": -16079.07,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "sin documento ni antecedente Nombre029 para Nombre001"
+  },
+  {
+   "n": 63,
+   "fecha": "2026-08-18",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, categoría convencional del Nombre256"
+  },
+  {
+   "n": 64,
+   "fecha": "2026-08-18",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, categoría convencional del Nombre256"
+  },
+  {
+   "n": 65,
+   "fecha": "2026-08-18",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, categoría convencional del Nombre256"
+  },
+  {
+   "n": 66,
+   "fecha": "2026-08-18",
+   "concepto": "Pago a proveedores Nombre065 - Nombre032 5000 625 d 33049643039 260 1295150 202",
+   "importe": 11710337.05,
+   "estado": "NARANJA",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "importe no coincide con el VEP candidato, no hay documento que respalde el cobro"
+  },
+  {
+   "n": 67,
+   "fecha": "2026-08-18",
+   "concepto": "Nombre031 al debito Nombre066 Nombre067 1,2%",
+   "importe": -14400.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 68,
+   "fecha": "2026-08-18",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -14691.97,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 69,
+   "fecha": "2026-08-18",
+   "concepto": "Impuesto ley 25.413 credito 0,6%",
+   "importe": -70262.02,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 70,
+   "fecha": "2026-08-19",
+   "concepto": "Comision Nombre068 Nombre069 Nombre070 - Total Nombre071 del Nombre072 $ 1200000,00",
+   "importe": -12000.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 71,
+   "fecha": "2026-08-19",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -2520.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 72,
+   "fecha": "2026-08-19",
+   "concepto": "Iva percepcion rg 2408",
+   "importe": -360.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 73,
+   "fecha": "2026-08-19",
+   "concepto": "Compra con tarjeta de debito - Nombre073 Nombre026 Nombre074 s.a - tarj nro. 9486",
+   "importe": -1548.82,
+   "estado": "NARANJA",
+   "detalle": "Insumo - Combustible - Nombre073 Nombre026 Nombre074",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "peaje/combustible por nombre, sin documento que confirme"
+  },
+  {
+   "n": 74,
+   "fecha": "2026-08-19",
+   "concepto": "Compra con tarjeta de debito - Nombre075 Nombre076 - tarj nro. 9486",
+   "importe": -37.3,
+   "estado": "NARANJA",
+   "detalle": "Insumo - Combustible - Nombre075 Nombre076",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "gasto de peaje por nombre del concepto, sin documento"
+  },
+  {
+   "n": 75,
+   "fecha": "2026-08-19",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -98.79,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 76,
+   "fecha": "2026-08-20",
+   "concepto": "Debito automatico - Nombre023 -909449900",
+   "importe": -332754.0,
+   "estado": "BLANCO",
+   "detalle": "Asesoramiento - Asociación - Nombre023",
+   "detalle_origen": "tabla",
+   "comprobante": "00011-00157351",
+   "docs": [
+    "doc_017.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe y emisor coinciden exacto con factura Nombre023"
+  },
+  {
+   "n": 77,
+   "fecha": "2026-08-20",
+   "concepto": "Compra con tarjeta de debito - Nombre077 de Nombre004 - tarj nro. 6685",
+   "importe": -11510.8,
+   "estado": "NARANJA",
+   "detalle": "Ganadería - Tasas - Marcas y Señales",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "regla",
+   "motivo": "regla: tabla exacta, sin documento candidato"
+  },
+  {
+   "n": 78,
+   "fecha": "2026-08-20",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -2065.58,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 79,
+   "fecha": "2026-08-21",
+   "concepto": "Pago de servicios - Arba Nombre078: 35082183007054 - tarj nro. 2889",
+   "importe": -666563.8,
+   "estado": "BLANCO",
+   "detalle": "Impuesto - ARBA - IIBB",
+   "detalle_origen": "tabla",
+   "comprobante": "192427094",
+   "docs": [
+    "doc_055.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con VEP, sugerencia de tabla se mantiene"
+  },
+  {
+   "n": 80,
+   "fecha": "2026-08-21",
+   "concepto": "Pago de servicios - Gas Nombre079: 38868782199995400 - tarj nro. 2889",
+   "importe": -186210.6,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Gas - Nombre004 7630",
+   "detalle_origen": "deducido",
+   "comprobante": "70015-51615416/8",
+   "docs": [
+    "doc_049.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con liquidación de gas; dos facturas iguales, se asigna una por movimiento"
+  },
+  {
+   "n": 81,
+   "fecha": "2026-08-21",
+   "concepto": "Pago de servicios - Gas Nombre079: 38868782199995400 - tarj nro. 2889",
+   "importe": -186210.6,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Gas - Nombre004 7630",
+   "detalle_origen": "deducido",
+   "comprobante": "70015-51619368/9",
+   "docs": [
+    "doc_051.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "segundo pago igual, se asigna la segunda factura de igual importe"
+  },
+  {
+   "n": 82,
+   "fecha": "2026-08-21",
+   "concepto": "Pago de servicios - Nombre031.Nombre032: 7316975267718804405 - tarj nro. 2889",
+   "importe": -15260197.01,
+   "estado": "BLANCO",
+   "detalle": "Impuesto - ARCA - IVA",
+   "detalle_origen": "deducido",
+   "comprobante": "1669866364",
+   "docs": [
+    "doc_040.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "VEP indica IVA con importe exacto, reemplaza sugerencia genérica de tabla"
+  },
+  {
+   "n": 83,
+   "fecha": "2026-08-21",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -97795.08,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 84,
+   "fecha": "2026-08-24",
+   "concepto": "Pago a proveedores Nombre065 - Nombre080 sa 30726480462 03 5359078",
+   "importe": 25000000.0,
+   "estado": "NARANJA",
+   "detalle": "Agricultura - Venta Cereal - Nombre080",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "emisor coincide pero ningún importe de los documentos coincide exacto"
+  },
+  {
+   "n": 85,
+   "fecha": "2026-08-24",
+   "concepto": "Transferencia recibida - De Nombre081 Nombre082 sa / saldo - cuo / 30956357683",
+   "importe": 48249866.67,
+   "estado": "AMARILLO",
+   "detalle": "Agricultura - Venta Cereal - Nombre081 Nombre082",
+   "detalle_origen": "tabla",
+   "comprobante": "84354",
+   "docs": [
+    "doc_029.pdf",
+    "doc_107.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con comprobantes de pago de la transferencia recibida"
+  },
+  {
+   "n": 86,
+   "fecha": "2026-08-24",
+   "concepto": "Impuesto ley 25.413 credito 0,6%",
+   "importe": -439499.2,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 87,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre031.Nombre032: 7316975267718804405 - tarj nro. 2889",
+   "importe": -165610.2,
+   "estado": "BLANCO",
+   "detalle": "Personal - Leyes - El Nombre116",
+   "detalle_origen": "tabla",
+   "comprobante": "1670810156 ; 0000-2026-000018",
+   "docs": [
+    "doc_091.pdf",
+    "doc_081.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "VEP e importe coinciden exacto, respaldado también por retención asociada | guarda: comprobante tomado de los documentos de origen"
+  },
+  {
+   "n": 88,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4885232022101152137 - tarj nro. 2889",
+   "importe": -3990.87,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.28",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128665",
+   "docs": [
+    "doc_083.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto de cuota plan de pagos coincide con liquidación eléctrica"
+  },
+  {
+   "n": 89,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4885232022101152137 - tarj nro. 2889",
+   "importe": -28007.62,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.28",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128665",
+   "docs": [
+    "doc_083.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe total exacto coincide con misma liquidación eléctrica"
+  },
+  {
+   "n": 90,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 3080918979609138235 - tarj nro. 2889",
+   "importe": -3996.53,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128669",
+   "docs": [
+    "doc_125.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto de cuota coincide con liquidación de otro suministro"
+  },
+  {
+   "n": 91,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 3080918979609138235 - tarj nro. 2889",
+   "importe": -28048.0,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128669",
+   "docs": [
+    "doc_125.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe total exacto coincide con misma liquidación"
+  },
+  {
+   "n": 92,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4610708478556785822 - tarj nro. 2889",
+   "importe": -12830.41,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32,5",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128667",
+   "docs": [
+    "doc_059.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto de cuota coincide con liquidación eléctrica"
+  },
+  {
+   "n": 93,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4610708478556785822 - tarj nro. 2889",
+   "importe": -95528.61,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32,5",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128667",
+   "docs": [
+    "doc_059.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe total exacto coincide con misma liquidación"
+  },
+  {
+   "n": 94,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4187955690102494490 - tarj nro. 2889",
+   "importe": -3999.33,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128661",
+   "docs": [
+    "doc_064.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto de cuota coincide con liquidación eléctrica"
+  },
+  {
+   "n": 95,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 4187955690102494490 - tarj nro. 2889",
+   "importe": -28067.96,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128661",
+   "docs": [
+    "doc_064.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe total exacto coincide con misma liquidación"
+  },
+  {
+   "n": 96,
+   "fecha": "2026-08-25",
+   "concepto": "Pago de servicios - Nombre016 Nombre017 Nombre018: 3860463269736230159 - tarj nro. 2889",
+   "importe": -107004.77,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Electricidad - Ruta 86 Nº0 KM.32",
+   "detalle_origen": "deducido",
+   "comprobante": "A-0014-00128663",
+   "docs": [
+    "doc_094.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto de cuota coincide con liquidación eléctrica"
+  },
+  {
+   "n": 97,
+   "fecha": "2026-08-25",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 98,
+   "fecha": "2026-08-25",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -300000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 99,
+   "fecha": "2026-08-25",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -300000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 100,
+   "fecha": "2026-08-25",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -2862.52,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 101,
+   "fecha": "2026-08-25",
+   "concepto": "Nombre031 al debito Nombre066 Nombre067 1,2%",
+   "importe": -12000.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 102,
+   "fecha": "2026-08-26",
+   "concepto": "Comision Nombre068 Nombre069 Nombre070 - Total Nombre071 del Nombre072 $ 1000000,00",
+   "importe": -10000.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 103,
+   "fecha": "2026-08-26",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -2100.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 104,
+   "fecha": "2026-08-26",
+   "concepto": "Iva percepcion rg 2408",
+   "importe": -300.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 105,
+   "fecha": "2026-08-26",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre083 Nombre084 Nombre085 / - fac / 20154722375",
+   "importe": -552027.92,
+   "estado": "BLANCO",
+   "detalle": "Flete - Agricultura - Nombre085",
+   "detalle_origen": "tabla",
+   "comprobante": "00002 00000279",
+   "docs": [
+    "doc_084.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 106,
+   "fecha": "2026-08-26",
+   "concepto": "Transferencia realizada - A el Nombre086 de Nombre087 s / - fac / 30143959176",
+   "importe": -590673.6,
+   "estado": "BLANCO",
+   "detalle": "Servicios - Internet - Nombre052",
+   "detalle_origen": "deducido",
+   "comprobante": "00001 00005363",
+   "docs": [
+    "doc_088.pdf"
+   ],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "importe y CUIT coinciden pero identificador de pista no confirma rubro exacto"
+  },
+  {
+   "n": 107,
+   "fecha": "2026-08-26",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -6930.61,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 108,
+   "fecha": "2026-08-26",
+   "concepto": "Comision Nombre005 Nombre088 Nombre089 Nombre090 - Comision Nombre091",
+   "importe": -1782.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 109,
+   "fecha": "2026-08-26",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -374.22,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 110,
+   "fecha": "2026-08-27",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -12.94,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 111,
+   "fecha": "2026-08-28",
+   "concepto": "Comision servicio cuenta Nombre093",
+   "importe": -15120.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 112,
+   "fecha": "2026-08-28",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -3175.2,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 113,
+   "fecha": "2026-08-28",
+   "concepto": "Iva percepcion rg 2408",
+   "importe": -453.6,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 114,
+   "fecha": "2026-08-28",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -112.49,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 115,
+   "fecha": "2026-08-29",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre094 Nombre095 Nombre096 / - fac / 20850146105",
+   "importe": -94138.0,
+   "estado": "BLANCO",
+   "detalle": "Maquinaria - Repuestos - Nombre096",
+   "detalle_origen": "tabla",
+   "comprobante": "00003 00013637",
+   "docs": [
+    "doc_011.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 116,
+   "fecha": "2026-08-31",
+   "concepto": "Transferencia inmediata - A Nombre097 Nombre098 Nombre099 Nombre100 / - fac / 27078868930",
+   "importe": -60000.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - Nombre099 Nombre123 Nombre097",
+   "detalle_origen": "tabla",
+   "comprobante": "00001 00000975",
+   "docs": [
+    "doc_128.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "regla: importe unico + emisor coincide + tabla exacta"
+  },
+  {
+   "n": 117,
+   "fecha": "2026-08-31",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 118,
+   "fecha": "2026-08-31",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 119,
+   "fecha": "2026-08-31",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 120,
+   "fecha": "2026-08-31",
+   "concepto": "Retiro de efectivo en Nombre064 - Tarj nro. 9486",
+   "importe": -400000.0,
+   "estado": "NARANJA",
+   "detalle": "Pagos en efectivo",
+   "detalle_origen": "deducido",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "retiro de efectivo con tarjeta, según convención del Nombre256"
+  },
+  {
+   "n": 121,
+   "fecha": "2026-08-31",
+   "concepto": "Pago a proveedores Nombre065 - Nombre080 sa 30726480462 03 6216998",
+   "importe": 63000000.0,
+   "estado": "NARANJA",
+   "detalle": "Agricultura - Venta Cereal - Nombre080",
+   "detalle_origen": "tabla",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "emisor coincide y sugerencia validada, pero importe no coincide con documentos vistos"
+  },
+  {
+   "n": 122,
+   "fecha": "2026-08-31",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre044 Nombre045 Nombre046 / - var / 20041007133",
+   "importe": -4000000.0,
+   "estado": "BLANCO",
+   "detalle": "Retiro - Accionista - Nombre044 Nombre045",
+   "detalle_origen": "tabla",
+   "comprobante": "00002 00000137",
+   "docs": [
+    "doc_106.pdf"
+   ],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "importe no coincide con factura; pagos candidatos son redondos y dudosos"
+  },
+  {
+   "n": 123,
+   "fecha": "2026-08-31",
+   "concepto": "Transferencia realizada - A Nombre101 Nombre102 Nombre103 Nombre104 / - hab / 20093978642",
+   "importe": -1554860.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - Nombre124 Nombre103",
+   "detalle_origen": "tabla",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_058.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo, nombre coincide con pista | convencion: comprobante = periodo"
+  },
+  {
+   "n": 124,
+   "fecha": "2026-08-31",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre008 Nombre045 Nombre105 / - var / 20638004023",
+   "importe": -4000000.0,
+   "estado": "BLANCO",
+   "detalle": "Retiro - Accionista - Nombre008 Nombre045",
+   "detalle_origen": "tabla",
+   "comprobante": "00002 00000137",
+   "docs": [
+    "doc_106.pdf"
+   ],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "importe no coincide con factura; pagos candidatos son redondos y dudosos"
+  },
+  {
+   "n": 125,
+   "fecha": "2026-08-31",
+   "concepto": "Transferencia realizada - A Nombre106 Nombre107 Nombre108 / - hab / 20569025623",
+   "importe": -1462298.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - Nombre108 Nombre106",
+   "detalle_origen": "tabla",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_028.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo, nombre coincide | convencion: comprobante = periodo"
+  },
+  {
+   "n": 126,
+   "fecha": "2026-08-31",
+   "concepto": "Debito Nombre005. online banking emp - A Nombre109 Nombre110 Nombre111 / - var / 23387889384",
+   "importe": -4000000.0,
+   "estado": "NARANJA",
+   "detalle": "Retiro - Accionista - Nombre109 Nombre111",
+   "detalle_origen": "tabla",
+   "comprobante": "08-2026",
+   "docs": [],
+   "confianza": "baja",
+   "fuente": "modelo",
+   "motivo": "solo candidatos redondos y dudosos, sin confirmación de nombre ni CUIT | convencion: comprobante = periodo"
+  },
+  {
+   "n": 127,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -1349920.01,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_120.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo de la empresa | convencion: comprobante = periodo"
+  },
+  {
+   "n": 128,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -1304328.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_031.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo de la empresa | convencion: comprobante = periodo"
+  },
+  {
+   "n": 129,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -1800000.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_118.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe redondo coincide con varios recibos idénticos, sin identificador único | convencion: comprobante = periodo"
+  },
+  {
+   "n": 130,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -666571.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_124.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo de la empresa | convencion: comprobante = periodo"
+  },
+  {
+   "n": 131,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -1457360.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_103.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo de la empresa | convencion: comprobante = periodo"
+  },
+  {
+   "n": 132,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -1299440.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - Nombre276 Nombre012 Nombre275",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_079.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto con recibo de sueldo, identificador con nombre del empleado | convencion: comprobante = periodo"
+  },
+  {
+   "n": 133,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -1800000.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - Nombre131 Nombre132 El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_067.pdf"
+   ],
+   "confianza": "media",
+   "fuente": "modelo",
+   "motivo": "importe redondo coincide con resumen de sueldos de dos empleados, sin CUIT ni nombre confirmando | convencion: comprobante = periodo"
+  },
+  {
+   "n": 134,
+   "fecha": "2026-08-31",
+   "concepto": "Pago haberes - 570997423 570997423",
+   "importe": -328725.0,
+   "estado": "BLANCO",
+   "detalle": "Personal - Haberes - Nombre131 Nombre132 El Nombre116 SA",
+   "detalle_origen": "deducido",
+   "comprobante": "08-2026",
+   "docs": [
+    "doc_089.pdf"
+   ],
+   "confianza": "alta",
+   "fuente": "modelo",
+   "motivo": "importe exacto coincide con recibo de sueldo neto individual | convencion: comprobante = periodo"
+  },
+  {
+   "n": 135,
+   "fecha": "2026-08-31",
+   "concepto": "Nombre031 al debito Nombre066 Nombre067 1,2%",
+   "importe": -19200.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 136,
+   "fecha": "2026-08-31",
+   "concepto": "Impuesto ley 25.413 debito 0,6%",
+   "importe": -151065.85,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 137,
+   "fecha": "2026-08-31",
+   "concepto": "Impuesto ley 25.413 credito 0,6%",
+   "importe": -378000.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 138,
+   "fecha": "2026-08-31",
+   "concepto": "Comision Nombre005 Nombre088 Nombre089 Nombre090 - Comision Nombre091",
+   "importe": -864.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 139,
+   "fecha": "2026-08-31",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -181.44,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 140,
+   "fecha": "2026-08-31",
+   "concepto": "Comision Nombre005 Nombre088 Nombre089 Nombre090 - Comision Nombre091",
+   "importe": -1782.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 141,
+   "fecha": "2026-08-31",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -374.22,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 142,
+   "fecha": "2026-08-31",
+   "concepto": "Comision Nombre005 Nombre088 Nombre089 Nombre090 - Comision Nombre091",
+   "importe": -1782.0,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  },
+  {
+   "n": 143,
+   "fecha": "2026-08-31",
+   "concepto": "Iva 21% Nombre040 de Nombre041 ley27743",
+   "importe": -374.22,
+   "estado": "GRIS",
+   "detalle": "",
+   "detalle_origen": "ninguno",
+   "comprobante": "",
+   "docs": [],
+   "confianza": "alta",
+   "fuente": "regla",
+   "motivo": "cargo automatico del banco"
+  }
+ ]
+}

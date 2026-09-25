@@ -1,0 +1,176 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 82,
+    "n": 90
+  },
+  "detalle_exacto_validado": {
+    "ok": 30,
+    "n": 38
+  },
+  "categoria_validada": {
+    "ok": 33,
+    "n": 38
+  },
+  "deducido_exacto": {
+    "ok": 1,
+    "n": 8
+  },
+  "deducido_categoria": {
+    "ok": 3,
+    "n": 8
+  },
+  "tabla_exacto": {
+    "ok": 29,
+    "n": 30
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 87,
+    "n": 90
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60,
+    80,
+    81
+  ],
+  "errores": [
+    {
+      "n": 2,
+      "campo": "detalle",
+      "agente": "Servicioss - Personal Flow - 002 25 DE MAYO AV. 3816 5 A",
+      "esperado": "Servicioss - Personal Flow - 002 3816 5A",
+      "origen": "tabla",
+      "motivo": "importe exacto coincide; documento de servicio validado"
+    },
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "importe coincide exacto; pertenencia dudosa pero servicio a propiedad del accionista"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A 0001-33529820",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 27,
+      "campo": "detalle",
+      "agente": "Impuesto - ARBA",
+      "esperado": "Personal - Leyes - El Nombre116",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide con VEP de impuesto provincial"
+    },
+    {
+      "n": 30,
+      "campo": "detalle",
+      "agente": "Impuesto - ARBA",
+      "esperado": "Impuesto - ARCA - Ganancias",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide con VEP de ganancias sociedades"
+    },
+    {
+      "n": 39,
+      "campo": "comprobante",
+      "agente": "00007683",
+      "esperado": "08-2026",
+      "motivo": "importe exacto coincide; e-cheque emitido a accionista"
+    },
+    {
+      "n": 55,
+      "campo": "comprobante",
+      "agente": "032361051-7",
+      "esperado": "",
+      "motivo": "importe exacto coincide; Nombre201 SENASA empresa"
+    },
+    {
+      "n": 63,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro efectivo sin destino especificado"
+    },
+    {
+      "n": 64,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro efectivo sin destino especificado"
+    },
+    {
+      "n": 65,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro efectivo sin destino especificado"
+    },
+    {
+      "n": 82,
+      "campo": "detalle",
+      "agente": "Impuesto - IVA - El Nombre116",
+      "esperado": "Impuesto - ARCA -IVA",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide; VEP de ARCA por IVA"
+    },
+    {
+      "n": 84,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Agricultura - Venta Cereal - Nombre080",
+      "origen": "ninguno",
+      "motivo": "importe no coincide con ningún candidato; CUIT coincide pero montos distintos"
+    },
+    {
+      "n": 85,
+      "campo": "comprobante",
+      "agente": "84354",
+      "esperado": "0002-00000043",
+      "motivo": "importe exacto coincide; comprobante de pago bancario"
+    },
+    {
+      "n": 122,
+      "campo": "comprobante",
+      "agente": "12158529",
+      "esperado": "08-2026",
+      "motivo": "importe exacto; comprobante pago dudoso pero sugerencia tabla valida"
+    },
+    {
+      "n": 124,
+      "campo": "comprobante",
+      "agente": "12162955",
+      "esperado": "08-2026",
+      "motivo": "importe exacto; comprobante pago dudoso pero sugerencia tabla valida"
+    },
+    {
+      "n": 126,
+      "campo": "comprobante",
+      "agente": "12162955",
+      "esperado": "08-2026",
+      "motivo": "importe exacto; comprobante pago dudoso pero sugerencia tabla valida"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 68,
+    "vinculados_correctamente": 55,
+    "vinculados_parcial": 4,
+    "no_vinculados": 9,
+    "sin_movimiento_esperado": 60,
+    "sin_movimiento_bien_dejados": 56,
+    "sin_movimiento_vinculados_de_mas": [
+      "doc_023.pdf",
+      "doc_049.pdf",
+      "doc_051.pdf",
+      "doc_085.pdf"
+    ]
+  }
+}

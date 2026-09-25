@@ -1,0 +1,122 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 82,
+    "n": 90
+  },
+  "detalle_exacto_validado": {
+    "ok": 37,
+    "n": 38
+  },
+  "categoria_validada": {
+    "ok": 37,
+    "n": 38
+  },
+  "deducido_exacto": {
+    "ok": 5,
+    "n": 6
+  },
+  "deducido_categoria": {
+    "ok": 5,
+    "n": 6
+  },
+  "tabla_exacto": {
+    "ok": 32,
+    "n": 32
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 86,
+    "n": 90
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60,
+    80,
+    81
+  ],
+  "errores": [
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "documento dudoso pero importe exacto y concepto de expensas coincide"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A 0001-33529820",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 27,
+      "campo": "detalle",
+      "agente": "Impuesto - ARCA - Ganancias",
+      "esperado": "Personal - Leyes - El Nombre116",
+      "origen": "deducido",
+      "motivo": "VEP de ARCA coincide en importe; corresponde a impuesto Nombre186 no cargas sociales"
+    },
+    {
+      "n": 32,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "ECHEQ 64193010",
+      "motivo": "e-Nombre034 candidato no pertenece a la empresa; se mantiene sugerencia de tabla por antecedente"
+    },
+    {
+      "n": 55,
+      "campo": "comprobante",
+      "agente": "032361051-7",
+      "esperado": "",
+      "motivo": "importe exacto y emisor propio coincide con remito SENASA"
+    },
+    {
+      "n": 85,
+      "campo": "comprobante",
+      "agente": "84354",
+      "esperado": "0002-00000043",
+      "motivo": "importe exacto coincide con comprobantes de pago de la transferencia recibida"
+    },
+    {
+      "n": 87,
+      "campo": "comprobante",
+      "agente": "1670810156 ; 0000-2026-000018",
+      "esperado": "VEP 1670810156",
+      "motivo": "VEP e importe coinciden exacto, respaldado también por retención asociada | guarda: comprobante tomado de los documentos de origen"
+    },
+    {
+      "n": 122,
+      "campo": "comprobante",
+      "agente": "00002 00000137",
+      "esperado": "08-2026",
+      "motivo": "importe no coincide con factura; pagos candidatos son redondos y dudosos"
+    },
+    {
+      "n": 124,
+      "campo": "comprobante",
+      "agente": "00002 00000137",
+      "esperado": "08-2026",
+      "motivo": "importe no coincide con factura; pagos candidatos son redondos y dudosos"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 68,
+    "vinculados_correctamente": 55,
+    "vinculados_parcial": 2,
+    "no_vinculados": 11,
+    "sin_movimiento_esperado": 60,
+    "sin_movimiento_bien_dejados": 54,
+    "sin_movimiento_vinculados_de_mas": [
+      "doc_023.pdf",
+      "doc_049.pdf",
+      "doc_051.pdf",
+      "doc_081.pdf",
+      "doc_085.pdf",
+      "doc_106.pdf"
+    ]
+  }
+}

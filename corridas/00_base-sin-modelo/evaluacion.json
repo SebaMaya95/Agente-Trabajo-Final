@@ -1,0 +1,589 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 20,
+    "n": 90
+  },
+  "detalle_exacto_validado": {
+    "ok": 32,
+    "n": 38
+  },
+  "categoria_validada": {
+    "ok": 32,
+    "n": 38
+  },
+  "deducido_exacto": {
+    "ok": 0,
+    "n": 4
+  },
+  "deducido_categoria": {
+    "ok": 0,
+    "n": 4
+  },
+  "tabla_exacto": {
+    "ok": 32,
+    "n": 34
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 20,
+    "n": 90
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60,
+    80,
+    81
+  ],
+  "errores": [
+    {
+      "n": 2,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "03950-07678443",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 4,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0003-00001728",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 5,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0001-00000004",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 7,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0002-00001222",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 8,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "C-00002-00000043",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 9,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381661",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 10,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02367928",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 11,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02367928",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 12,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381660",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 13,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02367927",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 14,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381661",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 15,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381660",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 16,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02367927",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 17,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0001-00005206 ; 0001-00005207",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 18,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0002-00000439",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 20,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "00011-00153429 ; 00011-00155355",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 22,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "9535379",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 24,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0005-00014682",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A 0001-33529820",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 26,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0004-00005765",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 27,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "VEP 1662208122",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 29,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0002-00082836",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 30,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "VEP 1663742379",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 30,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - El Nombre116",
+      "esperado": "Impuesto - ARCA - Ganancias",
+      "origen": "tabla",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 32,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "ECHEQ 64193010",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 37,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "03950-07882992",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 38,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "03950-07857017",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 39,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 40,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0002-00000427",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 43,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0003-00019213",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 45,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0004-00005776",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 48,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0003-00001684",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 50,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392599",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 51,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392599",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 52,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392598",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 53,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392598",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 54,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "Liq 0031880663",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 58,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0028-00068988",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 61,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0080-00365134",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 63,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 64,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 65,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 76,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0011-00157351",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 79,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "192427094",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 82,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "VEP 1669866364",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 82,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - El Nombre116",
+      "esperado": "Impuesto - ARCA -IVA",
+      "origen": "tabla",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 85,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0002-00000043",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 87,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "VEP 1670810156",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 88,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128665",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 89,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128665",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 90,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128669",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 91,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128669",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 92,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128667",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 93,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128667",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 94,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128661",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 95,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128661",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 96,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128663",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 105,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0002-00000279",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 106,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0001-00005363",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 115,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0003-00013637",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 116,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "C 00001-00000975",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 122,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 123,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 123,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Personal - Haberes - Nombre124 Nombre103",
+      "origen": "ninguno",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 124,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 125,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 126,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 127,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 128,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 129,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 130,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 131,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 132,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 133,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    },
+    {
+      "n": 134,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "el modelo no devolvio decision"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 68,
+    "vinculados_correctamente": 0,
+    "vinculados_parcial": 0,
+    "no_vinculados": 68,
+    "sin_movimiento_esperado": 60,
+    "sin_movimiento_bien_dejados": 60,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

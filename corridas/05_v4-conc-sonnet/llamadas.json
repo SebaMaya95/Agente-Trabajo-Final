@@ -1,0 +1,47 @@
+[
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 13131,
+  "output_tokens": 2196,
+  "usd": 0.048222,
+  "stop_reason": "end_turn",
+  "segundos": 17.83
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 10263,
+  "output_tokens": 1931,
+  "usd": 0.039836,
+  "stop_reason": "end_turn",
+  "segundos": 16.66
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 13726,
+  "output_tokens": 2226,
+  "usd": 0.049712,
+  "stop_reason": "end_turn",
+  "segundos": 18.7
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 10403,
+  "output_tokens": 1955,
+  "usd": 0.040356,
+  "stop_reason": "end_turn",
+  "segundos": 14.71
+ },
+ {
+  "etapa": "conciliacion",
+  "modelo": "claude-sonnet-5",
+  "input_tokens": 4847,
+  "output_tokens": 251,
+  "usd": 0.012204,
+  "stop_reason": "end_turn",
+  "segundos": 3.45
+ }
+]

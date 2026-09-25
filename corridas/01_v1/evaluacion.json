@@ -1,0 +1,383 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 49,
+    "n": 90
+  },
+  "detalle_exacto_validado": {
+    "ok": 33,
+    "n": 38
+  },
+  "categoria_validada": {
+    "ok": 33,
+    "n": 38
+  },
+  "deducido_exacto": {
+    "ok": 4,
+    "n": 7
+  },
+  "deducido_categoria": {
+    "ok": 4,
+    "n": 7
+  },
+  "tabla_exacto": {
+    "ok": 29,
+    "n": 31
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 63,
+    "n": 90
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60,
+    80,
+    81
+  ],
+  "errores": [
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 9,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381661",
+      "motivo": "múltiples pistas sin coincidir exactamente; falta documento"
+    },
+    {
+      "n": 10,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02367928",
+      "motivo": "pistas sin candidatos confirmados; imposible determinar suministro"
+    },
+    {
+      "n": 11,
+      "campo": "comprobante",
+      "agente": "B 0012-83939302",
+      "esperado": "B-0014-02367928",
+      "motivo": "importe exacto coincide; doc_077 es liquidación de Nombre249"
+    },
+    {
+      "n": 12,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381660",
+      "motivo": "pistas múltiples sin candidatos; no se puede determinar"
+    },
+    {
+      "n": 13,
+      "campo": "comprobante",
+      "agente": "B 0012-83939301",
+      "esperado": "B-0014-02367927",
+      "motivo": "importe exacto coincide; liquidación Nombre017 Nombre004"
+    },
+    {
+      "n": 14,
+      "campo": "comprobante",
+      "agente": "B 0012-83954330",
+      "esperado": "B-0014-02381661",
+      "motivo": "importe exacto; liquidación Nombre017 Nombre004 doc_108"
+    },
+    {
+      "n": 15,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02381660",
+      "motivo": "pistas sin candidatos; no hay confirmación de documento"
+    },
+    {
+      "n": 16,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02367927",
+      "motivo": "pistas múltiples sin candidatos específicos"
+    },
+    {
+      "n": 20,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "00011-00153429 ; 00011-00155355",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 22,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "9535379",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A 0001-33529820",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 30,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - El Nombre116",
+      "esperado": "Impuesto - ARCA - Ganancias",
+      "origen": "tabla",
+      "motivo": "regla: importe unico + tabla exacta"
+    },
+    {
+      "n": 39,
+      "campo": "comprobante",
+      "agente": "10233657",
+      "esperado": "08-2026",
+      "motivo": "importe exacto doc_056 (Adelanto Retiro Nombre244); sugerencia_tabla coincide"
+    },
+    {
+      "n": 50,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392599",
+      "motivo": "sin candidatos; pistas múltiples sin confirmación"
+    },
+    {
+      "n": 51,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392599",
+      "motivo": "monto elevado sin candidatos específicos"
+    },
+    {
+      "n": 52,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392598",
+      "motivo": "sin candidatos; no hay confirmación de documento"
+    },
+    {
+      "n": 53,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392598",
+      "motivo": "pistas sin candidatos confirmados; indeterminable"
+    },
+    {
+      "n": 55,
+      "campo": "comprobante",
+      "agente": "032361051-7",
+      "esperado": "",
+      "motivo": "regla: importe unico + tabla exacta"
+    },
+    {
+      "n": 63,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro efectivo sin justificación; no hay candidatos"
+    },
+    {
+      "n": 64,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro efectivo sin justificación; no hay candidatos"
+    },
+    {
+      "n": 65,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Pagos en efectivo",
+      "origen": "ninguno",
+      "motivo": "retiro efectivo sin justificación; no hay candidatos"
+    },
+    {
+      "n": 82,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - El Nombre116",
+      "esperado": "Impuesto - ARCA -IVA",
+      "origen": "tabla",
+      "motivo": "regla: importe unico + tabla exacta"
+    },
+    {
+      "n": 84,
+      "campo": "comprobante",
+      "agente": "1-15943",
+      "esperado": "",
+      "motivo": "CUIT coincide; liquidación Nombre080 pero sin importe exacto"
+    },
+    {
+      "n": 85,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "0002-00000043",
+      "motivo": "importe exacto transferencia; sugerencia tabla validada"
+    },
+    {
+      "n": 88,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128665",
+      "motivo": "sin candidatos; importe pequeño Nombre016 Nombre017 Nombre018"
+    },
+    {
+      "n": 90,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128669",
+      "motivo": "sin candidatos; importe pequeño Nombre016 Nombre017 suministro 80000"
+    },
+    {
+      "n": 91,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128669",
+      "motivo": "sin candidatos; importe Nombre016 Nombre017 suministro 80000"
+    },
+    {
+      "n": 92,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128667",
+      "motivo": "sin candidatos; importe Nombre016 Nombre017 suministro 70000"
+    },
+    {
+      "n": 94,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128661",
+      "motivo": "sin documento candidato; similar a movimientos de servicios"
+    },
+    {
+      "n": 95,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128661",
+      "motivo": "sin documento candidato; similar a movimientos de servicios"
+    },
+    {
+      "n": 96,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "A-0014-00128663",
+      "motivo": "sin documento candidato; similar a movimientos de servicios"
+    },
+    {
+      "n": 121,
+      "campo": "comprobante",
+      "agente": "1-15943",
+      "esperado": "",
+      "motivo": "CUIT y sugerencia coinciden; importe sin detallar en liquidación"
+    },
+    {
+      "n": 122,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "concepto indica retiro a accionista; candidatos tienen pertenece=dudoso"
+    },
+    {
+      "n": 123,
+      "campo": "comprobante",
+      "agente": "00000027",
+      "esperado": "08-2026",
+      "motivo": "importe exacto en recibo de sueldo; transferencia a empleado"
+    },
+    {
+      "n": 124,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "concepto indica retiro a accionista; candidatos tienen pertenece=dudoso"
+    },
+    {
+      "n": 125,
+      "campo": "comprobante",
+      "agente": "00000036",
+      "esperado": "08-2026",
+      "motivo": "regla: importe unico + tabla exacta"
+    },
+    {
+      "n": 126,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "08-2026",
+      "motivo": "concepto indica retiro a accionista; candidatos tienen pertenece=dudoso"
+    },
+    {
+      "n": 127,
+      "campo": "comprobante",
+      "agente": "00000032",
+      "esperado": "08-2026",
+      "motivo": "importe exacto en recibo de sueldo; pago de haberes"
+    },
+    {
+      "n": 128,
+      "campo": "comprobante",
+      "agente": "00000035",
+      "esperado": "08-2026",
+      "motivo": "importe exacto (sueldo neto) en recibo de sueldo"
+    },
+    {
+      "n": 129,
+      "campo": "comprobante",
+      "agente": "00000013, 00000003",
+      "esperado": "08-2026",
+      "motivo": "importe cubierto por dos recibos de sueldo con importe idéntico"
+    },
+    {
+      "n": 130,
+      "campo": "comprobante",
+      "agente": "00000031",
+      "esperado": "08-2026",
+      "motivo": "importe neto exacto coincide; recibo de sueldo agosto 2026"
+    },
+    {
+      "n": 131,
+      "campo": "comprobante",
+      "agente": "00000023",
+      "esperado": "08-2026",
+      "motivo": "importe neto exacto coincide; recibo de sueldo agosto 2026"
+    },
+    {
+      "n": 132,
+      "campo": "comprobante",
+      "agente": "00000034",
+      "esperado": "08-2026",
+      "motivo": "importe neto exacto coincide; recibo de sueldo agosto 2026"
+    },
+    {
+      "n": 133,
+      "campo": "comprobante",
+      "agente": "00000013",
+      "esperado": "08-2026",
+      "motivo": "importe exacto coincide; recibo sueldo agosto 2026 Nombre045 Nombre105"
+    },
+    {
+      "n": 134,
+      "campo": "comprobante",
+      "agente": "00000028",
+      "esperado": "08-2026",
+      "motivo": "importe neto exacto coincide; recibo de sueldo agosto 2026"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 68,
+    "vinculados_correctamente": 42,
+    "vinculados_parcial": 6,
+    "no_vinculados": 20,
+    "sin_movimiento_esperado": 60,
+    "sin_movimiento_bien_dejados": 56,
+    "sin_movimiento_vinculados_de_mas": [
+      "doc_023.pdf",
+      "doc_049.pdf",
+      "doc_051.pdf",
+      "doc_068.pdf"
+    ]
+  }
+}
