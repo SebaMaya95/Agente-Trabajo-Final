@@ -33,7 +33,14 @@ Supuesto: un cliente, una corrida completa por mes, ~140 movimientos y ~130 docu
 
 Con **10 clientes** parecidos: el escenario A cuesta unos US$ 76 por año; el D, unos US$ 194.
 
-**Frente al ahorro:** el costo de la API (US$ 0,63 por cliente por mes) es despreciable frente al tiempo humano del proceso manual. *Falta un dato que solo tiene el administrador: cuántas horas lleva hoy el cierre de un mes. No se estimó acá para no inventarlo.* Lo que sí se puede decir con lo medido es que el agente no es el cuello de botella económico: lo es la revisión humana de lo marcado.
+## 2.b Frente al proceso manual
+
+- **Tiempo actual (dato del administrador):** **6 a 8 horas por mes y por cliente**, desde que descarga los movimientos del banco hasta que revisa cada documento contra su movimiento, los renombra y arma el informe final.
+- **Lo que el agente hace en lugar de esas horas:** leer los 128 documentos, vincularlos con los movimientos, completar comprobante y categoría, copiarlos con nombre ordenado y armar el reporte por categoría. Costo: US$ 0,63.
+- **Lo que sigue haciendo la persona** (medido en agosto, corrida v5): de los 143 movimientos, 46 son cargos automáticos del banco (sin revisión). De los 97 restantes, **67 quedan marcados para revisar** (69%: 24 naranjas sin documento, 6 amarillas, 15 de confianza media, y detalles deducidos) y 30 quedan como "alta confianza", que se revisan por muestreo. A eso se suman las decisiones sobre lo dudoso (`GOBIERNO_Y_RIESGO.md`, punto 4).
+- **Lo que NO está medido: cuánto tarda esa revisión.** No hay un mes real corrido con el agente y cronometrado, así que **el ahorro en horas es una hipótesis, no un resultado**. Cualquier cifra sería inventada. Lo que sí se puede afirmar con lo medido: la parte que el agente automatiza (leer, vincular, renombrar, reportar) es la mayor parte de las 6 a 8 horas descriptas, y la revisión humana pasa de ser sobre todos los documentos a ser sobre 67 filas marcadas más una muestra.
+- **Punto de equilibrio:** el agente conviene mientras la revisión lleve menos que las 6 a 8 horas actuales, y el costo de la API es despreciable. **A modo de ilustración** (valor hora hipotético de US$ 20, no un dato del administrador), 6 a 8 horas equivalen a US$ 120 a 160 por mes por cliente: la API sería el 0,4% a 0,5% de ese costo. Si la revisión llevara la mitad del tiempo actual (hipótesis), el ahorro sería de 3 a 4 horas por mes, es decir 36 a 48 horas por año por cliente.
+- **Cómo cerrar el dato:** correr un mes real con el agente, cronometrar la revisión y registrar el resultado en `DECISIONES.md`.
 
 ## 3. Elección del modelo, con el criterio del curso (el más chico que hace bien la tarea)
 

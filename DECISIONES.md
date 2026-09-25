@@ -1,7 +1,7 @@
 # DECISIONES — la historia de cómo se construyó
 
 > Registro cronológico. D1 a D9 se escribieron antes de correr la versión siguiente; D10 a D14 se escribieron juntas después de correr v4 y las comparaciones de modelo; D15 y D16 después de sus hallazgos. Las cifras son las medidas de cada corrida y están en [corridas/RESUMEN.md](corridas/RESUMEN.md).
-> Fechas: el armado del repo empezó el 25/09/2026, después de la fecha original de entrega (13/09); se consulta prórroga con el profesor.
+> Fechas: el armado del repo empezó el 25/09/2026, después de la fecha original de entrega (13/09). Según informó la persona, la entrega tardía está contemplada.
 
 ## D0 · Quién hizo qué, y cómo leer la historia de commits
 - **La persona (dueña del caso):** eligió el problema; aportó los datos de agosto (extracto, cierre hecho a mano, Tabla de Referencias, comprobantes) y la instrucción original de Cowork; aclaró la semántica de los colores y las convenciones del cliente; aprobó el recorte de alcance y la evaluación contra un mes cerrado; creó la cuenta y la clave de la API (sin pasarla por el chat); autorizó publicar las corridas anonimizadas; fijó el criterio de uso eficiente de tokens y modelo óptimo.
