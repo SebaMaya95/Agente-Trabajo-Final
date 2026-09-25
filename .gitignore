@@ -1,0 +1,9 @@
+# DATOS REALES DE CLIENTES: nunca al repositorio publico
+datos_privados/
+Banco/
+*.xls
+*.xlsx
+*.zip
+.env
+*.key
+__pycache__/
