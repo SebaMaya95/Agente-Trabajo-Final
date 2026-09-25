@@ -1,0 +1,56 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 91,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 40,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 40,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 9,
+    "n": 9
+  },
+  "deducido_categoria": {
+    "ok": 9,
+    "n": 9
+  },
+  "tabla_exacto": {
+    "ok": 31,
+    "n": 31
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 91,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [
+    {
+      "n": 76,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "FC 0011-00157351",
+      "motivo": "Nombre coincide pero importe no exacto; débito automático confirmado | guarda: se descartaron documentos vinculados sin el importe exacto"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 68,
+    "vinculados_parcial": 0,
+    "no_vinculados": 2,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 58,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

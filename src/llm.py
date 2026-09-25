@@ -9,7 +9,9 @@ from config import MODELOS, cargar_env
 
 
 class LLM:
-    def __init__(self):
+    def __init__(self, temperatura: float | None = None, cache_prompt: bool = False):
+        self.temperatura = temperatura          # solo Haiku: Sonnet 5 no admite parametros de muestreo
+        self.cache_prompt = cache_prompt        # marca el prompt del sistema como cacheable (se mide si aplica)
         cargar_env()
         self.client = anthropic.Anthropic(max_retries=4)
         self.registro: list[dict] = []
@@ -21,17 +23,22 @@ class LLM:
         m = MODELOS[modelo]
         t0 = time.time()
         extra = {"thinking": {"type": "disabled"}} if modelo == "sonnet" else {}   # Sonnet 5 razona por defecto: se apaga para comparar en igualdad
+        if modelo == "haiku" and self.temperatura is not None:
+            extra["extra_body"] = {"temperature": self.temperatura}      # el SDK 1.x ya no lo acepta como argumento
+        sistema = [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}] if self.cache_prompt else system
         r = self.client.messages.create(
-            model=m["id"], max_tokens=max_tokens, system=system,
+            model=m["id"], max_tokens=max_tokens, system=sistema,
             messages=[{"role": "user", "content": contenido}],
             output_config={"format": {"type": "json_schema", "schema": schema}}, **extra,
         )
         u = r.usage
-        costo = (u.input_tokens * m["usd_in"] + u.output_tokens * m["usd_out"]) / 1_000_000
+        c_esc = getattr(u, "cache_creation_input_tokens", 0) or 0
+        c_lec = getattr(u, "cache_read_input_tokens", 0) or 0
+        costo = ((u.input_tokens + 1.25 * c_esc + 0.1 * c_lec) * m["usd_in"] + u.output_tokens * m["usd_out"]) / 1_000_000
         with self._lock:
             self.registro.append({
                 "etapa": etapa, "modelo": m["id"], "input_tokens": u.input_tokens,
-                "output_tokens": u.output_tokens, "usd": round(costo, 6),
+                "output_tokens": u.output_tokens, "cache_creacion": c_esc, "cache_lectura": c_lec, "usd": round(costo, 6),
                 "stop_reason": r.stop_reason, "segundos": round(time.time() - t0, 2)})
         if r.stop_reason == "max_tokens":
             raise RuntimeError(f"[{etapa}] respuesta cortada por max_tokens ({max_tokens})")

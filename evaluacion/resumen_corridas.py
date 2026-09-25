@@ -14,10 +14,11 @@ for d in sorted((REPO / "corridas").glob("[0-9]*")):
     tout = sum(v["output_tokens"] for v in g.values())
     completo = m["costo_referencia_lectura_completa"]["usd"] + g.get("conciliacion", {}).get("usd", 0)   # lectura completa medida + conciliacion de esta corrida
     lect = json.loads((d / "lecturas_documentos.json").read_text(encoding="utf-8"))
+    cfg = (m['modelo_lector'] or '-') + (f" (imágenes: {m['modelo_lector_imagenes']})" if m.get('modelo_lector_imagenes') not in (None, m['modelo_lector']) else '')         + ' / ' + (m['modelo_conciliador'] or '-') + (f", temperatura {m['temperatura']}" if m.get('temperatura') is not None else '')
     (d / "LEEME.md").write_text(f"""# Corrida {d.name}
 
 - **Fecha:** {m['fecha'].replace('T', ' ')}
-- **Modelos:** lector `{m['modelo_lector'] or 'ninguno (solo código)'}` / conciliador `{m['modelo_conciliador'] or 'ninguno (solo código)'}`
+- **Modelos:** lector `{m['modelo_lector'] or 'ninguno (solo código)'}`{(' (imágenes y PDF escaneados: `' + m['modelo_lector_imagenes'] + '`)') if m.get('modelo_lector_imagenes') not in (None, m['modelo_lector']) else ''} / conciliador `{m['modelo_conciliador'] or 'ninguno (solo código)'}`{(', temperatura ' + str(m['temperatura'])) if m.get('temperatura') is not None else ''}
 - **Prompts usados:** `prompts_usados/` (plantillas; los datos de la empresa se completan desde un archivo privado)
 
 ## Entrada
@@ -36,7 +37,7 @@ for d in sorted((REPO / "corridas").glob("[0-9]*")):
 
 *Anonimizada: nombres, CUIT, cuentas, direcciones y saldos reemplazados; importes, fechas y números de comprobante reales.*
 """, encoding="utf-8")
-    filas.append(f"| {d.name} | {m['fecha'][:16].replace('T', ' ')} | {m['modelo_lector'] or '-'} / {m['modelo_conciliador'] or '-'} | "
+    filas.append(f"| {d.name} | {m['fecha'][:16].replace('T', ' ')} | {cfg} | "
                  f"{pct(e['comprobante'])} | {pct(e['detalle_exacto_validado'])} | {doc['vinculados_correctamente']}/{doc['con_movimiento_esperado']} | "
                  f"{len(doc['sin_movimiento_vinculados_de_mas'])} | {tin:,} / {tout:,} | {m['usd_esta_corrida']:.3f} | {completo:.3f} |")
 cab = ("# Resumen de corridas (mes 202608)\n\n"

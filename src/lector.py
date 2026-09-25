@@ -23,6 +23,15 @@ def _limpiar(t: str) -> str:
     return re.sub(r"\n\s*\n+", "\n", t).strip()
 
 
+# Frases tipicas de una inyeccion de instrucciones (espanol e ingles). Deteccion local, sin modelo, sobre el texto COMPLETO
+# (incluido el texto invisible: blanco sobre blanco o de cuerpo minusculo, que una persona no ve pero pypdf si lee).
+RE_INYECCION = re.compile(
+    r"(ignor[aeá]\w*|ignore|disregard|olvid[aá]\w*|forget)\s+(all\s+|todas\s+|las\s+|the\s+|your\s+|previous\s+|anteriores\s+)*(reglas|instrucciones|instructions|rules|previous|prior)"
+    r"|system\s+override|prompt\s+(injection|del sistema)|instrucci[oó]n(es)?\s+para\s+el\s+sistema"
+    r"|(link|vincul[aá]\w*)\s+(it|this|este|esta)?\s*(invoice|document|documento|factura)?\s*(to|a)\s+(every|all|todos)"
+    r"|(set|poner|pon[eé]|asign[aá])\s+(the\s+)?(confidence|confianza)\s+(to\s+|en\s+)?(high|alta)"
+    r"|never\s+mention|no\s+menciones\s+esta", re.IGNORECASE)
+
 RE_MONTO = re.compile(r"(?<![\d.,])(\d{1,3}(?:\.\d{3})+,\d{2}|\d+,\d{2}|\d+\.\d{2})(?!\d)")
 
 
@@ -51,12 +60,13 @@ def leer(ruta: Path) -> dict:
         if len(texto) >= 50:
             n = len(texto)
             montos = montos_del_texto(texto)
+            sospecha = bool(RE_INYECCION.search(texto))
             truncado = n > MAX_CHARS_CABEZA + MAX_CHARS_COLA
             if truncado:
                 texto = texto[:MAX_CHARS_CABEZA] + "\n[...recortado...]\n" + texto[-MAX_CHARS_COLA:]
-            return {"texto": texto, "bloque": None, "truncado": truncado, "chars_originales": n, "montos": montos}
+            return {"texto": texto, "bloque": None, "truncado": truncado, "chars_originales": n, "montos": montos, "sospecha": sospecha}
         datos = base64.standard_b64encode(ruta.read_bytes()).decode()
-        return {"texto": None, "truncado": False, "chars_originales": 0, "montos": {},
+        return {"texto": None, "truncado": False, "chars_originales": 0, "montos": {}, "sospecha": False,
                 "bloque": {"type": "document",
                            "source": {"type": "base64", "media_type": "application/pdf", "data": datos}}}
     if ext in MEDIA:
@@ -64,7 +74,7 @@ def leer(ruta: Path) -> dict:
         img.thumbnail((MAX_LADO_IMAGEN, MAX_LADO_IMAGEN))
         buf = io.BytesIO()
         img.convert("RGB").save(buf, "JPEG", quality=85)
-        return {"texto": None, "truncado": False, "chars_originales": 0, "montos": {},
+        return {"texto": None, "truncado": False, "chars_originales": 0, "montos": {}, "sospecha": False,
                 "bloque": {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg",
                                                        "data": base64.standard_b64encode(buf.getvalue()).decode()}}}
     raise ValueError(f"tipo no soportado: {ext}")

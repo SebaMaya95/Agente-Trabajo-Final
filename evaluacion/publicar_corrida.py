@@ -41,7 +41,7 @@ neto gravado cargo fijo variable energia electrica unificado fundacion educacion
 adelanto ordinarias egresos consorcio propietario propietarios inquilino unidad funcional departamento dpto impuestos
 derivado enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre moneda pesos usd ars
 tasa saldo primer segundo cuenta banco liquidacion resumen comprobante operacion transferencia judicial
-feria general vinculado sociedades empleador gastos retenido segun productos servicio empresa movimiento movimientos documento documentos concepto precio recaudacion pagar practicada tipo impuestos impuesto vep consolidado
+feria general vinculado sociedades empleador gastos retenido segun productos servicio empresa movimiento movimientos documento documentos concepto precio recaudacion pagar practicada tipo impuestos impuesto vep consolidado final
 """.split())
 
 

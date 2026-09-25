@@ -32,6 +32,10 @@ def main():
     ap.add_argument("--etiqueta", required=True)
     ap.add_argument("--lector", default="haiku", choices=MODELOS)
     ap.add_argument("--conciliador", default="haiku", choices=MODELOS)
+    ap.add_argument("--lector-imagenes", choices=MODELOS, default=None, help="modelo para imagenes y PDF escaneados (por defecto, el del lector)")
+    ap.add_argument("--temperatura", type=float, default=None, help="solo Haiku (Sonnet 5 no admite el parametro)")
+    ap.add_argument("--sin-cache", action="store_true", help="vuelve a leer todos los documentos aunque esten en el cache")
+    ap.add_argument("--cache-prompt", action="store_true", help="marca el prompt del sistema como cacheable")
     ap.add_argument("--prompts", default=str(REPO / "prompts"))
     ap.add_argument("--sin-modelo", action="store_true")
     ap.add_argument("--limite", type=int, default=0, help="solo los primeros N documentos (prueba de humo)")
@@ -60,11 +64,11 @@ def main():
         decisiones = {}
     else:
         from llm import LLM
-        llm = LLM()
+        llm = LLM(temperatura=a.temperatura, cache_prompt=a.cache_prompt)
         leer = lambda n: (pdir / n).read_text(encoding="utf-8")  # noqa: E731
         sis_l = P.render(leer("system_prompt_lector.md"), **sub)
         lecturas = P.etapa_lectura(llm, docs, a.lector, sis_l, leer("user_prompt_lector.md"),
-                                   base / "cache_lectura")
+                                   base / "cache_lectura", modelo_imagenes=a.lector_imagenes, usar_cache=not a.sin_cache)
         P.normalizar_lecturas(lecturas)
         reglas, para_llm, cands = P.preparar(movs, lecturas, refs, empresa["cuit"], empresa.get("convenciones_concepto"))
         sis_c = P.render(leer("system_prompt.md"), **sub)
@@ -79,6 +83,9 @@ def main():
     meta = {
         "mes": a.mes, "etiqueta": a.etiqueta, "fecha": datetime.now().isoformat(timespec="seconds"),
         "modelo_lector": None if a.sin_modelo else MODELOS[a.lector]["id"],
+        "modelo_lector_imagenes": None if a.sin_modelo else MODELOS[a.lector_imagenes or a.lector]["id"],
+        "temperatura": None if a.sin_modelo else a.temperatura,
+        "cache_prompt": a.cache_prompt,
         "modelo_conciliador": None if a.sin_modelo else MODELOS[a.conciliador]["id"],
         "movimientos": len(movs), "control_saldo": control_saldo(movs), "documentos": len(docs), "resueltos_por_regla": len(reglas),
         "enviados_al_modelo": len(para_llm), "lecturas_reutilizadas_del_cache": reutilizadas,

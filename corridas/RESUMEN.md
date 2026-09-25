@@ -19,5 +19,10 @@ Generado por `evaluacion/resumen_corridas.py`. Evaluación contra el cierre manu
 | 12_v9 | 2026-09-25 15:44 | claude-haiku-4-5 / claude-haiku-4-5 | 98% (90/92) | 100% (40/40) | 67/70 | 0 | 51,177 / 5,598 | 0.079 | 0.688 |
 | 13_v9-repeticion1 | 2026-09-25 15:45 | claude-haiku-4-5 / claude-haiku-4-5 | 99% (91/92) | 100% (40/40) | 68/70 | 0 | 51,177 / 5,644 | 0.079 | 0.688 |
 | 14_v9-repeticion2 | 2026-09-25 15:45 | claude-haiku-4-5 / claude-haiku-4-5 | 98% (90/92) | 100% (40/40) | 67/70 | 0 | 51,177 / 5,644 | 0.079 | 0.688 |
+| 15_v10 | 2026-09-25 16:09 | claude-haiku-4-5 (imágenes: claude-sonnet-5) / claude-haiku-4-5, temperatura 0.0 | 100% (92/92) | 100% (40/40) | 69/70 | 0 | 540,208 / 26,879 | 0.768 | 0.784 |
+| 16_v10-repeticion1 | 2026-09-25 16:11 | claude-haiku-4-5 (imágenes: claude-sonnet-5) / claude-haiku-4-5, temperatura 0.0 | 100% (92/92) | 100% (40/40) | 69/70 | 0 | 35,038 / 5,377 | 0.062 | 0.784 |
+| 17_v10-repeticion2 | 2026-09-25 16:12 | claude-haiku-4-5 (imágenes: claude-sonnet-5) / claude-haiku-4-5, temperatura 0.0 | 100% (92/92) | 100% (40/40) | 69/70 | 0 | 35,038 / 5,382 | 0.062 | 0.784 |
+| 18_v10-relectura | 2026-09-25 16:14 | claude-haiku-4-5 (imágenes: claude-sonnet-5) / claude-haiku-4-5, temperatura 0.0 | 99% (91/92) | 100% (40/40) | 68/70 | 0 | 545,333 / 27,860 | 0.787 | 0.787 |
+| 19_v11-final | 2026-09-25 16:18 | claude-haiku-4-5 (imágenes: claude-sonnet-5) / claude-haiku-4-5, temperatura 0.0 | 99% (91/92) | 100% (40/40) | 68/70 | 0 | 35,369 / 5,488 | 0.063 | 0.787 |
 
 (*) Lectura completa de los 128 documentos (medida en la corrida que la hizo) más la conciliación de esa corrida. Las corridas 03 a 05 y 07 reutilizaron la lectura de la 02 desde el cache, por eso gastaron mucho menos. La prueba de humo con 5 documentos (US$ 0,049) no se publica.

@@ -59,27 +59,31 @@ def _sha(p: Path) -> str:
 
 # ---------------------------------------------------------------- etapa 1
 def etapa_lectura(llm, docs: list[Path], modelo: str, sistema: str, usuario: str, cache: Path,
-                  workers: int = 4) -> dict[str, dict]:
+                  workers: int = 4, modelo_imagenes: str | None = None, usar_cache: bool = True) -> dict[str, dict]:
     """Devuelve {doc: {extraccion, uso, truncado, reutilizado}}. Reusa el cache si el prompt y el modelo no cambiaron."""
     cache.mkdir(parents=True, exist_ok=True)
-    huella = hashlib.sha256((sistema + usuario + modelo).encode()).hexdigest()[:8]
+    modelo_imagenes = modelo_imagenes or modelo
+    temp = "" if llm.temperatura is None else str(llm.temperatura)
 
     def uno(p: Path):
+        leido = lector.leer(p)
+        modelo_doc = modelo_imagenes if leido["bloque"] else modelo          # imagenes y PDF escaneados: modelo de vision
+        huella = hashlib.sha256((sistema + usuario + modelo_doc + temp).encode()).hexdigest()[:8]
         f = cache / f"{_sha(p)}_{huella}.json"
-        if f.exists():
+        if usar_cache and f.exists():
             d = json.loads(f.read_text(encoding="utf-8"))
             d["reutilizado"] = True
+            d["sospecha_texto"] = leido["sospecha"]              # se recalcula siempre: es local y gratis
             return p.name, d
-        leido = lector.leer(p)
         contenido = []
         if leido["bloque"]:
             contenido.append(leido["bloque"])
         contenido.append({"type": "text", "text": usuario + (("\n\n" + leido["texto"]) if leido["texto"] else "")})
         n0 = len(llm.registro)
-        ext = llm.llamar("lectura", modelo, sistema, contenido, SCHEMA_LECTOR, max_tokens=2000)
+        ext = llm.llamar("lectura", modelo_doc, sistema, contenido, SCHEMA_LECTOR, max_tokens=2000)
         u = llm.registro[-1] if len(llm.registro) > n0 else {}
         d = {"extraccion": ext, "truncado": leido["truncado"], "chars": leido["chars_originales"], "montos": leido["montos"],
-             "vision": bool(leido["bloque"]),
+             "vision": bool(leido["bloque"]), "modelo": modelo_doc, "sospecha_texto": leido["sospecha"],
              "uso": {k: u.get(k) for k in ("input_tokens", "output_tokens", "usd")}, "reutilizado": False}
         f.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
         return p.name, d
@@ -98,6 +102,8 @@ def normalizar_lecturas(lecturas: dict) -> dict:
     """Coherencia en codigo: el modelo a veces marca 'origen' a un remito o un certificado de retencion."""
     for d in lecturas.values():
         e = d["extraccion"]
+        if d.get("sospecha_texto") and not SOSPECHA.search(e["nota"]):
+            e["nota"] = (e["nota"] + " ALERTA local: el texto del documento contiene instrucciones sospechosas").strip()
         if e["tipo"] in SOLO_INFORMATIVOS and e["rol"] != "otro":
             e["rol_original"], e["rol"] = e["rol"], "otro"
         elif e["tipo"] == "comprobante_pago" and e["rol"] != "pago":

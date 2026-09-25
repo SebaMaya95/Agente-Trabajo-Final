@@ -1,0 +1,48 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 92,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 40,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 40,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 10,
+    "n": 10
+  },
+  "deducido_categoria": {
+    "ok": 10,
+    "n": 10
+  },
+  "tabla_exacto": {
+    "ok": 30,
+    "n": 30
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 92,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 69,
+    "vinculados_parcial": 0,
+    "no_vinculados": 1,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 58,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

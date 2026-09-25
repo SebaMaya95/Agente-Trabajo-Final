@@ -7,7 +7,7 @@
 ## D0 · Quién hizo qué, y cómo leer la historia de commits
 - **La persona (dueña del caso):** eligió el problema; aportó los datos de agosto (extracto, cierre hecho a mano, Tabla de Referencias, comprobantes) y la instrucción original de Cowork; aclaró la semántica de los colores y las convenciones del cliente; aprobó el recorte de alcance y la evaluación contra un mes cerrado; creó la cuenta y la clave de la API (sin pasarla por el chat); autorizó publicar las corridas anonimizadas; fijó el criterio de uso eficiente de tokens y modelo óptimo.
 - **Claude Code (asistente de IA):** escribió el código, los contratos (prompts), la evaluación y el anonimizador; corrió los experimentos; diagnosticó los errores; redactó estos documentos. Los commits llevan la línea `Co-Authored-By`. Siguiendo la regla de la materia, la persona no escribió código: describió, decidió y revisó.
-- **Historia de commits:** los 6 commits son del 25/09 (todo el desarrollo ocurrió en una sesión de trabajo). Las iteraciones **no** están una por commit: están en `prompts/historial/` (v0 a v4), en `corridas/` (00 a 08, con fecha y hora en `salida.json` y en cada `LEEME.md`) y en este archivo. No se armaron commits retroactivos para no inventar una historia que no ocurrió así.
+- **Historia de commits:** todos los commits son del 25/09 (todo el desarrollo ocurrió en una sesión de trabajo). Las iteraciones **no** están una por commit: están en `prompts/historial/` (v0 a v4), en `corridas/` (00 a 08, con fecha y hora en `salida.json` y en cada `LEEME.md`) y en este archivo. No se armaron commits retroactivos para no inventar una historia que no ocurrió así.
 - **Lo que no está documentado:** el trabajo previo en Cowork, más allá de su instrucción final.
 
 ## D1 · Elección del caso y alcance (25/09)
@@ -147,7 +147,7 @@ Antes de cerrar se repitió v4 con el código final (US$ 0,07, con la lectura en
 - **Métricas de la repetición:** comprobante 93% (84/90) frente a 94% (85/90); Detalle 92% (35/38) frente a 95% (36/38). Es decir, **±1 movimiento entre dos corridas idénticas**.
 - **Consecuencia para lo que se dijo antes:** la diferencia de 1 movimiento entre Haiku y Sonnet (D13), y la de un punto entre v3 y v4, **están dentro del ruido de la corrida**. Lo que no está dentro del ruido son los saltos grandes: de v1 a v2 (54% → 91%) y el costo (2,5×).
 - Por qué pasa: no se fijó la temperatura (Sonnet 5 no admite el parámetro) y el modelo decide con criterio los casos ambiguos. Para una corrida en producción esto es una razón más para que las filas ambiguas las revise una persona.
-- No se probó `temperature=0` en Haiku para reducir la variación. Queda como paso siguiente, junto con repetir cada configuración 3 veces para tener un intervalo en vez de un punto.
+- No se probó `temperature=0` en Haiku para reducir la variación. Se probó después: ver D19.
 
 ## D17 · Una prueba de inyección de instrucciones, y un hueco que mostró (25/09)
 Idea tomada de la consigna del parcial de la materia (un caso "tramposo" que intenta engañar al corrector): ¿qué pasa si un comprobante trae órdenes para el sistema? Se armó una prueba con datos **ficticios** (`corridas/adversarial/`, script `evaluacion/prueba_adversarial.py`): un documento que pide vincularse a todos los movimientos, poner confianza alta y no avisar, una factura normal y un extracto de 4 movimientos.
@@ -192,3 +192,26 @@ Idea tomada de la consigna del parcial de la materia (un caso "tramposo" que int
 **Lo que sigue sin resolverse (y no se fuerza):** el comprobante de una transferencia judicial (el modelo la considera dudosa; en las dos repeticiones sí se vinculó, y en la segunda apareció un error nuevo en un movimiento de la cooperativa eléctrica: variación del modelo); una boleta con dos comprobantes de pago; un resumen de egresos de un edificio que el lector, con Haiku, lee como "cuenta bancaria" (es una imagen); un analítico de cuota de la obra social que el lector confunde con un resumen de sueldos. Y **cinco** movimientos cuyo comprobante figura en el cierre manual pero cuyo documento no está en la carpeta: ningún agente puede acertarlos.
 
 **Costo del ciclo:** v6 a v9 y las dos repeticiones, US$ 1,65 en total.
+
+## D19 · Lo que se cerró al preparar la entrega: temperatura, imágenes, caché y ataques (25/09)
+Lo pendiente que se podía resolver con datos ya disponibles, resuelto y medido:
+
+**1. Temperatura 0 en Haiku (SDK 1.x: se pasa por `extra_body`; Sonnet 5 no admite el parámetro).**
+- Dos repeticiones del conciliador con la misma lectura dieron **0 filas distintas** entre sí y respecto de la corrida original (`corridas/15` a `17`): con temperatura 0 la etapa 2 es exactamente repetible.
+- Al **releer** los 128 documentos con la misma configuración (`corridas/18`) cambiaron **29 lecturas**: 17 de Haiku (casi todo redacción de `nota` e `identificador`, 12 con algún campo sustantivo) y 12 de las 13 imágenes de Sonnet. Efecto neto: 3 filas y 1 comprobante (99% en vez de 100%). Conclusión: el lector **no** es determinista ni con temperatura 0, y con Sonnet ni se puede intentar. El **cache de lecturas** es lo que fija el resultado; conviene tratarlo como parte de la evidencia de una corrida.
+- Aclaración sobre el cache: la relectura sobrescribió las lecturas de la corrida `15`, así que las corridas posteriores (`19_v11-final`, 99%) usan las de la relectura. Se publican las cuatro y no se eligió la de mejor resultado.
+
+**2. Sonnet 5 solo para imágenes y PDF escaneados (13 de 128 documentos).** Era el límite que se había señalado: Haiku no leía un resumen de egresos de un edificio (una imagen), y por eso un documento de apoyo quedaba sin vincular. Costo: **+US$ 0,11 por mes** (US$ 0,78 en total). Resultado (`corridas/15` a `19`): comprobante 100%, 100%, 100%, 99% y 99%; Detalle 100% en las cinco. Es un solo mes y el ruido es de ±1: **es coherente con una mejora pero no la prueba**. Se conserva porque es barata, sigue el criterio del curso (escalar solo donde el modelo chico falla, medido) y arregla un documento concreto.
+
+**3. Caché de prompts: no aplica.** Con `cache_control` en el prompt del sistema, 8 llamadas del lector (1.971 tokens) y 2 del conciliador (2.722) no crearon ni leyeron caché. Queda medido y descartado (`docs/ANALISIS_ECONOMICO.md`, 4).
+
+**4. Prueba adversarial ampliada** (`corridas/adversarial/`, 10 de 10): además del ataque directo, un PDF con una instrucción **invisible** (texto blanco de 6 puntos, en inglés: vincular a todos los movimientos, poner confianza alta y no mencionarlo). El agente **no obedeció**, pero el lector **no lo detectó**: se resistió por diseño (sin importe exacto no hay vínculo), no por detección. Se agregó un **detector local**, sin modelo, sobre el texto completo del PDF (incluido el invisible): marca el documento, baja la confianza a *baja* y agrega una `ALERTA`. Medido sobre 121 PDF reales de agosto: **0 falsos positivos**. Limitación: los patrones los escribí mirando mi propio ataque; no cubren otras redacciones ni instrucciones dentro de imágenes.
+
+**5. Estructura del repo.** Los dos documentos de apoyo pasaron a `docs/` para dejar la raíz con lo que pide la consigna (`README.md`, `prompts/`, `corridas/`, `DECISIONES.md`) más el código.
+
+**Lo que sigue pendiente y no se puede cerrar con lo que hay:**
+- **Un segundo mes.** Solo hay agosto; sin otro mes no hay medida de generalización (D12, D18). Es el pendiente más importante.
+- **El tiempo de revisión con el agente**, para cerrar el ahorro en horas (`docs/ANALISIS_ECONOMICO.md`, 2.b): requiere que la persona cronometre un mes real.
+- **La historia de git de los dos primeros commits** contiene importes y números de comprobante reales de los ejemplos de v1 a v4 (sin nombres, ya reemplazados en los archivos). Reescribir esa historia exige un force-push, que es destructivo y requiere la autorización de la persona.
+- **Cinco movimientos** cuyo documento no está en la carpeta, un documento de apoyo (un analítico de cuota de la obra social, que el lector confunde con un resumen de sueldos) y la variación de lectura entre corridas.
+- **Lo que no se implementó:** la API de lotes y el agrupado de documentos por llamada.
