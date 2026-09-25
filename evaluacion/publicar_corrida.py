@@ -49,6 +49,10 @@ def _norm(t: str) -> str:
     return unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
 
 
+VALORES_EJEMPLO_REALES = [("80.210,02", "<importe-real-1>"), ("80210.02", "<importe-real-1>"), ("1023536.89", "<importe-real-2>"),
+                          ("1018855.9", "<importe-real-3>"), ("4680.99", "<importe-real-4>"), ("00011-00153429", "<n-real-1>"),
+                          ("00011-00155355", "<n-real-2>"), ("$2.000.000", "$<importe-real-5>"), ('"monto":2000000', '"monto":<importe-real-5>'),
+                          ("FC 0001-00000004", "<n-real-3>")]
 GLOSARIO = RAIZ / "datos_privados" / "glosario_alias.json"   # privado: mapa palabra real -> alias
 
 
@@ -161,6 +165,11 @@ def main(run: Path, destino_nombre: str) -> None:
     if (run / "llamadas.json").exists():
         shutil.copy2(run / "llamadas.json", dest / "llamadas.json")
     shutil.copytree(run / "prompts", dest / "prompts_usados")
+    for f in (dest / "prompts_usados").glob("*.md"):                   # v1-v4 tenian valores reales en los ejemplos (DECISIONES D16)
+        t = f.read_text(encoding="utf-8")
+        for viejo, nuevo in VALORES_EJEMPLO_REALES:
+            t = t.replace(viejo, nuevo)
+        f.write_text(t, encoding="utf-8")
     with open(dest / "resultado.csv", "w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh)
         w.writerow(["n", "fecha", "concepto", "importe", "estado", "detalle", "n_comprobante", "documentos", "confianza", "origen_detalle", "fuente", "motivo"])
