@@ -13,6 +13,29 @@ for d in sorted((REPO / "corridas").glob("0*")):
     tin = sum(v["input_tokens"] for v in g.values())
     tout = sum(v["output_tokens"] for v in g.values())
     completo = m["costo_referencia_lectura_completa"]["usd"] + g.get("conciliacion", {}).get("usd", 0)   # lectura completa medida + conciliacion de esta corrida
+    lect = json.loads((d / "lecturas_documentos.json").read_text(encoding="utf-8"))
+    (d / "LEEME.md").write_text(f"""# Corrida {d.name}
+
+- **Fecha:** {m['fecha'].replace('T', ' ')}
+- **Modelos:** lector `{m['modelo_lector'] or 'ninguno (solo código)'}` / conciliador `{m['modelo_conciliador'] or 'ninguno (solo código)'}`
+- **Prompts usados:** `prompts_usados/` (plantillas; los datos de la empresa se completan desde un archivo privado)
+
+## Entrada
+- El extracto del banco del mes (143 movimientos, saldos omitidos): `../entrada_extracto_202608.csv`
+- {'Lo que el lector extrajo de cada uno de los ' + str(len(lect)) + ' documentos (los PDF y las fotos no se publican): `lecturas_documentos.json`' if lect else 'Ningún documento: esta corrida usa solo código y la Tabla de Referencias.'}
+
+## Salida
+- Una fila por movimiento, con estado (color), Detalle, N° de comprobante, documentos vinculados, confianza y motivo: `resultado.csv`
+- Lo mismo en JSON, con la metadata de la corrida (cantidad de movimientos resueltos por regla y enviados al modelo, control de saldo, tokens y costo): `salida.json`
+- Tokens de entrada y salida de cada llamada a la API: `llamadas.json`
+
+## Evaluación contra el cierre manual
+- N° de comprobante exacto: {pct(e['comprobante'])} · Detalle (celdas validadas): {pct(e['detalle_exacto_validado'])} · documentos bien vinculados: {doc['vinculados_correctamente']}/{doc['con_movimiento_esperado']}
+- Cada error, uno por uno, con lo que decidió el agente y lo esperado: `evaluacion.json`
+- Costo de esta corrida: US$ {m['usd_esta_corrida']:.3f} ({tin:,} tokens de entrada y {tout:,} de salida). Contexto y advertencias: `../RESUMEN.md` y `DECISIONES.md` del repositorio.
+
+*Anonimizada: nombres, CUIT, cuentas, direcciones y saldos reemplazados; importes, fechas y números de comprobante reales.*
+""", encoding="utf-8")
     filas.append(f"| {d.name} | {m['fecha'][:16].replace('T', ' ')} | {m['modelo_lector'] or '-'} / {m['modelo_conciliador'] or '-'} | "
                  f"{pct(e['comprobante'])} | {pct(e['detalle_exacto_validado'])} | {doc['vinculados_correctamente']}/{doc['con_movimiento_esperado']} | "
                  f"{len(doc['sin_movimiento_vinculados_de_mas'])} | {tin:,} / {tout:,} | {m['usd_esta_corrida']:.3f} | {completo:.3f} |")
