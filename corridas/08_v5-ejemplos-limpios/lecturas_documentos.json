@@ -428,7 +428,7 @@
     "monto": 5264480
    },
    {
-    "etiqueta": "Nombre169 Julio 2026",
+    "etiqueta": "Recaudacion Julio 2026",
     "monto": 4044000
    },
    {
@@ -663,7 +663,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 232251.57
    }
   ],
@@ -940,7 +940,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 63600.61
    }
   ],
@@ -1122,7 +1122,7 @@
   ],
   "identificador": "Nombre004",
   "pertenece": "si",
-  "nota": "liquidación de venta de ganado, plazos múltiples",
+  "nota": "liquidación de venta de Nombre447, plazos múltiples",
   "uso": {
    "input_tokens": 3260,
    "output_tokens": 309,
@@ -1329,7 +1329,7 @@
   ],
   "identificador": "",
   "pertenece": "si",
-  "nota": "documento duplicado en imagen, transacción en USD",
+  "nota": "documento duplicado en imagen, Nombre430 en USD",
   "uso": {
    "input_tokens": 3860,
    "output_tokens": 163,
@@ -1481,7 +1481,7 @@
   "fecha": "2026-09-01",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 791525.38
    }
   ],
@@ -1688,13 +1688,13 @@
   "fecha": "2026-08-20",
   "importes": [
    {
-    "etiqueta": "monto a Nombre184",
+    "etiqueta": "monto a pagar",
     "monto": 666563.8
    }
   ],
   "identificador": "2026-07",
   "pertenece": "si",
-  "nota": "VEP ingresos brutos período julio 2026",
+  "nota": "VEP Nombre442 Nombre443 período julio 2026",
   "uso": {
    "input_tokens": 2664,
    "output_tokens": 133,
@@ -2113,7 +2113,7 @@
     "monto": 101564.4
    },
    {
-    "etiqueta": "importe neto a Nombre184",
+    "etiqueta": "importe neto a pagar",
     "monto": 1417670.98
    }
   ],
@@ -2917,7 +2917,7 @@
   ],
   "identificador": "Nombre004",
   "pertenece": "si",
-  "nota": "venta de hacienda (4 vacas conserva)",
+  "nota": "venta de Nombre461 (4 vacas conserva)",
   "uso": {
    "input_tokens": 3287,
    "output_tokens": 156,
@@ -3120,7 +3120,7 @@
   ],
   "identificador": "Factura 00004-00002343",
   "pertenece": "si",
-  "nota": "Retención Ganancias sobre servicios no ejecutados dependencia",
+  "nota": "Retención Ganancias sobre servicios no Nombre450 Nombre452",
   "uso": {
    "input_tokens": 2819,
    "output_tokens": 177,
@@ -3553,7 +3553,7 @@
   ],
   "identificador": "Retiro Julio 26",
   "pertenece": "dudoso",
-  "nota": "transferencia a persona física, relación con empresa unclear",
+  "nota": "transferencia a persona física, Nombre451 con empresa unclear",
   "uso": {
    "input_tokens": 2658,
    "output_tokens": 141,
@@ -3759,7 +3759,7 @@
   ],
   "identificador": "2026-07",
   "pertenece": "si",
-  "nota": "VEP pendiente, Empleadores SICOSS Saldo DJ",
+  "nota": "VEP pendiente, Nombre432 Nombre433 Saldo DJ",
   "uso": {
    "input_tokens": 2737,
    "output_tokens": 297,
@@ -3961,7 +3961,7 @@
   ],
   "identificador": "Calle 59 Nº3200, suministro 6",
   "pertenece": "si",
-  "nota": "liquidación 1/2, dos códigos Link/Banelco",
+  "nota": "liquidación 1/2, dos códigos Link/Nombre456",
   "uso": {
    "input_tokens": 3362,
    "output_tokens": 205,

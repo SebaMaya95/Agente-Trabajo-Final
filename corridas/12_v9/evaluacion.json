@@ -1,0 +1,63 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 90,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 40,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 40,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 8,
+    "n": 8
+  },
+  "deducido_categoria": {
+    "ok": 8,
+    "n": 8
+  },
+  "tabla_exacto": {
+    "ok": 32,
+    "n": 32
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 91,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [
+    {
+      "n": 22,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "9535379",
+      "motivo": "documento dudoso pertenece; transferencia judicial, verificar si es gasto empresa | guarda: se restituyo el Detalle de la tabla"
+    },
+    {
+      "n": 54,
+      "campo": "comprobante",
+      "agente": "173439841804",
+      "esperado": "Liq 0031880663",
+      "motivo": "importe exacto coincide, pago Mercado Pago Nombre059 confirmado | guarda: se agrego doc_101.pdf (importe exacto)"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 67,
+    "vinculados_parcial": 0,
+    "no_vinculados": 3,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 58,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

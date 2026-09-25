@@ -428,7 +428,7 @@
     "monto": 5264480
    },
    {
-    "etiqueta": "Nombre169 Julio 2026",
+    "etiqueta": "Recaudacion Julio 2026",
     "monto": 4044000
    },
    {
@@ -492,7 +492,7 @@
   ],
   "identificador": "Factura 00002-00000644",
   "pertenece": "si",
-  "nota": "retención sobre servicio no en relación dependencia",
+  "nota": "retención sobre servicio no en Nombre451 Nombre452",
   "uso": {
    "input_tokens": 2816,
    "output_tokens": 169,
@@ -663,7 +663,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 232251.57
    }
   ],
@@ -952,7 +952,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 63600.61
    }
   ],
@@ -1102,7 +1102,7 @@
   ],
   "identificador": "Nombre004, Nombre129 Nombre130",
   "pertenece": "si",
-  "nota": "Liquidación de venta de hacienda con retenciones",
+  "nota": "Liquidación de venta de Nombre461 con retenciones",
   "uso": {
    "input_tokens": 3260,
    "output_tokens": 310,
@@ -1457,7 +1457,7 @@
   "fecha": "2026-09-01",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 791525.38
    }
   ],
@@ -1664,13 +1664,13 @@
   "fecha": "2026-08-20",
   "importes": [
    {
-    "etiqueta": "monto a Nombre184",
+    "etiqueta": "monto a pagar",
     "monto": 666563.8
    }
   ],
   "identificador": "202607",
   "pertenece": "si",
-  "nota": "Ingresos Brutos período julio 2026",
+  "nota": "Nombre442 Nombre443 período julio 2026",
   "uso": {
    "input_tokens": 2664,
    "output_tokens": 129,
@@ -2101,7 +2101,7 @@
     "monto": 101564.4
    },
    {
-    "etiqueta": "importe neto a Nombre184",
+    "etiqueta": "importe neto a pagar",
     "monto": 1417670.98
    }
   ],
@@ -2271,7 +2271,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 75000
    }
   ],
@@ -2937,7 +2937,7 @@
   ],
   "identificador": "Nombre004",
   "pertenece": "si",
-  "nota": "liquidación de venta de hacienda con múltiples retenciones",
+  "nota": "liquidación de venta de Nombre461 con múltiples retenciones",
   "uso": {
    "input_tokens": 3287,
    "output_tokens": 316,
@@ -3007,7 +3007,7 @@
   ],
   "identificador": "Calle 40 Nº5242, Nombre004, Suministro 9",
   "pertenece": "si",
-  "nota": "Liquidación 1/2, dos códigos Link/Banelco listados",
+  "nota": "Liquidación 1/2, dos códigos Link/Nombre456 listados",
   "uso": {
    "input_tokens": 3352,
    "output_tokens": 216,
@@ -3136,7 +3136,7 @@
   ],
   "identificador": "00004-00002343",
   "pertenece": "si",
-  "nota": "Retención Impuesto a las Ganancias, locaciones de Nombre178/servicios",
+  "nota": "Retención Impuesto a las Ganancias, Nombre445 de Nombre178/servicios",
   "uso": {
    "input_tokens": 2819,
    "output_tokens": 178,
@@ -3423,7 +3423,7 @@
   ],
   "identificador": "01-2026 a 06-2026",
   "pertenece": "si",
-  "nota": "resumen mensual de saldos semestre enero-junio 2026",
+  "nota": "resumen Nombre436 de saldos semestre enero-junio 2026",
   "uso": {
    "input_tokens": 3070,
    "output_tokens": 368,
@@ -3785,7 +3785,7 @@
     "monto": 184624.48
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 8066194.02
    }
   ],

@@ -8,9 +8,9 @@ Un agente que concilia el extracto bancario mensual de una empresa agropecuaria 
 | Requisito | Dónde |
 |---|---|
 | 1 · Sistema completo (objetivo, contrato, herramienta real, salida estructurada, supervisión L0–L4) | Contrato: [prompts/](prompts/) · código: [src/](src/) · supervisión L0–L4: [GOBIERNO_Y_RIESGO.md](GOBIERNO_Y_RIESGO.md), punto 2 |
-| 2 · Corre de verdad (tres corridas reales, reconstruibles) | [corridas/](corridas/): 9 corridas, cada una con su `LEEME.md` (fecha, entrada, salida); resumen en [corridas/RESUMEN.md](corridas/RESUMEN.md) |
+| 2 · Corre de verdad (tres corridas reales, reconstruibles) | [corridas/](corridas/): 15 corridas, cada una con su `LEEME.md` (fecha, entrada, salida); resumen en [corridas/RESUMEN.md](corridas/RESUMEN.md) |
 | 3 · Formato estricto | Este README, `prompts/`, `corridas/` y `DECISIONES.md`, más dos documentos de apoyo (`ANALISIS_ECONOMICO.md` y `GOBIERNO_Y_RIESGO.md`) |
-| 4 · Historia del proceso | [DECISIONES.md](DECISIONES.md) (D0 a D16: quién hizo qué, iteraciones, errores, cambios de alcance) y [prompts/historial/](prompts/historial/) |
+| 4 · Historia del proceso | [DECISIONES.md](DECISIONES.md) (D0 a D18: quién hizo qué, iteraciones, errores, cambios de alcance) y [prompts/historial/](prompts/historial/) |
 | 5 · Análisis económico | [ANALISIS_ECONOMICO.md](ANALISIS_ECONOMICO.md) |
 | 6 · Gobierno y riesgo | [GOBIERNO_Y_RIESGO.md](GOBIERNO_Y_RIESGO.md) |
 
@@ -25,49 +25,48 @@ Las instrucciones textuales que le di al agente que construyó el sistema (Claud
 6. *"1. Estoy de acuerdo. 2. Ok 3. Ok"* (aprobación del recorte de alcance, de la carpeta de datos y de la evaluación contra un mes cerrado) y *"Dejo lo de Agosto."* / *"Si tengo [cuenta de la API]"*.
 7. *"1. El verde significa que tengo una copia en papel, pero eso no importa para el agente. Correcto, por eso bajo el naranja. 2. No, porque se va actualizando cada mes. 3. Hagamos todas las corridas en Agosto, mejorando el contrato y, en consecuencia, el resultado obtenido. Cuando consideres, anda subiendo todo a git para que quede registro. Lo central es cumplir con la consigna del tp, mientras que hacemos un uso eficiente de tokens junto con un modelo optimo."*
 
-**El contrato que usa el agente en cada corrida** (las seis piezas: Rol, Contexto, Tarea, Restricciones, Formato, Ejemplos) está en [prompts/system_prompt_lector.md](prompts/system_prompt_lector.md) + [prompts/user_prompt_lector.md](prompts/user_prompt_lector.md) (etapa 1) y [prompts/system_prompt.md](prompts/system_prompt.md) + [prompts/user_prompt.md](prompts/user_prompt.md) (etapa 2). Las versiones v1, v2 y v3 están en `prompts/historial/`, y cada corrida guarda los prompts que usó en `prompts_usados/`.
+**El contrato que usa el agente en cada corrida** (las seis piezas: Rol, Contexto, Tarea, Restricciones, Formato, Ejemplos) está en [prompts/system_prompt_lector.md](prompts/system_prompt_lector.md) + [prompts/user_prompt_lector.md](prompts/user_prompt_lector.md) (etapa 1) y [prompts/system_prompt.md](prompts/system_prompt.md) + [prompts/user_prompt.md](prompts/user_prompt.md) (etapa 2). Las versiones v1 a v7 están en `prompts/historial/`, y cada corrida guarda los prompts que usó en `prompts_usados/`.
 
 ## Qué funciona
 **Cómo se usa** (sobre un mes con el extracto descargado y los comprobantes en una carpeta):
 ```
 pip install -r requirements.txt
 python evaluacion/preparar_datos.py 202608        # solo para probar contra un mes ya cerrado
-python src/main.py --mes 202608 --etiqueta v5 --lector haiku --conciliador haiku
+python src/main.py --mes 202608 --etiqueta v9 --lector haiku --conciliador haiku
 ```
 Necesita una clave de la API de Anthropic en `datos_privados/.env` (`ANTHROPIC_API_KEY=...`). Los datos reales no están en el repositorio: para reproducir hace falta una carpeta propia con la misma forma. Cada corrida genera en `datos_privados/<mes>/corridas/<fecha>_<etiqueta>/`: el Excel del mes con las columnas y colores, el reporte de 3 hojas (resumen, totales por categoría, filas para revisar), los comprobantes copiados con nombre nuevo, y el JSON con cada decisión, su confianza, su motivo y los tokens gastados.
 
-**Qué se probó y anduvo** (mes de agosto: 143 movimientos, 128 documentos únicos, 60 de los cuales no corresponden a ningún movimiento). Evaluación contra el cierre manual, sobre 90 movimientos evaluables:
+**Qué se probó y anduvo** (mes de agosto: 143 movimientos, 128 documentos únicos, 58 de los cuales no corresponden a ningún movimiento). Evaluación contra el cierre manual, que es la verdad, sobre 92 movimientos evaluables:
 
-| Corrida | N° comprobante exacto | Detalle (celdas validadas) | Documentos bien vinculados | US$ por corrida completa |
+| Corrida | N° comprobante exacto | Detalle (celdas validadas) | Documentos bien vinculados (de 70) | US$ por corrida completa |
 |---|---|---|---|---|
-| Solo código + tabla, sin modelo (línea base) | 22%* | 84% | 0 de 68 | 0 |
-| v1 (Haiku) | 54% | 87% | 42 de 68 | 0,55 |
-| v2 | 91% | 79% | 55 de 68 | 0,64 |
-| v3 | 92% | 95% | 58 de 68 | 0,64 |
-| v4 (Haiku) | 94% (85/90) | 95% (36/38) | 58 de 68 | 0,64 |
-| v4 repetida (misma entrada, mismo código) | 93% | 92% | 55 de 68 | 0,64 |
-| **v5 (final, Haiku; ejemplos del prompt sin datos reales)** | **94% (85/90)** | **92% (35/38)** | **57 de 68** | **0,63** |
-| v4 con Sonnet 5 en las dos etapas | 96% | 95% | 58 de 68 | 1,62 |
+| Solo código + tabla, sin modelo (línea base) | 22%* | 80% | 0 | 0 |
+| v1 (Haiku) | 53% | 82% | 44 | 0,55 |
+| v5 (Haiku; ejemplos del prompt sin datos reales) | 95% | 88% | 59 | 0,63 |
+| **v9 (final, Haiku)** | **98% (90/92)** | **100% (40/40)** | **67** | **0,69** |
+| v9 repetida dos veces (misma entrada, mismo código) | 99% y 98% | 100% | 68 y 67 | 0,69 |
+| v4 con Sonnet 5 en las dos etapas | 93% | 90% | 60 | 1,62 |
 
-\* La línea base "acierta" en las filas que no tienen comprobante; por eso se mira también cuántos documentos quedan bien vinculados.
+\* La línea base "acierta" en las filas que no tienen comprobante; por eso se mira también cuántos documentos quedan bien vinculados. Historia completa de las 15 corridas en [corridas/RESUMEN.md](corridas/RESUMEN.md).
 
-- Los 46 cargos automáticos del banco se marcan solos y sin costo; 15 movimientos más se resuelven por regla, sin modelo.
-- El pipeline cuesta unos **US$ 0,63 por mes por cliente** (US$ 7,6 por año), de los cuales el 89% es la lectura de documentos. Ver [ANALISIS_ECONOMICO.md](ANALISIS_ECONOMICO.md).
-- Elegí **Haiku 4.5** en las dos etapas: Sonnet 5 como conciliador no mejora, y en las dos etapas suma un movimiento acertado de 90 al 2,5× del costo.
+- Los 46 cargos automáticos del banco se marcan solos y sin costo; 24 movimientos más se resuelven por regla, sin modelo.
+- El pipeline cuesta unos **US$ 0,69 por mes por cliente** (US$ 8,3 por año), de los cuales el 88% es la lectura de documentos. Ver [ANALISIS_ECONOMICO.md](ANALISIS_ECONOMICO.md).
+- Elegí **Haiku 4.5** en las dos etapas: Sonnet 5 no mejora el resultado y cuesta hasta 2,5 veces más.
+- **De 97 movimientos que no son cargos del banco, 69 quedan marcados para revisar** (71%): el agente prefiere avisar a vincular mal.
 - Las corridas guardan tokens de entrada y salida, modelo, prompts y decisiones por movimiento, y permiten reconstruir qué pasó (ver [corridas/](corridas/)).
+- Cada diferencia con el cierre manual se investigó leyendo los documentos y se corrigió en el contrato o en el código (`DECISIONES.md`, D18).
 
 ## Qué falta o qué falló
-- **El ahorro en horas no está medido.** El proceso manual lleva 6 a 8 horas por mes; el agente cuesta US$ 0,63 pero la revisión humana con el agente no se cronometró (queda 67 filas marcadas de 97 no grises). Ver `ANALISIS_ECONOMICO.md`, 2.b.
-- **El modelo no es determinista.** Repetir v4 con la misma entrada dio 93% en comprobantes en vez de 94% y cambió 26 de 143 filas (casi todas de redacción). Las diferencias de un movimiento entre configuraciones (Haiku vs. Sonnet, v3 vs. v4) están dentro de ese ruido; los saltos grandes (v1 → v2) no. Falta repetir cada configuración varias veces y probar `temperature=0` en Haiku (D15).
-- **La cifra está inflada y no dice cuánto generaliza.** Las reglas de v2 a v4 salieron de las fallas de agosto y se miden sobre agosto. Hay un solo mes; falta correrlo sobre otro mes sin tocar nada. Es lo primero que haría.
-- **Errores que siguen en la versión final** (5 comprobantes y 3 detalles sobre 90 y 38 evaluables; D12 y D16): un N° de comprobante de expensas (el documento se vinculó bien pero faltó aplicar la convención del período), una factura de un importe distinto del débito, un cobro parcial, una guía de tránsito que el cierre manual no vincula, dos VEP de impuestos que el modelo confunde entre sí, una liquidación de granos del mes anterior vinculada a un cobro y un retiro de efectivo sin categoría. La regla "el VEP manda sobre la tabla" arregló uno y rompió otro. Detalle en `DECISIONES.md`, D12.
-- **Un error propio en los prompts:** dos ejemplos usaban importes y un N° de comprobante reales de agosto; lo encontré revisando el diff antes de publicar, los reemplacé por valores inventados y repetí todo (v5): el resultado se sostuvo (D16).
-- **Una regresión propia:** al pasar a código la convención "haberes → período", rompí el caso de una persona que cobra con factura propia. Lo detecté al revisar los errores de v3 y lo corregí en v4 (D11).
-- **7 movimientos no se pueden evaluar:** el cierre manual tiene su comprobante pero ese documento no está en la carpeta. Se separaron como "no reconstruibles" (D9).
-- **Los 13 documentos que son imágenes** dependen de la lectura por visión de Haiku, que es débil (extrajo solo el total de un resumen de expensas, no el importe por unidad). No se probó un modelo más grande solo para esas.
+- **La cifra no dice cuánto generaliza.** Las reglas de v2 a v9 salieron de las fallas de agosto y se miden sobre agosto: es entrenar y probar con el mismo mes. Algunas reglas son muy específicas de agosto. Hay un solo mes; falta correrlo sobre otro mes **sin tocar nada**. Es lo primero que haría.
+- **El ahorro en horas no está medido.** El proceso manual lleva 6 a 8 horas por mes; el agente cuesta US$ 0,69 pero la revisión humana con el agente no se cronometró (quedan 69 filas marcadas de 97). Ver `ANALISIS_ECONOMICO.md`, 2.b.
+- **El modelo no es determinista.** Repetir la misma corrida cambia el resultado en ±1 movimiento (v4: 95% y 93%; la final: 98%, 99% y 98%). Falta probar `temperature=0` en Haiku (D15, D18).
+- **Errores que siguen en la versión final** (2 comprobantes de 92, 0 detalles de 40, 3 documentos de 70 sin vincular): una transferencia judicial que el modelo considera dudosa, una boleta con dos comprobantes de pago, y dos documentos de apoyo (un resumen de egresos de un edificio, que es una imagen, y un analítico de cuota de la obra social) que el lector clasifica mal. Detalle en `DECISIONES.md`, D18.
+- **5 movimientos no se pueden evaluar:** el cierre manual tiene su comprobante pero ese documento no está en la carpeta (D9, D18).
+- **Errores propios que encontré y corregí** (D11, D16, D18): una regresión de "haberes → período", ejemplos del prompt con importes reales, una vara de evaluación que no reconocía documentos sin renombrar, una regla de "pago parcial" demasiado amplia. Cada uno está contado con su corrección.
+- **Los 13 documentos que son imágenes** dependen de la lectura por visión de Haiku, que es débil. No se probó un modelo más grande solo para esas.
 - **Lo que quedó fuera de alcance a propósito:** el cruce de echeqs con comprobantes sueltos, el circuito de facturas con una empresa vinculada y la ejecución programada semanal (D1).
 - **Las corridas publicadas están anonimizadas**, no son literalmente "tal como salieron" (D14). Los PDF no se publican.
-- **Poco probado:** documentos adversariales (un solo caso ficticio y directo, `corridas/adversarial/`, D17; no se probaron ataques sutiles). **No probado:** la API de lotes y el caché de prompts para bajar el costo, y un segundo cliente.
+- **Poco probado:** documentos adversariales (un solo caso ficticio y directo, `corridas/adversarial/`, D17). **No probado:** la API de lotes y el caché de prompts para bajar el costo, y un segundo cliente.
 - El agente **no** actualiza la Tabla de Referencias: agregar filas es decisión de la persona.
 
 ## Qué aprendí

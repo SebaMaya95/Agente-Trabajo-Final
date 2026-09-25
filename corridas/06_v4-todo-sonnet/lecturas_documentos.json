@@ -432,7 +432,7 @@
     "monto": -5264480
    },
    {
-    "etiqueta": "Nombre169 julio 2026",
+    "etiqueta": "recaudacion julio 2026",
     "monto": 4044000
    },
    {
@@ -467,7 +467,7 @@
   ],
   "identificador": "Retiro Agosto 26",
   "pertenece": "dudoso",
-  "nota": "transferencia a persona física, no aclara relación con la empresa",
+  "nota": "transferencia a persona física, no aclara Nombre451 con la empresa",
   "uso": {
    "input_tokens": 3383,
    "output_tokens": 209,
@@ -572,7 +572,7 @@
     "monto": 1273.86
    },
    {
-    "etiqueta": "importe total a Nombre184",
+    "etiqueta": "importe total a pagar",
     "monto": 2559009.88
    }
   ],
@@ -667,7 +667,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 232251.57
    }
   ],
@@ -849,7 +849,7 @@
   "fecha": "2026-07-14",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 27900.64
    }
   ],
@@ -924,7 +924,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 63600.61
    },
    {
@@ -1058,7 +1058,7 @@
   ],
   "identificador": "Nombre004",
   "pertenece": "si",
-  "nota": "liquidación de venta de hacienda, no factura de compra",
+  "nota": "liquidación de venta de Nombre461, no factura de compra",
   "uso": {
    "input_tokens": 4078,
    "output_tokens": 278,
@@ -1172,7 +1172,7 @@
   "fecha": "2026-06-13",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 174962.97
    }
   ],
@@ -1201,7 +1201,7 @@
     "monto": 15260197.01
    },
    {
-    "etiqueta": "importe total a Nombre184",
+    "etiqueta": "importe total a pagar",
     "monto": 15260197.01
    }
   ],
@@ -1413,7 +1413,7 @@
   "fecha": "2026-09-01",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 791525.38
    }
   ],
@@ -1528,7 +1528,7 @@
     "monto": 5641.05
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 186210.6
    }
   ],
@@ -1561,11 +1561,11 @@
     "monto": 4000.55
    },
    {
-    "etiqueta": "monto a Nombre184 tarjeta pesos",
+    "etiqueta": "monto a pagar tarjeta pesos",
     "monto": 11103.77
    },
    {
-    "etiqueta": "monto a Nombre184 tarjeta Nombre093",
+    "etiqueta": "monto a pagar tarjeta Nombre093",
     "monto": 13.54
    }
   ],
@@ -1652,7 +1652,7 @@
   "fecha": "2026-08-20",
   "importes": [
    {
-    "etiqueta": "monto a Nombre184",
+    "etiqueta": "monto a pagar",
     "monto": 666563.8
    }
   ],
@@ -1934,7 +1934,7 @@
   "fecha": "2026-07-28",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 164889.25
    }
   ],
@@ -2073,7 +2073,7 @@
     "monto": 29797.58
    },
    {
-    "etiqueta": "importe neto a Nombre184",
+    "etiqueta": "importe neto a pagar",
     "monto": 1417670.98
    },
    {
@@ -2247,7 +2247,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 75000
    }
   ],
@@ -2755,7 +2755,7 @@
   "fecha": "2026-08-24",
   "importes": [
    {
-    "etiqueta": "importe total a Nombre184",
+    "etiqueta": "importe total a pagar",
     "monto": 165610.2
    }
   ],
@@ -2780,7 +2780,7 @@
   "fecha": "2026-08-24",
   "importes": [
    {
-    "etiqueta": "importe total a Nombre184",
+    "etiqueta": "importe total a pagar",
     "monto": 1221783.91
    }
   ],
@@ -2809,7 +2809,7 @@
     "monto": 5917909.11
    },
    {
-    "etiqueta": "importe total a Nombre184",
+    "etiqueta": "importe total a pagar",
     "monto": 5917909.11
    }
   ],
@@ -2889,7 +2889,7 @@
   ],
   "identificador": "Nombre004",
   "pertenece": "si",
-  "nota": "liquidación de venta de hacienda, no servicio",
+  "nota": "liquidación de venta de Nombre461, no servicio",
   "uso": {
    "input_tokens": 4109,
    "output_tokens": 271,
@@ -3185,7 +3185,7 @@
   "fecha": "2026-08-10",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 74739.06
    }
   ],
@@ -3432,7 +3432,7 @@
   "fecha": "2026-06-13",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 200716.03
    }
   ],
@@ -3709,7 +3709,7 @@
     "monto": 184624.48
    },
    {
-    "etiqueta": "importe total a Nombre184",
+    "etiqueta": "importe total a pagar",
     "monto": 8066194.02
    }
   ],

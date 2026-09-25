@@ -1,41 +1,39 @@
 {
   "filas_no_gris": 97,
   "comprobante": {
-    "ok": 85,
-    "n": 90
+    "ok": 87,
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 35,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 35,
-    "n": 38
+    "ok": 37,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 4,
-    "n": 6
+    "n": 8
   },
   "deducido_categoria": {
-    "ok": 4,
-    "n": 6
+    "ok": 6,
+    "n": 8
   },
   "tabla_exacto": {
     "ok": 31,
     "n": 32
   },
   "tiene_comprobante_coincide": {
-    "ok": 86,
-    "n": 90
+    "ok": 88,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -76,6 +74,22 @@
       "motivo": "retiro de efectivo sin documento respaldatorio"
     },
     {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto; documento C.E.S.P. para Nombre185 del inmueble"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto; segundo comprobante C.E.S.P. mismo domicilio"
+    },
+    {
       "n": 84,
       "campo": "comprobante",
       "agente": "1-15943",
@@ -99,16 +113,14 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 57,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 59,
     "vinculados_parcial": 2,
     "no_vinculados": 9,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 54,
     "sin_movimiento_vinculados_de_mas": [
       "doc_023.pdf",
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_068.pdf",
       "doc_081.pdf",
       "doc_085.pdf"

@@ -1,41 +1,39 @@
 {
   "filas_no_gris": 97,
   "comprobante": {
-    "ok": 82,
-    "n": 90
+    "ok": 84,
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 37,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 37,
-    "n": 38
+    "ok": 39,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 5,
-    "n": 6
+    "n": 8
   },
   "deducido_categoria": {
-    "ok": 5,
-    "n": 6
+    "ok": 7,
+    "n": 8
   },
   "tabla_exacto": {
     "ok": 32,
     "n": 32
   },
   "tiene_comprobante_coincide": {
-    "ok": 86,
-    "n": 90
+    "ok": 88,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -75,6 +73,22 @@
       "motivo": "importe exacto y emisor propio coincide con remito SENASA"
     },
     {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide con liquidación de gas; dos facturas iguales, se asigna una por movimiento"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "segundo pago igual, se asigna la segunda factura de igual importe"
+    },
+    {
       "n": 85,
       "campo": "comprobante",
       "agente": "84354",
@@ -104,16 +118,14 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 55,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 57,
     "vinculados_parcial": 2,
     "no_vinculados": 11,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 54,
     "sin_movimiento_vinculados_de_mas": [
       "doc_023.pdf",
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_081.pdf",
       "doc_085.pdf",
       "doc_106.pdf"

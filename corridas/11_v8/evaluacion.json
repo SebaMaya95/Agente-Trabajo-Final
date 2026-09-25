@@ -1,0 +1,85 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 88,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 39,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 39,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 7,
+    "n": 8
+  },
+  "deducido_categoria": {
+    "ok": 7,
+    "n": 8
+  },
+  "tabla_exacto": {
+    "ok": 32,
+    "n": 32
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 90,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [
+    {
+      "n": 22,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "9535379",
+      "motivo": "documento dudoso; verificar si es gasto empresa o accionista | guarda: se restituyo el Detalle de la tabla"
+    },
+    {
+      "n": 54,
+      "campo": "comprobante",
+      "agente": "173439841804 ; 0031880663",
+      "esperado": "Liq 0031880663",
+      "motivo": "Dos comprobantes de pago del mismo importe a Nombre059"
+    },
+    {
+      "n": 80,
+      "campo": "comprobante",
+      "agente": "70015-51615416/8 ; 70015-51619368/9",
+      "esperado": "70015-51615416/8",
+      "motivo": "importe exacto coincide doc_049 y doc_051; gas Nombre444 | guarda: comprobante tomado de los documentos de origen"
+    },
+    {
+      "n": 81,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "70015-51619368/9",
+      "motivo": "mismo importe que movimiento anterior; ya vinculado a doc_049 y doc_051"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "ninguno",
+      "motivo": "mismo importe que movimiento anterior; ya vinculado a doc_049 y doc_051"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 66,
+    "vinculados_parcial": 1,
+    "no_vinculados": 3,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 58,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

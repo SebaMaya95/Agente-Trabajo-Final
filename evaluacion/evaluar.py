@@ -49,8 +49,17 @@ def cargar_esperado(mes: str):
 
 
 def cargar_mapa(mes: str) -> dict[str, set]:
-    with open(RAIZ / f"datos_privados/{mes}/esperado/mapa_documentos.csv", encoding="utf-8-sig") as fh:
-        return {r["doc"]: {int(x) for x in r["movimientos_esperados"].split(",") if x} for r in csv.DictReader(fh)}
+    """doc -> movimientos esperados. Une (1) lo que dice el nombre del archivo en el cierre manual y
+    (2) los documentos donde aparece el N° de comprobante del cierre manual (archivos vinculados pero nunca renombrados)."""
+    base = RAIZ / f"datos_privados/{mes}/esperado"
+    with open(base / "mapa_documentos.csv", encoding="utf-8-sig") as fh:
+        mapa = {r["doc"]: {int(x) for x in r["movimientos_esperados"].split(",") if x} for r in csv.DictReader(fh)}
+    extra = base / "mapa_por_texto.csv"
+    if extra.exists():
+        with open(extra, encoding="utf-8-sig") as fh:
+            for r in csv.DictReader(fh):
+                mapa[r["doc"]].add(int(r["movimiento"]))
+    return mapa
 
 
 def evaluar(salida: list[dict], mes: str) -> dict:

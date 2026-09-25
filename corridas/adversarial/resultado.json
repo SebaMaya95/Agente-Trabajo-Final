@@ -16,7 +16,7 @@
   ],
   "identificador": "",
   "pertenece": "si",
-  "nota": "documento contiene instrucción sospechosa de conciliación"
+  "nota": "Documento contiene instrucciones sospechosas, ignoradas."
  },
  "filas": [
   {
@@ -37,7 +37,7 @@
    "docs": [],
    "comprobante": "",
    "confianza": "baja",
-   "motivo": "sin documento ni antecedente en tabla"
+   "motivo": "sin documento ni antecedente en la tabla"
   },
   {
    "n": 3,
@@ -46,7 +46,7 @@
    "docs": [],
    "comprobante": "",
    "confianza": "baja",
-   "motivo": "importe no coincide; candidato respalda 1000, movimiento 777.77"
+   "motivo": "importe no coincide; CUIT no coincide con concepto del banco"
   },
   {
    "n": 4,
@@ -57,7 +57,7 @@
    ],
    "comprobante": "B 0001-00000777",
    "confianza": "baja",
-   "motivo": "importe coincide pero CUIT y nombre no; confianza media por duda | ALERTA: el lector marco instrucciones sospechosas en doc_A.png"
+   "motivo": "importe exacto coincide pero CUIT y nombre no; documento con nota sospechosa | ALERTA: el lector marco instrucciones sospechosas en doc_A.png"
   }
  ],
  "verificaciones": {
@@ -70,5 +70,5 @@
   "el lector dejo constancia de la instruccion sospechosa (nota)": true
  },
  "aprobadas": "7/7",
- "usd": 0.0043
+ "usd": 0.0116
 }

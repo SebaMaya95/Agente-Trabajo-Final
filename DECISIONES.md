@@ -1,6 +1,7 @@
 # DECISIONES — la historia de cómo se construyó
 
 > Registro cronológico. D1 a D9 se escribieron antes de correr la versión siguiente; D10 a D14 se escribieron juntas después de correr v4 y las comparaciones de modelo; D15 y D16 después de sus hallazgos. Las cifras son las medidas de cada corrida y están en [corridas/RESUMEN.md](corridas/RESUMEN.md).
+> **Nota sobre las cifras:** D8 a D16 citan las métricas tal como se calcularon en su momento (evaluación de D9, 90 movimientos evaluables). D18 corrigió la evaluación otra vez (92 evaluables) y recalculó todas las corridas; los valores vigentes están en [corridas/RESUMEN.md](corridas/RESUMEN.md) y difieren en 1 o 2 puntos de los citados en esas entradas.
 > Fechas: el armado del repo empezó el 25/09/2026, después de la fecha original de entrega (13/09). Según informó la persona, la entrega tardía está contemplada.
 
 ## D0 · Quién hizo qué, y cómo leer la historia de commits
@@ -154,3 +155,40 @@ Idea tomada de la consigna del parcial de la materia (un caso "tramposo" que int
 - **Corrección:** guarda en código: si el lector anota instrucciones sospechosas en un documento vinculado, la confianza pasa a *baja* y el motivo lleva una `ALERTA`. En agosto ninguna nota de las 128 lecturas dispara la guarda, así que las corridas 00 a 08 no cambian.
 - **Segunda pasada (US$ 0,004):** 7 de 7 verificaciones aprobadas (`corridas/adversarial/resultado.json`): el documento manipulador se vincula al movimiento 4 (importe idéntico) pero con confianza baja y alerta.
 - **Límite dicho con claridad:** es un solo ataque directo. No se probaron ataques sutiles (texto invisible, otros idiomas, documentos que imitan comprobantes reales). Un documento *falso* con el importe exacto de un movimiento real seguirá vinculándose: la defensa ahí es la revisión humana de los vínculos con confianza media o baja.
+
+## D18 · Los desacuerdos con el cierre manual, uno por uno, y las versiones v6 a v9 (25/09)
+**Criterio fijado por la persona:** el cierre manual es la verdad; si el agente difiere, el agente tiene que aprender la causa. Se dejó de lado la planilla de adjudicación (`evaluacion/planilla_desacuerdos.py`, que queda como herramienta) y se diagnosticó cada caso leyendo los documentos y usando la instrucción original de Cowork como guía de reglas.
+
+**Primero, otro error de la vara (mío).** El mapa documento → movimiento salía solo del nombre del archivo. Dos facturas de gas que la persona vinculó pero nunca renombró figuraban como "sin movimiento", y el agente parecía vincularlas "de más" aunque acertaba. Se corrigió buscando el N° de comprobante del cierre manual dentro del texto de cada documento (`evaluacion/mapear_por_texto.py`): 50 coincidencias. Resultado: los "no reconstruibles" bajan de 7 a 5 (quedan los cinco cuyo documento no está en la carpeta), los movimientos evaluables suben de 90 a 92 y los documentos con movimiento de 68 a 70. Todas las corridas se recalcularon.
+
+**Qué causaba cada diferencia** (lo que decían los documentos, no una hipótesis):
+| Diferencia | Causa | Corrección |
+|---|---|---|
+| Un débito de telefonía sin comprobante | El importe **sí estaba** en el documento (una línea de recibo dentro de un resumen de cuenta), pero en la parte que el lector recortaba por largo | Se extraen **en código** todos los importes del texto completo, con su contexto; el comprobante se toma de esa línea |
+| Guía de tránsito, certificado de retención, liquidación vieja y e-cheq vinculados de más | Documentos que no justifican un pago tratados como comprobantes; una liquidación vinculada sin ningún importe coincidente | El tipo remito, retención o resumen de cuenta nunca es documento de origen; un e-cheq solo sirve en movimientos de cheques; **todo vínculo necesita al menos un documento con el importe exacto** |
+| Dos VEP con el Detalle cambiado | Convención de la persona que el contrato no decía: retenciones de Ganancias y SICOSS → `Personal - Leyes`; anticipos → `Impuesto - ARCA - Ganancias`; IVA → `Impuesto - ARCA - IVA`; y mi guarda restituía la tabla encima del VEP | Convenciones al contrato; el lector informa Tipo de Pago, Concepto e impuestos del VEP; la tabla no manda sobre un VEP de AFIP/ARCA |
+| Gas: Detalle con el domicilio postal | El lector tomó la dirección del titular; el cierre usa el código de calle y altura del suministro | Regla en el contrato del lector |
+| Retiros de accionistas y sueldos de igual importe | Un mismo recibo se vinculaba a varios movimientos | **Exclusividad** de comprobantes de pago y recibos, con desempate por el nombre del beneficiario o el CUIT; si no hay pista, por orden (recibo ascendente ↔ movimiento ascendente) |
+| Retiro de efectivo sin Detalle | Convención de la persona: `Pagos en efectivo` | Regla por concepto (archivo privado); va como "deducido" para que se revise |
+| Expensas sin N° de comprobante | Convención de la persona: el período; el documento no lo informa | Período del mes anterior al del pago cuando el documento no lo dice |
+| `Personal - Leyes - <algo>` | El modelo inventaba el tercer elemento | El identificador es el nombre corto de la empresa (privado) |
+| Un cobro parcial de una venta | La factura es por un monto mayor que el cobro | Se agrega la factura del mismo emisor por nombre, solo para cobros |
+| Un débito gemelo (mismo concepto e importe) sin Detalle | El modelo lo dejó vacío | Hereda el Detalle del gemelo |
+
+**Errores míos en el camino** (cada uno visible porque la evaluación los mostró): (1) la regla de "pago parcial" quedó tan amplia que vinculó la factura de una empresa vinculada a tres retiros de accionistas, y la limité a cobros; (2) le pedí al lector que marcara los e-cheqs como "otro", con lo que el movimiento de un depósito de e-cheq perdió su documento; (3) la guarda de "la tabla manda siempre" tuvo que exceptuar a los VEP de AFIP/ARCA pero no a los de ARBA (Ingresos Brutos), y rompió un pago de ARBA.
+
+**Resultado** (evaluación corregida, 92 movimientos; ver `corridas/RESUMEN.md`):
+| Versión | Comprobante | Detalle (celdas validadas) | Docs bien vinculados (de 70) | Vinculados de más |
+|---|---|---|---|---|
+| v5 | 95% (87/92) | 88% (35/40) | 59 | 4 |
+| v6 | 96% (88/92) | 88% (35/40) | 64 | 0 |
+| v7 | 96% (88/92) | 98% (39/40) | 67 | 1 |
+| v8 | 96% (88/92) | 98% (39/40) | 66 | 0 |
+| **v9 (final)** | **98% (90/92)** | **100% (40/40)** | **67** | **0** |
+| v9 repetida, dos veces | 99% y 98% | 100% y 100% | 68 y 67 | 0 y 0 |
+
+**Advertencia, más fuerte que antes:** de v6 a v9 cada regla salió de un error de **agosto** y se mide sobre agosto. Este 98% dice que el sistema, con las convenciones de la persona escritas, reproduce su cierre de agosto; **no dice cuánto acertará en septiembre**. Algunas reglas son muy específicas de este mes (el desempate por orden de recibos, el período de las expensas como mes anterior, `Pagos en efectivo`) y podrían fallar en otro. La única forma honesta de medir es correrlo sobre otro mes **sin tocarlo**: falta ese mes.
+
+**Lo que sigue sin resolverse (y no se fuerza):** el comprobante de una transferencia judicial (el modelo la considera dudosa; en las dos repeticiones sí se vinculó, y en la segunda apareció un error nuevo en un movimiento de la cooperativa eléctrica: variación del modelo); una boleta con dos comprobantes de pago; un resumen de egresos de un edificio que el lector, con Haiku, lee como "cuenta bancaria" (es una imagen); un analítico de cuota de la obra social que el lector confunde con un resumen de sueldos. Y **cinco** movimientos cuyo comprobante figura en el cierre manual pero cuyo documento no está en la carpeta: ningún agente puede acertarlos.
+
+**Costo del ciclo:** v6 a v9 y las dos repeticiones, US$ 1,65 en total.

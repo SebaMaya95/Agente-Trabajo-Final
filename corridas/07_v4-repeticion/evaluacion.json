@@ -1,41 +1,39 @@
 {
   "filas_no_gris": 97,
   "comprobante": {
-    "ok": 84,
-    "n": 90
+    "ok": 86,
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 35,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 36,
-    "n": 38
+    "ok": 38,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 6,
-    "n": 9
+    "n": 11
   },
   "deducido_categoria": {
-    "ok": 7,
-    "n": 9
+    "ok": 9,
+    "n": 11
   },
   "tabla_exacto": {
     "ok": 29,
     "n": 29
   },
   "tiene_comprobante_coincide": {
-    "ok": 86,
-    "n": 90
+    "ok": 88,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -90,6 +88,22 @@
       "motivo": "importe exacto coincide; concepto SENASA confirmado"
     },
     {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto Nombre444 liquidación coincide; servicio gas confirmado"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto pero dos documentos iguales; se vincula segunda liquidación"
+    },
+    {
       "n": 85,
       "campo": "comprobante",
       "agente": "84354",
@@ -106,16 +120,14 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 55,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 57,
     "vinculados_parcial": 3,
     "no_vinculados": 10,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 55,
     "sin_movimiento_vinculados_de_mas": [
       "doc_023.pdf",
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_085.pdf",
       "doc_106.pdf"
     ]

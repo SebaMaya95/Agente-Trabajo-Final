@@ -30,7 +30,7 @@
 29,2026-08-07,Snp debito directo - Nombre033 y con-30719795892,-535279.8,BLANCO,Servicios - Software - Nombre117 Nombre118,0002-00082836,doc_015.pdf,alta,tabla,regla,regla: importe unico + tabla exacta
 30,2026-08-07,Pago de servicios - Nombre031.Nombre032: 7316975267718804405 - tarj nro. 2889,-5917909.11,BLANCO,Personal - Leyes - El Nombre116,1663742379,doc_093.pdf,alta,tabla,regla,regla: importe unico + tabla exacta
 31,2026-08-07,"Impuesto ley 25.413 debito 0,6%",-38719.13,GRIS,,,,alta,ninguno,regla,cargo automatico del banco
-32,2026-08-10,Deposito e-Nombre034 48hs Nombre035 Nombre036,3100000.0,AMARILLO,Maquinaria - Venta - Nombre119,64193010,doc_009.pdf,alta,tabla,modelo,e-Nombre034 importe exacto; sugerencia_tabla coherente con ingresos
+32,2026-08-10,Deposito e-Nombre034 48hs Nombre035 Nombre036,3100000.0,AMARILLO,Maquinaria - Venta - Nombre119,64193010,doc_009.pdf,alta,tabla,modelo,e-Nombre034 importe exacto; sugerencia_tabla coherente con Nombre442
 33,2026-08-10,Comision Nombre037 Nombre038 Nombre039,-21700.0,GRIS,,,,alta,ninguno,regla,cargo automatico del banco
 34,2026-08-10,Iva 21% Nombre040 de Nombre041 ley27743,-4557.0,GRIS,,,,alta,ninguno,regla,cargo automatico del banco
 35,2026-08-10,Iva percepcion rg 2408,-651.0,GRIS,,,,alta,ninguno,regla,cargo automatico del banco

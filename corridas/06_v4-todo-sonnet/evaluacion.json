@@ -2,40 +2,38 @@
   "filas_no_gris": 97,
   "comprobante": {
     "ok": 86,
-    "n": 90
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 36,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 36,
-    "n": 38
+    "ok": 38,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 5,
-    "n": 7
+    "n": 9
   },
   "deducido_categoria": {
-    "ok": 5,
-    "n": 7
+    "ok": 7,
+    "n": 9
   },
   "tabla_exacto": {
     "ok": 31,
     "n": 31
   },
   "tiene_comprobante_coincide": {
-    "ok": 88,
-    "n": 90
+    "ok": 90,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -61,6 +59,36 @@
       "motivo": "VEP de ARCA confirma impuesto Nombre186; se reemplaza sugerencia genérica de la tabla"
     },
     {
+      "n": 80,
+      "campo": "comprobante",
+      "agente": "7010-0066505679",
+      "esperado": "70015-51615416/8",
+      "motivo": "liquidación Nombre157 Gas importe exacto, Nombre185 del suministro"
+    },
+    {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "liquidación Nombre157 Gas importe exacto, Nombre185 del suministro"
+    },
+    {
+      "n": 81,
+      "campo": "comprobante",
+      "agente": "7010-0066509631",
+      "esperado": "70015-51619368/9",
+      "motivo": "segunda liquidación Nombre157 con mismo importe, doc dudoso pero coincide"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "segunda liquidación Nombre157 con mismo importe, doc dudoso pero coincide"
+    },
+    {
       "n": 85,
       "campo": "comprobante",
       "agente": "TSOP9-03-519",
@@ -84,15 +112,13 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 58,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 60,
     "vinculados_parcial": 4,
     "no_vinculados": 6,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 57,
     "sin_movimiento_vinculados_de_mas": [
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_081.pdf"
     ]
   }

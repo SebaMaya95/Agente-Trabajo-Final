@@ -14,7 +14,7 @@
 - Tokens de entrada y salida de cada llamada a la API: `llamadas.json`
 
 ## Evaluación contra el cierre manual
-- N° de comprobante exacto: 54% (49/90) · Detalle (celdas validadas): 87% (33/38) · documentos bien vinculados: 42/68
+- N° de comprobante exacto: 53% (49/92) · Detalle (celdas validadas): 82% (33/40) · documentos bien vinculados: 44/70
 - Cada error, uno por uno, con lo que decidió el agente y lo esperado: `evaluacion.json`
 - Costo de esta corrida: US$ 0.534 (397,742 tokens de entrada y 27,211 de salida). Contexto y advertencias: `../RESUMEN.md` y `DECISIONES.md` del repositorio.
 

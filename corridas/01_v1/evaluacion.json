@@ -2,40 +2,38 @@
   "filas_no_gris": 97,
   "comprobante": {
     "ok": 49,
-    "n": 90
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 33,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 33,
-    "n": 38
+    "ok": 35,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 4,
-    "n": 7
+    "n": 9
   },
   "deducido_categoria": {
-    "ok": 4,
-    "n": 7
+    "ok": 6,
+    "n": 9
   },
   "tabla_exacto": {
     "ok": 29,
     "n": 31
   },
   "tiene_comprobante_coincide": {
-    "ok": 63,
-    "n": 90
+    "ok": 65,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -195,6 +193,36 @@
       "esperado": "Pagos en efectivo",
       "origen": "ninguno",
       "motivo": "retiro efectivo sin justificación; no hay candidatos"
+    },
+    {
+      "n": 80,
+      "campo": "comprobante",
+      "agente": "7010-0066505679",
+      "esperado": "70015-51615416/8",
+      "motivo": "importe exacto; factura C.E.S.P gas Nombre004 coincide"
+    },
+    {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto; factura C.E.S.P gas Nombre004 coincide"
+    },
+    {
+      "n": 81,
+      "campo": "comprobante",
+      "agente": "7010-0066509631",
+      "esperado": "70015-51619368/9",
+      "motivo": "importe exacto; segunda factura C.E.S.P gas mismo período"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto; segunda factura C.E.S.P gas mismo período"
     },
     {
       "n": 82,
@@ -367,16 +395,14 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 42,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 44,
     "vinculados_parcial": 6,
     "no_vinculados": 20,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 56,
     "sin_movimiento_vinculados_de_mas": [
       "doc_023.pdf",
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_068.pdf"
     ]
   }

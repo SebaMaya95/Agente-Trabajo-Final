@@ -78,7 +78,7 @@
 77,2026-08-20,Compra con tarjeta de debito - Nombre077 de Nombre004 - tarj nro. 6685,-11510.8,NARANJA,Ganadería - Tasas - Marcas y Señales,,,media,tabla,regla,"regla: tabla exacta, sin documento candidato"
 78,2026-08-20,"Impuesto ley 25.413 debito 0,6%",-2065.58,GRIS,,,,alta,ninguno,regla,cargo automatico del banco
 79,2026-08-21,Pago de servicios - Arba Nombre078: 35082183007054 - tarj nro. 2889,-666563.8,BLANCO,Impuesto - ARBA - IIBB,192427094,doc_055.pdf,alta,deducido,modelo,importe exacto VEP; concepto es ARBA pero VEP Nombre032 tiene ese monto
-80,2026-08-21,Pago de servicios - Gas Nombre079: 38868782199995400 - tarj nro. 2889,-186210.6,BLANCO,Servicios - Gas - Nombre004 7630 Nombre129 Nombre130,70015-51615416/8,doc_049.pdf,alta,deducido,modelo,importe exacto CESP liquidación coincide; servicio gas confirmado
+80,2026-08-21,Pago de servicios - Gas Nombre079: 38868782199995400 - tarj nro. 2889,-186210.6,BLANCO,Servicios - Gas - Nombre004 7630 Nombre129 Nombre130,70015-51615416/8,doc_049.pdf,alta,deducido,modelo,importe exacto Nombre444 liquidación coincide; servicio gas confirmado
 81,2026-08-21,Pago de servicios - Gas Nombre079: 38868782199995400 - tarj nro. 2889,-186210.6,BLANCO,Servicios - Gas - Nombre004 7630 Nombre129 Nombre130,70015-51619368/9,doc_051.pdf,media,deducido,modelo,importe exacto pero dos documentos iguales; se vincula segunda liquidación
 82,2026-08-21,Pago de servicios - Nombre031.Nombre032: 7316975267718804405 - tarj nro. 2889,-15260197.01,BLANCO,Impuesto - ARCA - IVA,1669866364,doc_040.pdf,alta,deducido,modelo,importe exacto VEP ARCA; concepto Nombre031.Nombre032 paga IVA de ARCA
 83,2026-08-21,"Impuesto ley 25.413 debito 0,6%",-97795.08,GRIS,,,,alta,ninguno,regla,cargo automatico del banco

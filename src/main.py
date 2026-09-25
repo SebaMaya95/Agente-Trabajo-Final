@@ -52,11 +52,11 @@ def main():
 
     sub = dict(empresa=empresa["razon_social"], cuit=empresa["cuit"],
                no_pertenecen="; ".join(empresa["no_pertenecen"]),
-               tambien_pertenecen="; ".join(empresa.get("tambien_pertenecen", [])), categorias="; ".join(refs.categorias()))
+               tambien_pertenecen="; ".join(empresa.get("tambien_pertenecen", [])), nombre_corto=empresa.get("nombre_corto", ""), categorias="; ".join(refs.categorias()))
     lecturas: dict = {}
     llm = None
     if a.sin_modelo:
-        reglas, para_llm = P.preparar(movs, {}, refs, empresa["cuit"])
+        reglas, para_llm, cands = P.preparar(movs, {}, refs, empresa["cuit"], empresa.get("convenciones_concepto"))
         decisiones = {}
     else:
         from llm import LLM
@@ -65,11 +65,12 @@ def main():
         sis_l = P.render(leer("system_prompt_lector.md"), **sub)
         lecturas = P.etapa_lectura(llm, docs, a.lector, sis_l, leer("user_prompt_lector.md"),
                                    base / "cache_lectura")
-        reglas, para_llm = P.preparar(movs, lecturas, refs, empresa["cuit"])
+        P.normalizar_lecturas(lecturas)
+        reglas, para_llm, cands = P.preparar(movs, lecturas, refs, empresa["cuit"], empresa.get("convenciones_concepto"))
         sis_c = P.render(leer("system_prompt.md"), **sub)
         decisiones = P.etapa_conciliacion(llm, para_llm, a.conciliador, sis_c, leer("user_prompt.md"), a.mes, a.lote)
 
-    filas = P.armar(movs, reglas, decisiones, lecturas, para_llm)
+    filas = P.armar(movs, reglas, decisiones, lecturas, para_llm, cands, empresa.get("nombre_corto", ""))
     reutilizadas = sum(d["reutilizado"] for d in lecturas.values())
     lect_usd = sum((d["uso"].get("usd") or 0) for d in lecturas.values())
     lect_in = sum((d["uso"].get("input_tokens") or 0) for d in lecturas.values())

@@ -1,0 +1,117 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 88,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 35,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 39,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 7,
+    "n": 11
+  },
+  "deducido_categoria": {
+    "ok": 10,
+    "n": 11
+  },
+  "tabla_exacto": {
+    "ok": 28,
+    "n": 29
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 90,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [
+    {
+      "n": 6,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "07-2026",
+      "motivo": "importe exacto pero pertenencia dudosa; gasto de empresa en inmueble"
+    },
+    {
+      "n": 25,
+      "campo": "comprobante",
+      "agente": "A 1340-00553437",
+      "esperado": "A 0001-33529820",
+      "motivo": "importe exacto en contexto del documento; Nombre280 comprobante extraído"
+    },
+    {
+      "n": 32,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "ECHEQ 64193010",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 76,
+      "campo": "detalle",
+      "agente": "Agricultura - Análisis Laboratorio - MS Nombre427",
+      "esperado": "Asesoramiento - Asociación - Nombre023",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide; débito automático de Nombre023"
+    },
+    {
+      "n": 79,
+      "campo": "detalle",
+      "agente": "Impuesto - ARCA - IIBB",
+      "esperado": "Impuesto - ARBA - IIBB",
+      "origen": "tabla",
+      "motivo": "VEP ARCA Nombre442 Nombre443; importe exacto coincide"
+    },
+    {
+      "n": 82,
+      "campo": "detalle",
+      "agente": "Impuesto - ARCA - VEP Consolidado",
+      "esperado": "Impuesto - ARCA -IVA",
+      "origen": "deducido",
+      "motivo": "VEP consolidado ARCA; importe exacto coincide"
+    },
+    {
+      "n": 85,
+      "campo": "comprobante",
+      "agente": "TSOP9-03-519 ; 00084354",
+      "esperado": "0002-00000043",
+      "motivo": "importe exacto coincide; dos comprobantes de pago"
+    },
+    {
+      "n": 87,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - Retenciones Ganancias",
+      "esperado": "Personal - Leyes - El Nombre116",
+      "origen": "deducido",
+      "motivo": "VEP retenciones ganancias; importe exacto coincide"
+    },
+    {
+      "n": 122,
+      "campo": "detalle",
+      "agente": "Retiro - Accionista - Nombre008 Nombre045",
+      "esperado": "Retiro - Accionista - Nombre044 Nombre045",
+      "origen": "deducido",
+      "motivo": "retiro accionista; importe redondo pero nombre y Nombre418 coinciden | guarda: se agrego doc_013.pdf (importe exacto); guarda: se agrego doc_035.pdf (importe exacto); guarda: doc_116.pdf pertenece a otro movimiento (mejor coincidencia de nombre); guarda: doc_013.pdf pertenece a otro movimiento (mejor coincidencia de nombre); convencion: comprobante = periodo"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 64,
+    "vinculados_parcial": 2,
+    "no_vinculados": 4,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 58,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

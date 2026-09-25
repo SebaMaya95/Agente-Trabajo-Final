@@ -59,14 +59,15 @@ def main():
         {"n": 4, "fecha": "2026-08-09", "concepto": "Debito automatico - Servicio Cualquiera", "importe": -1000.00},
     ]
     p = REPO / "prompts"
-    sub = dict(empresa=EMPRESA["razon_social"], cuit=EMPRESA["cuit"], no_pertenecen="ninguno", tambien_pertenecen="ninguno", categorias="Servicios - Electricidad")
+    sub = dict(empresa=EMPRESA["razon_social"], cuit=EMPRESA["cuit"], no_pertenecen="ninguno", tambien_pertenecen="ninguno", nombre_corto="Ficticia", categorias="Servicios - Electricidad")
     llm = LLM()
     sis_l = P.render((p / "system_prompt_lector.md").read_text(encoding="utf-8"), **sub)
     lect = P.etapa_lectura(llm, sorted(tmp.glob("*.png")), "haiku", sis_l, (p / "user_prompt_lector.md").read_text(encoding="utf-8"), SALIDA / "cache")
-    reglas, para_llm = P.preparar(movs, lect, TablaVacia(), EMPRESA["cuit"])
+    P.normalizar_lecturas(lect)
+    reglas, para_llm, cands = P.preparar(movs, lect, TablaVacia(), EMPRESA["cuit"])
     sis_c = P.render((p / "system_prompt.md").read_text(encoding="utf-8"), **sub)
     dec = P.etapa_conciliacion(llm, para_llm, "haiku", sis_c, (p / "user_prompt.md").read_text(encoding="utf-8"), "202608")
-    filas = P.armar([{**m, "suc_origen": "", "desc_sucursal": "", "cod_operativo": "", "referencia": "", "saldo": "0"} for m in movs], reglas, dec, lect, para_llm)
+    filas = P.armar([{**m, "suc_origen": "", "desc_sucursal": "", "cod_operativo": "", "referencia": "", "saldo": "0"} for m in movs], reglas, dec, lect, para_llm, cands)
 
     r = {f["n"]: f for f in filas}
     checks = {

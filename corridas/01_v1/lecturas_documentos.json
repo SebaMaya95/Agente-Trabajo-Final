@@ -388,7 +388,7 @@
     "monto": 5264480
    },
    {
-    "etiqueta": "Nombre169 julio 2026",
+    "etiqueta": "recaudacion julio 2026",
     "monto": 4044000
    },
    {
@@ -528,7 +528,7 @@
     "monto": 1273.86
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 2559009.88
    }
   ],
@@ -651,7 +651,7 @@
     "monto": 63600.62
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 232251.57
    }
   ],
@@ -739,7 +739,7 @@
   ],
   "identificador": "Nombre201 9425958, Nombre004",
   "pertenece": "si",
-  "nota": "Traslado de ganado (8 vacas) a remate feria",
+  "nota": "Traslado de Nombre447 (8 vacas) a remate feria",
   "uso": {
    "input_tokens": 4370,
    "output_tokens": 147,
@@ -857,7 +857,7 @@
   "fecha": "2026-07-14",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 27900.64
    },
    {
@@ -948,7 +948,7 @@
   "fecha": "2026-08-05",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 63600.61
    }
   ],
@@ -1110,7 +1110,7 @@
   ],
   "identificador": "Nombre004, Nombre229",
   "pertenece": "si",
-  "nota": "Liquidación de venta de hacienda, vencimiento 18/09/2026",
+  "nota": "Liquidación de venta de Nombre461, vencimiento 18/09/2026",
   "uso": {
    "input_tokens": 2748,
    "output_tokens": 317,
@@ -1209,7 +1209,7 @@
   ],
   "identificador": "Nombre233 Nombre234 3652, Nombre235, Nombre129 Nombre130",
   "pertenece": "si",
-  "nota": "retención de ingresos brutos a tercero",
+  "nota": "retención de Nombre442 Nombre443 a tercero",
   "uso": {
    "input_tokens": 2062,
    "output_tokens": 181,
@@ -1228,7 +1228,7 @@
   "fecha": "2026-06-13",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 174962.97
    }
   ],
@@ -1257,7 +1257,7 @@
     "monto": 15260197.01
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 15260197.01
    }
   ],
@@ -1506,7 +1506,7 @@
   "fecha": "2026-08-13",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 186210.6
    },
    {
@@ -1588,7 +1588,7 @@
     "monto": 5641.05
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 186210.6
    }
   ],
@@ -1712,13 +1712,13 @@
   "fecha": "2026-08-20",
   "importes": [
    {
-    "etiqueta": "monto a Nombre184",
+    "etiqueta": "monto a pagar",
     "monto": 666563.8
    }
   ],
   "identificador": "202607",
   "pertenece": "si",
-  "nota": "VEP Ingresos Brutos período julio 2026",
+  "nota": "VEP Nombre442 Nombre443 período julio 2026",
   "uso": {
    "input_tokens": 2152,
    "output_tokens": 133,
@@ -2098,7 +2098,7 @@
   "fecha": "2026-07-28",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 164889.25
    },
    {
@@ -2253,7 +2253,7 @@
     "monto": 1586046.7
    },
    {
-    "etiqueta": "importe neto a Nombre184",
+    "etiqueta": "importe neto a pagar",
     "monto": 1417670.98
    },
    {
@@ -2479,7 +2479,7 @@
     "monto": 75000
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 75000
    }
   ],
@@ -2703,7 +2703,7 @@
   ],
   "identificador": "Factura 00002-00001127",
   "pertenece": "si",
-  "nota": "retención impuesto a las ganancias, locaciones de servicios",
+  "nota": "retención impuesto a las ganancias, Nombre445 de servicios",
   "uso": {
    "input_tokens": 2321,
    "output_tokens": 172,
@@ -3040,7 +3040,7 @@
     "monto": 1221783.91
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 1221783.91
    }
   ],
@@ -3069,7 +3069,7 @@
     "monto": 5917909.11
    },
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 5917909.11
    }
   ],
@@ -3181,7 +3181,7 @@
   ],
   "identificador": "Nombre004, Nombre129 Nombre130",
   "pertenece": "si",
-  "nota": "liquidación de venta de hacienda",
+  "nota": "liquidación de venta de Nombre461",
   "uso": {
    "input_tokens": 2775,
    "output_tokens": 321,
@@ -3398,13 +3398,13 @@
     "monto": 11992955.0
    },
    {
-    "etiqueta": "retencion Nombre319",
+    "etiqueta": "retencion practicada",
     "monto": 238515.7
    }
   ],
   "identificador": "Factura 00004-00002343",
   "pertenece": "si",
-  "nota": "Retención sobre locaciones de Nombre178 y servicios",
+  "nota": "Retención sobre Nombre445 de Nombre178 y servicios",
   "uso": {
    "input_tokens": 2307,
    "output_tokens": 169,
@@ -3533,7 +3533,7 @@
   "fecha": "2026-08-10",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 74739.06
    },
    {
@@ -3781,7 +3781,7 @@
   ],
   "identificador": "Factura 00002-00001127",
   "pertenece": "si",
-  "nota": "retención por servicios no ejecutados en relación dependencia",
+  "nota": "retención por servicios no Nombre450 en Nombre451 Nombre452",
   "uso": {
    "input_tokens": 2303,
    "output_tokens": 167,
@@ -3800,7 +3800,7 @@
   "fecha": "2026-06-13",
   "importes": [
    {
-    "etiqueta": "total a Nombre184",
+    "etiqueta": "total a pagar",
     "monto": 200716.03
    }
   ],

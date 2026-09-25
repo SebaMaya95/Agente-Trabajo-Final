@@ -1,41 +1,39 @@
 {
   "filas_no_gris": 97,
   "comprobante": {
-    "ok": 85,
-    "n": 90
+    "ok": 87,
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 36,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 37,
-    "n": 38
+    "ok": 39,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 7,
-    "n": 9
+    "n": 11
   },
   "deducido_categoria": {
-    "ok": 8,
-    "n": 9
+    "ok": 10,
+    "n": 11
   },
   "tabla_exacto": {
     "ok": 29,
     "n": 29
   },
   "tiene_comprobante_coincide": {
-    "ok": 87,
-    "n": 90
+    "ok": 89,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -68,6 +66,22 @@
       "motivo": "importe exacto; sugerencia tabla coincide"
     },
     {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "Importe exacto coincide; Nombre444 es Gas Nombre079; Nombre185 identificador."
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "Importe exacto coincide segunda liquidación; misma Nombre185 y monto."
+    },
+    {
       "n": 85,
       "campo": "comprobante",
       "agente": "84354 ; 00084354",
@@ -91,16 +105,14 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 58,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 60,
     "vinculados_parcial": 4,
     "no_vinculados": 6,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 55,
     "sin_movimiento_vinculados_de_mas": [
       "doc_023.pdf",
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_081.pdf",
       "doc_085.pdf"
     ]

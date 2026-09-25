@@ -1,0 +1,63 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 90,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 40,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 40,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 11,
+    "n": 11
+  },
+  "deducido_categoria": {
+    "ok": 11,
+    "n": 11
+  },
+  "tabla_exacto": {
+    "ok": 29,
+    "n": 29
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 91,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [
+    {
+      "n": 51,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "B-0014-02392599",
+      "motivo": "Importe exacto; documento dudoso; empresa puede pagar servicios inmuebles | guarda: se descartaron documentos vinculados sin el importe exacto"
+    },
+    {
+      "n": 54,
+      "campo": "comprobante",
+      "agente": "173439841804 ; 0031880663",
+      "esperado": "Liq 0031880663",
+      "motivo": "Importe exacto; dos comprobantes de pago confirman débito"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 67,
+    "vinculados_parcial": 1,
+    "no_vinculados": 2,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 58,
+    "sin_movimiento_vinculados_de_mas": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "filas_no_gris": 97,
+  "comprobante": {
+    "ok": 88,
+    "n": 92
+  },
+  "detalle_exacto_validado": {
+    "ok": 39,
+    "n": 40
+  },
+  "categoria_validada": {
+    "ok": 39,
+    "n": 40
+  },
+  "deducido_exacto": {
+    "ok": 7,
+    "n": 7
+  },
+  "deducido_categoria": {
+    "ok": 7,
+    "n": 7
+  },
+  "tabla_exacto": {
+    "ok": 32,
+    "n": 33
+  },
+  "tiene_comprobante_coincide": {
+    "ok": 91,
+    "n": 92
+  },
+  "no_reconstruibles": [
+    21,
+    36,
+    44,
+    56,
+    60
+  ],
+  "errores": [
+    {
+      "n": 32,
+      "campo": "comprobante",
+      "agente": "",
+      "esperado": "ECHEQ 64193010",
+      "motivo": "regla: tabla exacta, sin documento candidato"
+    },
+    {
+      "n": 39,
+      "campo": "comprobante",
+      "agente": "00002 00000137",
+      "esperado": "08-2026",
+      "motivo": "accionista; importe redondo; pertenece dudoso pero razonable | guarda: pago parcial de la factura doc_106.pdf; guarda: comprobante tomado de los documentos de origen"
+    },
+    {
+      "n": 82,
+      "campo": "detalle",
+      "agente": "Personal - Leyes - El Nombre116",
+      "esperado": "Impuesto - ARCA -IVA",
+      "origen": "tabla",
+      "motivo": "VEP consolidado ARCA, importe exacto coincide"
+    },
+    {
+      "n": 122,
+      "campo": "comprobante",
+      "agente": "00002 00000137",
+      "esperado": "08-2026",
+      "motivo": "doc_116 identifica accionista, importe redondo pero confirmado | guarda: se agrego doc_013.pdf (importe exacto); guarda: se agrego doc_035.pdf (importe exacto); guarda: doc_116.pdf pertenece a otro movimiento (mejor coincidencia de nombre); guarda: doc_013.pdf pertenece a otro movimiento (mejor coincidencia de nombre); guarda: pago parcial de la factura doc_106.pdf; guarda: se restituyo el Detalle de la tabla; guarda: comprobante tomado de los documentos de origen"
+    },
+    {
+      "n": 124,
+      "campo": "comprobante",
+      "agente": "00002 00000137",
+      "esperado": "08-2026",
+      "motivo": "importe exacto y CUIT coinciden; sugerencia tabla validada | guarda: se agrego doc_013.pdf (importe exacto); guarda: se agrego doc_035.pdf (importe exacto); guarda: doc_013.pdf pertenece a otro movimiento (mejor coincidencia de nombre); guarda: doc_035.pdf pertenece a otro movimiento (mejor coincidencia de nombre); guarda: pago parcial de la factura doc_106.pdf; guarda: comprobante tomado de los documentos de origen"
+    }
+  ],
+  "documentos": {
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 67,
+    "vinculados_parcial": 0,
+    "no_vinculados": 3,
+    "sin_movimiento_esperado": 58,
+    "sin_movimiento_bien_dejados": 57,
+    "sin_movimiento_vinculados_de_mas": [
+      "doc_106.pdf"
+    ]
+  }
+}

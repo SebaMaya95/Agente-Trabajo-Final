@@ -1,41 +1,39 @@
 {
   "filas_no_gris": 97,
   "comprobante": {
-    "ok": 82,
-    "n": 90
+    "ok": 84,
+    "n": 92
   },
   "detalle_exacto_validado": {
     "ok": 30,
-    "n": 38
+    "n": 40
   },
   "categoria_validada": {
-    "ok": 33,
-    "n": 38
+    "ok": 35,
+    "n": 40
   },
   "deducido_exacto": {
     "ok": 1,
-    "n": 8
+    "n": 10
   },
   "deducido_categoria": {
-    "ok": 3,
-    "n": 8
+    "ok": 5,
+    "n": 10
   },
   "tabla_exacto": {
     "ok": 29,
     "n": 30
   },
   "tiene_comprobante_coincide": {
-    "ok": 87,
-    "n": 90
+    "ok": 89,
+    "n": 92
   },
   "no_reconstruibles": [
     21,
     36,
     44,
     56,
-    60,
-    80,
-    81
+    60
   ],
   "errores": [
     {
@@ -115,6 +113,22 @@
       "motivo": "retiro efectivo sin destino especificado"
     },
     {
+      "n": 80,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide; liquidación de gas"
+    },
+    {
+      "n": 81,
+      "campo": "detalle",
+      "agente": "Servicios - Gas - Nombre004 7630 Nombre129 Nombre130",
+      "esperado": "Servicios - Gas - 040 5242",
+      "origen": "deducido",
+      "motivo": "importe exacto coincide; segunda liquidación de gas"
+    },
+    {
       "n": 82,
       "campo": "detalle",
       "agente": "Impuesto - IVA - El Nombre116",
@@ -160,16 +174,14 @@
     }
   ],
   "documentos": {
-    "con_movimiento_esperado": 68,
-    "vinculados_correctamente": 55,
+    "con_movimiento_esperado": 70,
+    "vinculados_correctamente": 57,
     "vinculados_parcial": 4,
     "no_vinculados": 9,
-    "sin_movimiento_esperado": 60,
+    "sin_movimiento_esperado": 58,
     "sin_movimiento_bien_dejados": 56,
     "sin_movimiento_vinculados_de_mas": [
       "doc_023.pdf",
-      "doc_049.pdf",
-      "doc_051.pdf",
       "doc_085.pdf"
     ]
   }
