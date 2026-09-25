@@ -28,11 +28,11 @@ Extraé los campos del esquema. Lo más importante para conciliar son `importes`
 Solo el JSON del esquema, sin texto adicional. `nota`: máximo 15 palabras, solo si hay algo raro (ilegible, duplicado, dos movimientos posibles).
 
 # EJEMPLOS
-Factura de la ferretería "Ferretería Sur SRL" (CUIT 30-11111111-1) a la empresa, Factura A 0003-00001234, fecha 05/08/2026, total $80.210,02:
-{"tipo":"factura","rol":"origen","emisor":"Ferretería Sur SRL","emisor_cuit":"30111111111","receptor":"{{empresa}}","receptor_cuit":"{{cuit}}","numero_comprobante":"A 0003-00001234","fecha":"2026-08-05","importes":[{"etiqueta":"total","monto":80210.02}],"identificador":"","pertenece":"si","nota":""}
+Factura de la ferretería "Ferretería Sur SRL" (CUIT 30-11111111-1) a la empresa, Factura A 0003-00001234, fecha 05/08/2026, total $<importe-real-1>:
+{"tipo":"factura","rol":"origen","emisor":"Ferretería Sur SRL","emisor_cuit":"30111111111","receptor":"{{empresa}}","receptor_cuit":"{{cuit}}","numero_comprobante":"A 0003-00001234","fecha":"2026-08-05","importes":[{"etiqueta":"total","monto":<importe-real-1>}],"identificador":"","pertenece":"si","nota":""}
 
-Comprobante del banco "Comprobante de transferencia" nº 5551234 por $2.000.000, información adicional "FC 0001-00000004":
-{"tipo":"comprobante_pago","rol":"pago","emisor":"","emisor_cuit":"","receptor":"","receptor_cuit":"","numero_comprobante":"5551234","fecha":"2026-08-10","importes":[{"etiqueta":"importe transferido","monto":2000000}],"identificador":"FC 0001-00000004","pertenece":"si","nota":"referencia a otra factura en info adicional"}
+Comprobante del banco "Comprobante de transferencia" nº 5551234 por $<importe-real-5>, información adicional "<n-real-3>":
+{"tipo":"comprobante_pago","rol":"pago","emisor":"","emisor_cuit":"","receptor":"","receptor_cuit":"","numero_comprobante":"5551234","fecha":"2026-08-10","importes":[{"etiqueta":"importe transferido","monto":<importe-real-5>}],"identificador":"<n-real-3>","pertenece":"si","nota":"referencia a otra factura en info adicional"}
 
 Liquidación de una cooperativa eléctrica, suministro en "Calle Falsa 123", comprobante adicional B-0014-00000001, total del detalle de conceptos $10.000,00, total unificado $12.500,00, cuota capital $2.440,00, fundación educacional $60,00:
 {"tipo":"liquidacion_servicio","rol":"origen","emisor":"Cooperativa Eléctrica Ejemplo","emisor_cuit":"30222222222","receptor":"{{empresa}}","receptor_cuit":"{{cuit}}","numero_comprobante":"B-0014-00000001","fecha":"2026-08-04","importes":[{"etiqueta":"total","monto":10000},{"etiqueta":"total unificado","monto":12500},{"etiqueta":"cuota capital","monto":2440},{"etiqueta":"fundación educacional","monto":60}],"identificador":"Calle Falsa 123","pertenece":"si","nota":""}
