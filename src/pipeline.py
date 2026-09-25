@@ -8,12 +8,13 @@ es mas barato, mas rapido y auditable.
 """
 import hashlib
 import json
+import re
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import lector
 from config import DATOS, MODELOS
-from extracto import es_gris
+from extracto import es_gris, norm
 from referencias import CUIT
 
 TIPOS = ["factura", "nota_credito", "vep_impuesto", "liquidacion_servicio", "expensas", "recibo_sueldo",
@@ -88,24 +89,68 @@ def etapa_lectura(llm, docs: list[Path], modelo: str, sistema: str, usuario: str
 
 
 # ---------------------------------------------------------------- etapa 2
+PALABRAS_COMUNES = {
+    "compra", "tarjeta", "debito", "transferencia", "realizada", "inmediata", "recibida", "pago", "pagos", "servicios",
+    "proveedores", "tarj", "nro", "online", "banking", "automatico", "sistema", "cuit", "cbu", "saldo", "factura",
+    "sociedad", "anonima", "limitada", "haberes", "varios", "expensas", "agro", "srl", "sas"}
+try:   # palabras que no distinguen a un emisor en la zona del cliente (ej. nombre de la localidad): archivo privado
+    PALABRAS_COMUNES |= set(json.loads((DATOS / "empresa.json").read_text(encoding="utf-8")).get("palabras_locales", []))
+except OSError:
+    pass
+
+
+def _tokens(texto: str) -> set[str]:
+    return {t for t in norm(texto).split() if len(t) >= 4 and not t.isdigit() and t not in PALABRAS_COMUNES}
+
+
+def importes_efectivos(e: dict) -> list[dict]:
+    """Importes impresos + los que el banco debita aparte y el documento no imprime (se calculan en codigo, no con el modelo)."""
+    imps = list(e["importes"])
+    lab = lambda i: norm(i["etiqueta"])  # noqa: E731
+    unif = next((i for i in imps if "unificado" in lab(i)), None)
+    total = next((i for i in imps if lab(i) in ("total", "total detalle de conceptos", "total conceptos")), None)
+    if unif and total and unif["monto"] > total["monto"]:
+        imps.append({"etiqueta": "(derivado) total unificado - total = cuota de plan de pagos",
+                     "monto": round(unif["monto"] - total["monto"], 2)})
+    cap = next((i for i in imps if "cuota capital" in lab(i)), None)
+    fun = next((i for i in imps if "fundac" in lab(i)), None)
+    if cap and fun:
+        imps.append({"etiqueta": "(derivado) cuota capital + fundacion educacional",
+                     "monto": round(cap["monto"] + fun["monto"], 2)})
+    return imps
+
+
 def candidatos(mov: dict, lecturas: dict[str, dict], cuit_empresa: str) -> list[dict]:
-    """Documentos cuyo importe coincide con el movimiento o cuyo emisor tiene el CUIT del concepto."""
+    """Documentos que podrian respaldar el movimiento: importe exacto, suma de dos facturas, CUIT o nombre del emisor."""
     monto = abs(mov["importe"])
     cuits = {c for c in CUIT.findall(mov["concepto"]) if c != cuit_empresa}
+    toks = _tokens(mov["concepto"])
+    ok = {d: x["extraccion"] for d, x in lecturas.items() if x["extraccion"]["rol"] != "otro"}
+    coinc = {d: [i for i in importes_efectivos(e) if abs(i["monto"] - monto) < 0.005] for d, e in ok.items()}
+    pares: dict[str, str] = {}
+    if not any(coinc.values()):                              # suma de dos facturas del mismo emisor
+        tot = [(d, i["monto"]) for d, e in ok.items() if e["rol"] == "origen" and e["pertenece"] != "no"
+               for i in e["importes"] if "total" in norm(i["etiqueta"])]
+        for a in range(len(tot)):
+            for b in range(a + 1, len(tot)):
+                (da, ma), (db, mb) = tot[a], tot[b]
+                if da != db and ok[da]["emisor_cuit"] == ok[db]["emisor_cuit"] and abs(ma + mb - monto) < 0.005:
+                    pares[da], pares[db] = db, da
     out = []
-    for doc, d in lecturas.items():
-        e = d["extraccion"]
-        if e["rol"] == "otro" or e["pertenece"] == "no":
+    for d, e in ok.items():
+        por_cuit = bool(e["emisor_cuit"]) and e["emisor_cuit"] in cuits
+        por_nombre = e["rol"] == "origen" and e["pertenece"] != "no" and bool(_tokens(e["emisor"]) & toks)
+        if not (coinc[d] or por_cuit or por_nombre or d in pares):
             continue
-        coinc = [i for i in e["importes"] if abs(i["monto"] - monto) < 0.005]
-        por_cuit = e["emisor_cuit"] in cuits
-        if not coinc and not por_cuit:
-            continue
-        out.append({
-            "doc": doc, "tipo": e["tipo"], "rol": e["rol"], "emisor": e["emisor"], "numero": e["numero_comprobante"],
-            "fecha": e["fecha"], "identificador": e["identificador"], "pertenece": e["pertenece"],
-            "importes": e["importes"] if len(e["importes"]) <= 4 else coinc,
-            "coincide_importe": bool(coinc), "coincide_cuit": por_cuit})
+        c = {"doc": d, "tipo": e["tipo"], "rol": e["rol"], "emisor": e["emisor"], "numero": e["numero_comprobante"],
+             "fecha": e["fecha"], "identificador": e["identificador"], "pertenece": e["pertenece"],
+             "importes": coinc[d] if coinc[d] else (e["importes"] if len(e["importes"]) <= 4 else e["importes"][:4]),
+             "coincide_importe": bool(coinc[d]), "coincide_cuit": por_cuit, "coincide_nombre": por_nombre}
+        if coinc[d] and monto % 10000 == 0:
+            c["importe_redondo"] = True                       # coincidencia poco informativa
+        if d in pares:
+            c["suma_con"] = pares[d]
+        out.append(c)
     return out
 
 
@@ -121,11 +166,12 @@ def preparar(movs: list[dict], lecturas, refs, cuit_empresa: str) -> tuple[dict,
         if tabla and not cands:
             reglas[m["n"]] = {"n": m["n"], "docs": [], "comprobante": "", "detalle": tabla, "detalle_origen": "tabla",
                               "confianza": "media", "motivo": "regla: tabla exacta, sin documento candidato"}
-        elif tabla and len(cands) == 1 and len(por_importe) == 1 and cands[0]["rol"] == "origen":
+        elif (tabla and len(cands) == 1 and len(por_importe) == 1 and cands[0]["rol"] == "origen"
+              and cands[0]["pertenece"] == "si" and (cands[0]["coincide_cuit"] or cands[0]["coincide_nombre"])):
             c = cands[0]
             reglas[m["n"]] = {"n": m["n"], "docs": [c["doc"]], "comprobante": c["numero"], "detalle": tabla,
                               "detalle_origen": "tabla", "confianza": "alta",
-                              "motivo": "regla: importe unico + tabla exacta"}
+                              "motivo": "regla: importe unico + emisor coincide + tabla exacta"}
         else:
             para_llm.append({"n": m["n"], "fecha": m["fecha"], "concepto": m["concepto"], "importe": m["importe"],
                              "sugerencia_tabla": tabla, "pistas_tabla": [] if tabla else refs.pistas(m["concepto"]),
@@ -148,7 +194,12 @@ def etapa_conciliacion(llm, para_llm: list[dict], modelo: str, sistema: str, usu
 
 
 # ---------------------------------------------------------------- armado final
-def armar(movs: list[dict], reglas: dict, decisiones: dict, lecturas: dict) -> list[dict]:
+PERIODO = re.compile(r"^(Retiro - |Personal - Haberes)")
+
+
+def armar(movs: list[dict], reglas: dict, decisiones: dict, lecturas: dict, para_llm: list[dict]) -> list[dict]:
+    """Junta reglas y decisiones del modelo, aplica las guardas en codigo y calcula el estado (color)."""
+    sugerencia = {x["n"]: x["sugerencia_tabla"] for x in para_llm}
     filas = []
     for m in movs:
         f = dict(m)
@@ -156,13 +207,34 @@ def armar(movs: list[dict], reglas: dict, decisiones: dict, lecturas: dict) -> l
             f.update(estado="GRIS", detalle="", comprobante="", docs=[], detalle_origen="ninguno",
                      confianza="alta", motivo="cargo automatico del banco", fuente="regla")
         else:
-            d = reglas.get(m["n"]) or decisiones.get(m["n"]) or {
+            d = dict(reglas.get(m["n"]) or decisiones.get(m["n"]) or {
                 "docs": [], "comprobante": "", "detalle": "", "detalle_origen": "ninguno",
-                "confianza": "baja", "motivo": "el modelo no devolvio decision"}
+                "confianza": "baja", "motivo": "el modelo no devolvio decision"})
+            avisos = []
+            validos = [x for x in d["docs"] if x in lecturas]          # el modelo no puede citar documentos que no existen
+            if validos != d["docs"]:
+                avisos.append("guarda: se descartaron ids de documento inexistentes")
+                d["docs"] = validos
+            sug = sugerencia.get(m["n"])
+            # Guarda 1: la tabla manda. El modelo no puede reescribirla ni dejarla vacia.
+            if sug and (d["detalle_origen"] == "tabla" or not d["detalle"]) and d["detalle"] != sug:
+                avisos.append("guarda: se restituyo el Detalle de la tabla")
+                d["detalle"], d["detalle_origen"] = sug, "tabla"
+            # Guarda 2: el N° de comprobante sale de los documentos de origen vinculados (no de lo que escribe el modelo).
+            ext = [lecturas[x]["extraccion"] for x in d["docs"] if x in lecturas]
+            nums = list(dict.fromkeys(e["numero_comprobante"] for e in ext if e["rol"] == "origen" and e["numero_comprobante"]))
+            if nums and nums != [d["comprobante"]]:
+                d["comprobante"] = " ; ".join(nums)
+                avisos.append("guarda: comprobante tomado de los documentos de origen")
+            # Guarda 3: convencion de periodo (MM-AAAA) para retiros y haberes, salvo que haya una factura con numero propio.
+            if PERIODO.match(d["detalle"]) and not any(e["tipo"] == "factura" and e["numero_comprobante"] for e in ext):
+                d["comprobante"] = f"{m['fecha'][5:7]}-{m['fecha'][:4]}"
+                avisos.append("convencion: comprobante = periodo")
             roles = [lecturas[x]["extraccion"]["rol"] for x in d["docs"] if x in lecturas]
             estado = "BLANCO" if "origen" in roles else "AMARILLO" if roles else "NARANJA"
             f.update(estado=estado, detalle=d["detalle"], comprobante=d["comprobante"], docs=d["docs"],
-                     detalle_origen=d["detalle_origen"], confianza=d["confianza"], motivo=d["motivo"],
+                     detalle_origen=d["detalle_origen"], confianza=d["confianza"],
+                     motivo=(d["motivo"] + (" | " + "; ".join(avisos) if avisos else "")),
                      fuente="regla" if m["n"] in reglas else "modelo")
         filas.append(f)
     return filas

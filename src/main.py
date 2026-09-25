@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "evaluacion"))
 import pipeline as P  # noqa: E402
 import salida  # noqa: E402
 from config import DATOS, MODELOS, REPO  # noqa: E402
-from extracto import leer_extracto  # noqa: E402
+from extracto import control_saldo, leer_extracto  # noqa: E402
 from referencias import Referencias  # noqa: E402
 
 EXT = {".pdf", ".jpg", ".jpeg", ".png"}
@@ -51,7 +51,8 @@ def main():
     shutil.copytree(pdir, run / "prompts", ignore=shutil.ignore_patterns("historial"))
 
     sub = dict(empresa=empresa["razon_social"], cuit=empresa["cuit"],
-               no_pertenecen="; ".join(empresa["no_pertenecen"]), categorias="; ".join(refs.categorias()))
+               no_pertenecen="; ".join(empresa["no_pertenecen"]),
+               tambien_pertenecen="; ".join(empresa.get("tambien_pertenecen", [])), categorias="; ".join(refs.categorias()))
     lecturas: dict = {}
     llm = None
     if a.sin_modelo:
@@ -68,7 +69,7 @@ def main():
         sis_c = P.render(leer("system_prompt.md"), **sub)
         decisiones = P.etapa_conciliacion(llm, para_llm, a.conciliador, sis_c, leer("user_prompt.md"), a.mes, a.lote)
 
-    filas = P.armar(movs, reglas, decisiones, lecturas)
+    filas = P.armar(movs, reglas, decisiones, lecturas, para_llm)
     reutilizadas = sum(d["reutilizado"] for d in lecturas.values())
     lect_usd = sum((d["uso"].get("usd") or 0) for d in lecturas.values())
     lect_in = sum((d["uso"].get("input_tokens") or 0) for d in lecturas.values())
@@ -78,7 +79,7 @@ def main():
         "mes": a.mes, "etiqueta": a.etiqueta, "fecha": datetime.now().isoformat(timespec="seconds"),
         "modelo_lector": None if a.sin_modelo else MODELOS[a.lector]["id"],
         "modelo_conciliador": None if a.sin_modelo else MODELOS[a.conciliador]["id"],
-        "movimientos": len(movs), "documentos": len(docs), "resueltos_por_regla": len(reglas),
+        "movimientos": len(movs), "control_saldo": control_saldo(movs), "documentos": len(docs), "resueltos_por_regla": len(reglas),
         "enviados_al_modelo": len(para_llm), "lecturas_reutilizadas_del_cache": reutilizadas,
         "gastado_en_esta_corrida": gastado,
         "costo_referencia_lectura_completa": {"input_tokens": lect_in, "output_tokens": lect_out, "usd": round(lect_usd, 4)},

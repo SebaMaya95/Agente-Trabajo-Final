@@ -53,3 +53,12 @@ def leer_extracto(ruta: Path) -> list[dict]:
 
 def es_gris(concepto: str) -> bool:
     return bool(PATRON_GRIS.search(concepto))
+
+
+def control_saldo(movs: list[dict]) -> dict:
+    """Control de integridad: el saldo de cada fila debe ser el anterior mas el importe. Detecta filas perdidas o mal leidas."""
+    saldos = [_importe(m["saldo"]) for m in movs]
+    saltos = [movs[i]["n"] for i in range(1, len(movs)) if abs(saldos[i - 1] + movs[i]["importe"] - saldos[i]) > 0.01]
+    return {"filas": len(movs), "filas_que_no_cierran": saltos, "cuadra": not saltos,
+            "saldo_inicial": round(saldos[0] - movs[0]["importe"], 2), "saldo_final": saldos[-1],
+            "suma_importes": round(sum(m["importe"] for m in movs), 2)}

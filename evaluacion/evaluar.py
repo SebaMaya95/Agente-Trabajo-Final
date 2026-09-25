@@ -48,18 +48,29 @@ def cargar_esperado(mes: str):
     return esp
 
 
+def cargar_mapa(mes: str) -> dict[str, set]:
+    with open(RAIZ / f"datos_privados/{mes}/esperado/mapa_documentos.csv", encoding="utf-8-sig") as fh:
+        return {r["doc"]: {int(x) for x in r["movimientos_esperados"].split(",") if x} for r in csv.DictReader(fh)}
+
+
 def evaluar(salida: list[dict], mes: str) -> dict:
     esp = cargar_esperado(mes)
+    mapa = cargar_mapa(mes)
+    con_doc = {n for m in mapa.values() for n in m}
     R = {"filas_no_gris": 0, "comprobante": {"ok": 0, "n": 0}, "detalle_exacto_validado": {"ok": 0, "n": 0},
          "categoria_validada": {"ok": 0, "n": 0}, "deducido_exacto": {"ok": 0, "n": 0},
          "deducido_categoria": {"ok": 0, "n": 0}, "tabla_exacto": {"ok": 0, "n": 0},
-         "tiene_comprobante_coincide": {"ok": 0, "n": 0}, "errores": []}
+         "tiene_comprobante_coincide": {"ok": 0, "n": 0}, "no_reconstruibles": [], "errores": []}
     for f in salida:
         e = esp[f["n"]]
         if es_gris(e["concepto"] or ""):
             continue
         R["filas_no_gris"] += 1
-        # comprobante
+        # Si el cierre manual tiene un comprobante pero ese documento NO esta en la carpeta,
+        # ninguna version del agente puede acertarlo: se cuenta aparte, no como falla.
+        if e["comprobante"] and f["n"] not in con_doc:
+            R["no_reconstruibles"].append(f["n"])
+            continue
         R["comprobante"]["n"] += 1
         ok_c = num(f["comprobante"]) == num(e["comprobante"])
         R["comprobante"]["ok"] += ok_c
@@ -86,8 +97,6 @@ def evaluar(salida: list[dict], mes: str) -> dict:
                 R["errores"].append({"n": f["n"], "campo": "detalle", "agente": f["detalle"],
                                      "esperado": e["detalle"], "origen": f["detalle_origen"], "motivo": f["motivo"]})
     # documentos
-    with open(RAIZ / f"datos_privados/{mes}/esperado/mapa_documentos.csv", encoding="utf-8-sig") as fh:
-        mapa = {r["doc"]: {int(x) for x in r["movimientos_esperados"].split(",") if x} for r in csv.DictReader(fh)}
     vinc = {}
     for f in salida:
         for d in f["docs"]:
@@ -111,7 +120,8 @@ def pct(x):
 
 def informe(R: dict) -> str:
     d = R["documentos"]
-    L = [f"Filas no grises evaluadas: {R['filas_no_gris']}",
+    L = [f"Filas no grises: {R['filas_no_gris']} (evaluables: {R['filas_no_gris'] - len(R['no_reconstruibles'])}; "
+         f"{len(R['no_reconstruibles'])} con comprobante en el cierre manual pero sin ese documento en la carpeta)",
          f"- N° de comprobante exacto: {pct(R['comprobante'])}",
          f"- Coincide si tiene o no comprobante: {pct(R['tiene_comprobante_coincide'])}",
          f"- Detalle exacto (solo celdas validadas por la persona): {pct(R['detalle_exacto_validado'])}",

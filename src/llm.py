@@ -20,10 +20,11 @@ class LLM:
         """Una llamada con salida JSON garantizada por esquema. Devuelve el dict parseado."""
         m = MODELOS[modelo]
         t0 = time.time()
+        extra = {"thinking": {"type": "disabled"}} if modelo == "sonnet" else {}   # Sonnet 5 razona por defecto: se apaga para comparar en igualdad
         r = self.client.messages.create(
             model=m["id"], max_tokens=max_tokens, system=system,
             messages=[{"role": "user", "content": contenido}],
-            output_config={"format": {"type": "json_schema", "schema": schema}},
+            output_config={"format": {"type": "json_schema", "schema": schema}}, **extra,
         )
         u = r.usage
         costo = (u.input_tokens * m["usd_in"] + u.output_tokens * m["usd_out"]) / 1_000_000
